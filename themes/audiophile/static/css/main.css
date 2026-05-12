@@ -50,6 +50,46 @@ a   { color: var(--accent); text-decoration: none; transition: color .2s; }
 a:hover { color: var(--accent-hover); }
 
 /* ============================================================
+   NETWORK TOP BAR
+   ============================================================ */
+.network-bar {
+  background: #0e0e0e;
+  border-bottom: 1px solid #222;
+  padding: .4rem 1.5rem;
+}
+
+.network-bar__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  flex-wrap: wrap;
+}
+
+.network-bar__label {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: .04em;
+}
+
+.network-bar a {
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: .04em;
+  transition: color .2s;
+}
+
+.network-bar a:hover { color: var(--accent-hover); }
+
+.network-bar__dot {
+  color: #333;
+  font-size: 11px;
+}
+
+/* ============================================================
    NAVIGATION
    ============================================================ */
 .nav {
@@ -849,7 +889,7 @@ a:hover { color: var(--accent-hover); }
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
 }
