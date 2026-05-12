@@ -51,6 +51,4 @@ A **passive preamplifier** uses only a volume control (potentiometer or stepped 
 
 An **active preamplifier** uses transistors or tubes to provide gain or buffering. This allows it to drive longer cable runs, work with more varied component combinations, and potentially add useful sonic character.
 
-{{< amazon name="Schiit Saga+ Passive/Active Preamplifier" asin="B086YVYXGV" price="~$449" desc="Switchable between passive (relay-switched stepped attenuator) and active (tube-buffered) operation. An excellent way to compare both approaches in the same chassis." >}}
-
 The honest advice: if your system works without a preamplifier — good volume control at the DAC, good impedance matching — don't add one. If your system benefits from one — multiple sources, turntable integration, impedance issues — find the best preamplifier your budget allows and don't cut corners. It's too central to the signal path to compromise.

@@ -61,6 +61,4 @@ The 24-bit advantage is more defensible: 24-bit audio provides genuine benefits 
 
 3. **Your DAC matters.** A quality DAC that properly implements the reconstruction filter and analog output stage will sound better with standard-resolution audio than a poor DAC playing hi-res files.
 
-{{< amazon name="iFi Audio NEO iDSD 2 DAC" asin="B0BQZRJB6W" price="~$399" desc="Supports PCM up to 768kHz, DSD512, and MQA. A versatile, well-measured DAC/headphone amp that handles every format you're likely to encounter." >}}
-
 If a streaming service offers 16-bit/44.1kHz lossless, that is genuinely excellent audio. Hi-res above that is worth exploring — particularly if you find masterings you prefer — but it isn't the dramatic leap some marketing suggests.

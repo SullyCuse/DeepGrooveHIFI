@@ -73,10 +73,6 @@ There is also a category of high-output MC cartridges that produce 1.5–2.5 mV 
 
 **Noise floor:** MC phono stages require much more gain, making noise performance more critical. A noisy phono stage will audibly hiss through your speakers at normal listening levels. Specifications below 80 dBV referred to input are generally fine; the best designs measure significantly lower.
 
-{{< amazon name="iFi Audio Zen Phono Preamplifier" asin="B07VGY1SXM" price="~$149" desc="Supports MM and MC cartridges with switchable gain, adjustable loading, and iFi's proprietary circuitry. A significant overperformer at its price point." >}}
-
-{{< amazon name="Pro-Ject Phono Box S3 B" asin="B0BQPTQJ7X" price="~$249" desc="An excellent MM/MC phono stage from one of the most respected turntable brands, with discrete circuitry, switchable gain, and a clean, low-noise design." >}}
-
 ## The Phono Stage in Your Amplifier
 
 Many integrated amplifiers and receivers include a built-in phono input. These range from adequate (in midrange Japanese solid-state units) to excellent (in some specialized phono preamplifier stages built into premium integrated amplifiers). If your amplifier has a phono input and you're happy with the results, there's no obligation to add an external phono stage.

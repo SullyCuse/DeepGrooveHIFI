@@ -71,4 +71,3 @@ They make less sense for listeners whose primary goal is discovery and broad cat
 
 The ideal hi-fi system in 2026 probably includes both: a quality streamer for access and discovery, and a CD player (or transport) for physical media that matters. The two complement rather than compete.
 
-{{< amazon name="Cambridge Audio CXC V2 CD Transport" asin="B09MZJTSLR" price="~$599" desc="A dedicated CD transport without an internal DAC — designed to output a bit-perfect digital signal to your external DAC of choice. Coaxial, optical, and AES/EBU outputs. One of the finest transports available under $1,000." >}}

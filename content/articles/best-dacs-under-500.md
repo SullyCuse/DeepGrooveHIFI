@@ -25,8 +25,6 @@ At this price point, look for units with a quality headphone output stage (not j
 - USB input plus at least one other digital input for flexibility
 - A volume control that works well in the useful range (not all gain crammed into the last 20% of rotation)
 
-{{< amazon name="FiiO K9 Pro ESS DAC/Amp" asin="B09PDM588T" price="~$349" desc="A powerhouse desktop unit with the ESS ES9038Pro chip, fully balanced circuit, 4.4mm and 6.35mm headphone outputs, and enough power for almost any headphone on the market." >}}
-
 ## For a Full Stereo System: A Pure DAC with Preamp Output
 
 If you're feeding a stereo amplifier, you want a unit with a high-quality analog output stage, variable output for direct-to-power-amp use, and ideally both RCA and XLR outputs.
@@ -37,21 +35,15 @@ If you're feeding a stereo amplifier, you want a unit with a high-quality analog
 - Multiple digital inputs (USB, coaxial, optical)
 - A well-implemented analog volume control or digital attenuator with minimal noise
 
-{{< amazon name="SMSL DO200 MKII DAC" asin="B0BFHD1RF4" price="~$299" desc="A fully balanced stereo DAC with AKM AK4493SEQ chips, XLR and RCA outputs, and MQA support. Clean measurements and a refined analog output stage." >}}
-
 ## For Vinyl-and-Digital Integration: A DAC with Analog Passthrough
 
 If your system mixes a turntable with digital sources, a DAC with an analog passthrough input lets you run everything through one device into your amplifier, simplifying your signal path without bypassing the analog signal.
-
-{{< amazon name="Cambridge Audio DacMagic 200M" asin="B08TYMGZNY" price="~$399" desc="A versatile DAC with MQA decoding, aptX HD Bluetooth, USB input, and an analog passthrough input — genuinely useful for mixed analog/digital systems." >}}
 
 ## For Simplicity and Measurements: A No-Frills Reference DAC
 
 Some listeners want the cleanest, most transparent conversion possible and nothing else. No Bluetooth, no fancy displays, no onboard headphone amp — just excellent conversion from USB to balanced and single-ended analog outputs.
 
 At this price point, you can get DAC performance that is genuinely difficult to improve on at any cost. The limiting factor quickly becomes your amplifier and speakers, not the DAC.
-
-{{< amazon name="Topping D90SE DAC" asin="B097851TJK" price="~$459" desc="An ES9038Pro-based DAC with exceptional measured performance, full MQA decoding, XLR and RCA outputs, and a clean, well-implemented output stage. One of the best-measuring DACs available at any price." >}}
 
 {{< ad id="in-article-dac3" >}}
 

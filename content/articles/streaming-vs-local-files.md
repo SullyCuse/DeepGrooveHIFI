@@ -62,4 +62,3 @@ For discovery, breadth, and everyday listening, streaming services at the lossle
 
 The best approach: use both. Stream for discovery and casual listening. Rip or purchase the recordings that matter most to you, in the versions you've identified as your preference. This hybrid approach has become the standard practice among serious digital audio enthusiasts, and for good reason.
 
-{{< amazon name="WiiM Pro Plus Network Streamer" asin="B0BX68WFXK" price="~$219" desc="Roon Ready, Tidal Connect, Qobuz, AirPlay 2, and USB/coaxial/optical digital outputs. An excellent streamer for both local DLNA playback and streaming services — letting you compare both through the same hardware path." >}}

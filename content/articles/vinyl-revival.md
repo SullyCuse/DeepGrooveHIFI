@@ -59,6 +59,4 @@ What vinyl does reliably is make listening feel more deliberate and rewarding. F
 
 The audiophile debate about which format sounds better has been running for forty years and will not be settled here. What can be said is that the equipment required to get the most from vinyl — a quality turntable, a good cartridge, a proper phono stage — is now more accessible and better-engineered than at any previous point. The entry cost to doing vinyl *well* is lower than it has ever been.
 
-{{< amazon name="Audio-Technica AT-LP120XUSB Turntable" asin="B07N3P19HB" price="~$299" desc="A direct-drive, belt-adjustable turntable with built-in phono preamp, USB output, and an included AT-VM95E cartridge. The most recommended entry-level audiophile turntable for good reason." >}}
-
 If the revival has brought you to vinyl for the first time, welcome. Just know going in: the rabbit hole is deep, the equipment matching is endlessly interesting, and you will eventually want a better cartridge.

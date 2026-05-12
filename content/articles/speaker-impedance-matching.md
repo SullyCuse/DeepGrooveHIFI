@@ -55,6 +55,4 @@ The combination of low impedance and difficult phase angle — which some demand
 - Sensitivity (dB/W/m) tells you how loud a speaker plays with 1 watt at 1 meter. An 87dB speaker needs roughly twice the amplifier power of a 90dB speaker to reach the same volume.
 - High-efficiency speakers (90dB+) enable lower-power amplifiers. Low-efficiency speakers (84dB or below) demand high power.
 
-{{< amazon name="Klipsch RP-600M II Bookshelf Speakers" asin="B09L9NKFQK" price="~$549/pair" desc="98dB sensitivity, 8-ohm nominal impedance — one of the most amplifier-friendly speaker designs available. Works brilliantly with tube amplifiers and low-power solid-state." >}}
-
 The bottom line: know your speaker's nominal and minimum impedance, confirm your amplifier is rated for that load, and ensure the power available matches the room size and speaker sensitivity. Do this, and you'll get everything both components have to offer.

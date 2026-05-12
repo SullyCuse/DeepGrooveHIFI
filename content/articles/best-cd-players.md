@@ -15,8 +15,6 @@ The CD player market has consolidated significantly as streaming has grown, but 
 
 A traditional CD player handles both transport and digital-to-analog conversion in one chassis. This simplifies the system and often represents the best value for most listeners.
 
-{{< amazon name="Marantz CD 60 CD Player" asin="B0B1PS8FCN" price="~$699" desc="Marantz's latest dedicated CD player with their proprietary HDAM (Hyper Dynamic Amplifier Module) output stage, a high-rigidity mechanism, and a voiced sound that Marantz is famous for — warm, smooth, and highly musical." >}}
-
 {{< ad id="in-article-cd4" >}}
 
 ## What Makes a Great CD Player?

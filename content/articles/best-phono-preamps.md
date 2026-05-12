@@ -1,7 +1,7 @@
 ---
 title: "The Best Phono Preamps Under $300"
 date: 2026-04-01
-description: "Six excellent phono stages from $99 to $299 that cover moving magnet and moving coil cartridges without breaking the bank."
+description: "Excellent phono stages from $99 to $299 that cover moving magnet and moving coil cartridges without breaking the bank."
 categories: ["Gear"]
 tags: ["turntables", "phono preamp", "vinyl", "buying guide"]
 image: "/images/articles/phono.svg"
@@ -17,25 +17,15 @@ Here are five phono stages we'd recommend at this price tier.
 
 The best news about phono stages is that excellent performance is available at accessible prices. The following units represent the upper tier of what's available under $150.
 
-{{< amazon name="Schiit Mani 2 Phono Preamplifier" asin="B09S5H9MP6" price="~$149" desc="The second-generation Mani from Schiit offers MM and MC support with four gain settings (30, 42, 47, 59 dB) and three loading options. Made in the USA with discrete circuitry and a low noise floor that challenges units twice its price." >}}
-
-{{< amazon name="iFi Audio Zen Phono" asin="B08H2GPD7F" price="~$149" desc="A Swiss-army-knife phono stage with automatic cartridge sensing, adjustable gain and loading, balanced ground and zero-feedback circuitry. Works with virtually any MM or MC cartridge." >}}
-
 ## $150–$250: The Sweet Spot
 
 This range represents exceptional value. Units here offer discrete circuitry, lower noise, better power supply implementation, and more adjustment options than budget offerings.
-
-{{< amazon name="Pro-Ject Phono Box DS3 B" asin="B09XY22PJ5" price="~$249" desc="Fully discrete, fully balanced phono stage with switchable MM/MC gain, adjustable MC loading via internal DIP switches, and audiophile-grade components throughout. Exceptional value from one of the most trusted names in vinyl." >}}
-
-{{< amazon name="Cambridge Audio Alva Duo" asin="B07932QK4N" price="~$199" desc="Elegant, straightforward phono stage with MM and MC support, adjustable MC loading (100Ω, 470Ω, 47kΩ), and Cambridge's typically refined sonic character. Works beautifully with their own turntables but is fully universal." >}}
 
 {{< ad id="in-article-phono4" >}}
 
 ## $250–$300: Approaching the Next Level
 
 At this price point, you begin to see features and component quality that approach more expensive units — MC loading flexibility, better power supplies, and lower noise floors.
-
-{{< amazon name="Parasound Zphono MM/MC Phono Preamplifier" asin="B001RM7BLG" price="~$275" desc="A Parasound-quality phono stage in a small form factor. MM and MC support with adjustable gain and loading, subsonic filter, and Parasound's reputation for overbuilt, reliable designs." >}}
 
 ## Buying Tips for This Category
 

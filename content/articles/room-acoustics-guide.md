@@ -73,6 +73,4 @@ The good news: bookshelves filled with books are excellent diffusers and absorbe
 
 What rooms genuinely lack is sufficient bass trapping. Bass traps are the treatment least likely to appear naturally in a living space and the one that pays the biggest acoustic dividend. Even a couple of corner floor-standing bass trap panels in a typical listening room makes an audible difference.
 
-{{< amazon name="Acoustimac DMD Stagger Acoustic Panel" asin="B07CVZP2KQ" price="~$60 each" desc="Pre-made acoustic panels with class A fire-rated mineral wool core and fabric covering. Ready to hang, effective, and aesthetically acceptable in most rooms. Start with 4-6 panels at first reflection points." >}}
-
 The room is a component. Treat it as one.

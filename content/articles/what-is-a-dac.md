@@ -63,8 +63,6 @@ External DACs make a meaningful difference in several specific situations:
 
 4. **You want to support more input formats.** A dedicated DAC often accepts USB, coaxial, optical, and AES/EBU inputs, letting you connect multiple digital sources.
 
-{{< amazon name="Topping E50 DAC" asin="B09BXFKH2Z" price="~$150" desc="A compact, measurements-excellent DAC with ES9068AS chip, covering all standard PCM and DSD formats with low noise and distortion." >}}
-
 ## The Conversion Chips Inside
 
 Most modern DACs use chips from a handful of manufacturers: ESS Technology (the Sabre series), AKM (Asahi Kasei Microelectronics), and Burr-Brown (now part of Texas Instruments) are the most common. Each has a distinct character as described by listeners, though measurements between the best implementations are often extremely close.

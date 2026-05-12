@@ -21,25 +21,19 @@ The integrated amplifier is the center of gravity. Every other component feeds i
 
 For this budget, you want a solid-state integrated with enough power for typical bookshelf speakers (50–80 watts), a built-in phono stage, and clean, neutral amplification that doesn't impose its character on the music.
 
-{{< amazon name="Yamaha A-S301 Integrated Amplifier" asin="B00MXUCN0A" price="~$449" desc="60 watts per channel, built-in MM phono stage, ToP-ART topology for low distortion, and Yamaha's reputation for reliable, neutral amplification. One of the most trusted entry-level audiophile integrateds." >}}
-
 ### Bookshelf Speakers: ~$500
 
 Don't undersize the speaker budget. In any audio system, the speakers have the most influence on what you hear. At $500, the options are genuinely excellent.
-
-{{< amazon name="ELAC Debut Reference DBR62 Bookshelf Speakers" asin="B081K9NSB3" price="~$499/pair" desc="Designed by Andrew Jones, the architect of some of the most critically praised budget speakers of the past decade. The DBR62 offers exceptional imaging, controlled bass, and a balanced presentation that scales with system quality." >}}
 
 ### Streaming Source: ~$220
 
 For digital music — streaming services, local files — a dedicated network streamer outperforms a phone or laptop in every audible way.
 
-{{< amazon name="WiiM Mini Network Streamer" asin="B09HC5GRKY" price="~$79" desc="Tidal, Qobuz, AirPlay 2, Spotify Connect, and local network playback. Optical and coaxial digital outputs feed the DAC in your integrated or an external DAC. Remarkable value." >}}
-
 If budget allows, upgrade to the WiiM Pro Plus (~$219) for better internals and a built-in DAC.
 
 ### Turntable: ~$300
 
-{{< amazon name="Audio-Technica AT-LP120XUSB" asin="B07N3S4X3P" price="~$299" desc="Direct-drive, belt-adjustable 33/45/78 RPM, built-in switchable phono preamp, AT-VM95E cartridge included. The recommendation we give every first-time vinyl listener who wants to do it right without spending recklessly." >}}
+For vinyl, look for a direct-drive table with a built-in switchable phono preamp and a quality cartridge included. You want something you can set up correctly and trust to play records without damaging them — not a suitcase player, but a real deck with adjustable tracking force and anti-skate.
 
 {{< ad id="in-article-sys2" >}}
 

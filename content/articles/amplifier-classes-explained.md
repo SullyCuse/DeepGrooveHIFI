@@ -71,4 +71,3 @@ That said, if sonic character matters to you and you've heard specific descripti
 
 The best amplifier for your system is the one that drives your specific speakers to your preferred listening levels without running out of headroom, while sounding the way you like and fitting your budget.
 
-{{< amazon name="Schiit Ragnarok 2 Integrated Amplifier" asin="B083CLBSXZ" price="~$1,499" desc="A Class A/AB switchable integrated amp from Schiit Audio. Run it in pure Class A at 24W or Class AB at 60W — a rare chance to compare both topologies in one chassis." >}}

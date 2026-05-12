@@ -65,8 +65,4 @@ Loading (input impedance) matters significantly for MC cartridges. Most manufact
 
 **$300–$600 (MC territory):** Denon DL-103 (spherical, requires good phono stage), Sumiko Songbird (high-output MC, universal compatibility), Audio-Technica OC9XSH.
 
-{{< amazon name="Audio-Technica VM95E Phono Cartridge" asin="B007BVCQ74" price="~$89" desc="A nude elliptical MM cartridge with an upgradeable stylus system — buy the body now, upgrade the stylus later. One of the best values in analog playback." >}}
-
-{{< amazon name="Ortofon 2M Blue Moving Magnet Cartridge" asin="B001AX1HBE" price="~$239" desc="A nude elliptical MM cartridge known for detailed, well-balanced presentation. One of the best-selling audiophile cartridges in the world. Straightforward alignment and compatibility with all MM phono stages." >}}
-
 The right cartridge is the one that matches your tonearm's effective mass, your phono stage's gain and loading capabilities, and your sonic priorities. Spend what you can, set it up carefully, and enjoy what vinyl does best.

@@ -55,8 +55,4 @@ Audiophiles who want speakers to make a visual statement in their listening room
 
 **Budget:** Below $1,500/pair, bookshelf speakers typically offer better driver quality and crossover engineering for the money.
 
-{{< amazon name="KEF LS50 Meta Bookshelf Speakers" asin="B08FT5N7LD" price="~$1,499/pair" desc="The benchmark two-way bookshelf speaker. KEF's Uni-Q coincident driver array produces extraordinary imaging, the Metamaterial Absorption Technology (MAT) eliminates rearward driver resonances, and the result is one of the finest speakers at any size for its price." >}}
-
-{{< amazon name="Klipsch RP-8000F II Floorstanding Speaker" asin="B09KYBTFXS" price="~$999/pair" desc="Dual 8-inch woofers, 1-inch titanium tweeter, and Klipsch's horn-loaded design deliver exceptional efficiency and dynamics. Excellent for larger rooms and lower-power amplification." >}}
-
 The best speaker for your room is rarely the biggest one you can afford. It's the one that works with your room's dimensions, your amplifier's capabilities, and your listening habits. Listen before you buy if at all possible — even brief auditions reveal things that no specification sheet can predict.

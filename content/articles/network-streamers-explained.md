@@ -45,10 +45,6 @@ Roon uses a server-client architecture: a Roon Core (running on a computer or de
 
 The platform has its advocates and critics — it requires a subscription ($14.99/month or a lifetime license purchase), and some find the approach unnecessarily complex for straightforward streaming. But for listeners with large local libraries alongside streaming subscriptions, there is nothing comparable for organization and browsing.
 
-{{< amazon name="WiiM Pro Plus Network Streamer" asin="B0BX68WFXK" price="~$219" desc="A remarkable overperformer: Roon Ready, Tidal Connect, Qobuz, AirPlay 2, HDMI ARC, coaxial and optical digital outputs, and a built-in ESS DAC. The best-value serious network streamer currently available." >}}
-
-{{< amazon name="Cambridge Audio MXN10 Network Player" asin="B0BW8N6LMZ" price="~$349" desc="A clean, minimal streamer focused on Roon, Tidal, Qobuz, and local DLNA playback. USB, coaxial, and optical digital outputs. Cambridge Audio's build quality and audio engineering at a reasonable price." >}}
-
 ## A Practical Starting Point
 
 If you're new to network streaming, start with a streamer that handles your primary services, outputs digitally to your existing DAC, and has an app you find comfortable. You can always add Roon later. The important thing is getting a dedicated, purpose-built audio device in your signal path rather than relying on a phone or laptop as a permanent source.

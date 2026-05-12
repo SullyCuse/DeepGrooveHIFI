@@ -81,6 +81,4 @@ Before playing your favorite record, start with something you're willing to risk
 
 Listen for channel balance, clarity in the inner grooves, and any evidence of mistracking (a buzzing or distorted quality). If you hear problems, revisit the steps above — alignment and tracking force are the most common culprits.
 
-{{< amazon name="Ortofon 2M Red Moving Magnet Cartridge" asin="B001AX7POA" price="~$99" desc="The world's best-selling audiophile cartridge for good reason. Excellent tracking, clear detailed sound, and replaceable nude elliptical stylus. The ideal first audiophile upgrade." >}}
-
 Setup done properly is not a one-time event — it's a skill. Each time you change cartridges or after the turntable is moved, run through these steps again. The reward is everything a well-maintained vinyl system has to offer.

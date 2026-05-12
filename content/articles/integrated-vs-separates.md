@@ -60,8 +60,6 @@ Choose an integrated amplifier when:
 - You value a clean-looking, simple system
 - You're not planning to biamplify
 
-{{< amazon name="Yamaha A-S2200 Integrated Amplifier" asin="B094VH61KT" price="~$2,499" desc="A beautifully built Class AB integrated with a built-in phono stage (MM/MC), balanced XLR inputs, and 90 watts per channel of refined, musical amplification." >}}
-
 ## When to Choose Separates
 
 Choose separates when:
@@ -70,8 +68,6 @@ Choose separates when:
 - You've clearly identified a preamp or power amp that fits your needs perfectly
 - You have a specific phono stage, DAC, or other component you want to integrate
 - Your budget allows for meaningful investment in both halves
-
-{{< amazon name="Schiit Freya+ Preamplifier" asin="B083BRLCYW" price="~$999" desc="A hybrid tube/solid-state preamp with balanced outputs and a tube gain stage you can actually roll. Pairs beautifully with a wide range of power amplifiers." >}}
 
 ## The Honest Answer
 

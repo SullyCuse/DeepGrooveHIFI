@@ -51,4 +51,3 @@ If your system uses short cable runs, has no noise problems, and uses components
 
 The cable itself — whether RCA or XLR — matters far less than its shielding quality and connector quality. A well-made, properly shielded RCA cable will outperform a poorly made XLR cable in every situation where balanced's noise-rejection advantage isn't needed.
 
-{{< amazon name="Blue Jeans Cable LC-1 RCA Cable" asin="B001C4BFGK" price="~$24" desc="Belden 1505A wire, genuine Canare connectors, and American construction. An honest, no-audiophile-markup cable that performs as well as cables costing ten times more." >}}
