@@ -9,7 +9,7 @@ image: "/images/articles/dac.svg"
 
 Finding a genuinely excellent DAC under $500 has never been easier. Conversion chip performance has improved dramatically, manufacturing costs have dropped, and competition among Chinese brands in particular has driven value to remarkable heights. The challenge now isn't finding a capable DAC at this price — it's narrowing down which one is right for your specific setup.
 
-Here are five DACs we'd confidently recommend under $500, organized by use case.
+Here are four DACs we'd confidently recommend under $500, organized by use case.
 
 {{< ad id="in-article-dac2" >}}
 
@@ -25,7 +25,7 @@ At this price point, look for units with a quality headphone output stage (not j
 - USB input plus at least one other digital input for flexibility
 - A volume control that works well in the useful range (not all gain crammed into the last 20% of rotation)
 
-{{< amazon name="FiiO K9 Pro ESS DAC/Amp" asin="B09XK98J8C" price="~$349" desc="A powerhouse desktop unit with the ESS ES9038Pro chip, fully balanced circuit, 4.4mm and 6.35mm headphone outputs, and enough power for almost any headphone on the market." >}}
+{{< amazon name="FiiO K9 Pro ESS DAC/Amp" asin="B09PDM588T" price="~$349" desc="A powerhouse desktop unit with the ESS ES9038Pro chip, fully balanced circuit, 4.4mm and 6.35mm headphone outputs, and enough power for almost any headphone on the market." >}}
 
 ## For a Full Stereo System: A Pure DAC with Preamp Output
 
@@ -37,13 +37,13 @@ If you're feeding a stereo amplifier, you want a unit with a high-quality analog
 - Multiple digital inputs (USB, coaxial, optical)
 - A well-implemented analog volume control or digital attenuator with minimal noise
 
-{{< amazon name="SMSL DO200 MKII DAC" asin="B0BPHVVXKZ" price="~$299" desc="A fully balanced stereo DAC with AKM AK4493SEQ chips, XLR and RCA outputs, and MQA support. Clean measurements and a refined analog output stage." >}}
+{{< amazon name="SMSL DO200 MKII DAC" asin="B0BFHD1RF4" price="~$299" desc="A fully balanced stereo DAC with AKM AK4493SEQ chips, XLR and RCA outputs, and MQA support. Clean measurements and a refined analog output stage." >}}
 
 ## For Vinyl-and-Digital Integration: A DAC with Analog Passthrough
 
 If your system mixes a turntable with digital sources, a DAC with an analog passthrough input lets you run everything through one device into your amplifier, simplifying your signal path without bypassing the analog signal.
 
-{{< amazon name="Cambridge Audio DacMagic 200M" asin="B094CHMPFC" price="~$399" desc="A versatile DAC with MQA decoding, aptX HD Bluetooth, USB input, and an analog passthrough input — genuinely useful for mixed analog/digital systems." >}}
+{{< amazon name="Cambridge Audio DacMagic 200M" asin="B08TYMGZNY" price="~$399" desc="A versatile DAC with MQA decoding, aptX HD Bluetooth, USB input, and an analog passthrough input — genuinely useful for mixed analog/digital systems." >}}
 
 ## For Simplicity and Measurements: A No-Frills Reference DAC
 
@@ -51,13 +51,7 @@ Some listeners want the cleanest, most transparent conversion possible and nothi
 
 At this price point, you can get DAC performance that is genuinely difficult to improve on at any cost. The limiting factor quickly becomes your amplifier and speakers, not the DAC.
 
-{{< amazon name="Topping D90SE DAC" asin="B094GN1RXC" price="~$459" desc="An ES9038Pro-based DAC with exceptional measured performance, full MQA decoding, XLR and RCA outputs, and a clean, well-implemented output stage. One of the best-measuring DACs available at any price." >}}
-
-## For Budget-Conscious Listeners: Maximum Performance Under $200
-
-If $500 feels like more than you want to spend on a DAC, you don't have to. The price-to-performance curve flattens dramatically above $200. A well-implemented DAC at $150 will often measure nearly as well as one at $500 — differences become marginal.
-
-{{< amazon name="Schiit Modi+ DAC" asin="B09MVNMTMF" price="~$129" desc="A straightforward, well-built USB/optical/coaxial DAC from Schiit Audio. Solid measurements, made in the USA, and a sensible feature set for the price." >}}
+{{< amazon name="Topping D90SE DAC" asin="B097851TJK" price="~$459" desc="An ES9038Pro-based DAC with exceptional measured performance, full MQA decoding, XLR and RCA outputs, and a clean, well-implemented output stage. One of the best-measuring DACs available at any price." >}}
 
 {{< ad id="in-article-dac3" >}}
 
