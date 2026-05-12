@@ -19,16 +19,16 @@ paginate = 12
 
 [menu]
   [[menu.main]]
-    name = "Reviews"
-    url = "/categories/reviews/"
-    weight = 1
-  [[menu.main]]
     name = "Guides"
     url = "/categories/guides/"
-    weight = 2
+    weight = 1
   [[menu.main]]
     name = "Gear"
     url = "/categories/gear/"
+    weight = 2
+  [[menu.main]]
+    name = "Features"
+    url = "/categories/features/"
     weight = 3
   [[menu.main]]
     name = "About"
