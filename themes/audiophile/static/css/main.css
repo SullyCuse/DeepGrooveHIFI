@@ -4,17 +4,17 @@
    ============================================================ */
 :root {
   /* ── Colors ── */
-  --bg:           #0d0d0d;   /* Page background      */
-  --bg-card:      #181818;   /* Article cards        */
-  --bg-nav:       #111111;   /* Navigation bar       */
-  --bg-sidebar:   #141414;   /* Sidebar background   */
-  --accent:       #c9a84c;   /* Gold accent color    */
-  --accent-hover: #e5c96a;   /* Accent on hover      */
-  --text:         #e2e2e2;   /* Primary body text    */
-  --text-muted:   #838383;   /* Dates, meta info     */
-  --text-head:    #f0f0f0;   /* Headings             */
-  --border:       #2a2a2a;   /* Borders, dividers    */
-  --tag-bg:       #1f1f1f;   /* Category tag pill bg */
+  --bg:           #141414;   /* Page background      */
+  --bg-card:      #1e1e1e;   /* Article cards        */
+  --bg-nav:       #161616;   /* Navigation bar       */
+  --bg-sidebar:   #1a1a1a;   /* Sidebar background   */
+  --accent:       #d4a94c;   /* Gold accent color    */
+  --accent-hover: #f0c96a;   /* Accent on hover      */
+  --text:         #f0f0f0;   /* Primary body text    */
+  --text-muted:   #9a9a9a;   /* Dates, meta info     */
+  --text-head:    #ffffff;   /* Headings             */
+  --border:       #333333;   /* Borders, dividers    */
+  --tag-bg:       #272727;   /* Category tag pill bg */
 
   /* ── Typography ── */
   --font-head:    'Playfair Display', Georgia, serif;
@@ -148,7 +148,7 @@ a:hover { color: var(--accent-hover); }
    HERO
    ============================================================ */
 .hero {
-  background: linear-gradient(135deg, #0d0d0d 0%, #1a1208 50%, #0d0d0d 100%);
+  background: linear-gradient(135deg, #181808 0%, #221a08 50%, #181808 100%);
   border-bottom: 1px solid var(--border);
   padding: 5rem 1.5rem;
   text-align: center;
@@ -203,11 +203,11 @@ a:hover { color: var(--accent-hover); }
   background: var(--bg-card);
   border: 1px dashed var(--border);
   border-radius: var(--radius);
-  padding: 1.5rem;
+  padding: .5rem 1.5rem;
   color: var(--text-muted);
-  font-size: var(--size-sm);
+  font-size: 11px;
   display: inline-block;
-  min-width: 728px;
+  min-width: 200px;
   max-width: 100%;
 }
 
@@ -227,8 +227,8 @@ a:hover { color: var(--accent-hover); }
   padding: 0 1.5rem;
 }
 
-.section { padding: 3rem 0; }
-.section--sm { padding: 1.5rem 0; }
+.section { padding: 2rem 0; }
+.section--sm { padding: 1rem 0; }
 
 .section__header {
   display: flex;

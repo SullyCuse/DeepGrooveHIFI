@@ -41,7 +41,7 @@
         <h2 class="featured__title">
           <a href="{{ .Permalink }}">{{ .Title }}</a>
         </h2>
-        <p class="featured__excerpt">{{ .Summary | plainify | truncate 200 }}</p>
+        <p class="featured__excerpt">{{ .Plain | truncate 200 }}</p>
         <a href="{{ .Permalink }}" class="btn">Read Article</a>
       </div>
     </article>

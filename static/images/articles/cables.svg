@@ -1,5 +1,5 @@
 <svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="450" fill="#0d0d0d"/>
+  <rect width="800" height="450" fill="#141414"/>
   <!-- Divider line -->
   <line x1="400" y1="60" x2="400" y2="390" stroke="#1e1e1e" stroke-width="1" stroke-dasharray="6,4"/>
   <!-- XLR side label -->

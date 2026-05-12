@@ -1,5 +1,5 @@
 <svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="450" fill="#0d0d0d"/>
+  <rect width="800" height="450" fill="#141414"/>
   <!-- Record groove cross-section background -->
   <path d="M0 350 L800 350" stroke="#1a1a1a" stroke-width="1"/>
   <!-- Groove walls (V-shape cross sections) -->

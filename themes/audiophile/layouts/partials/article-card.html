@@ -28,7 +28,7 @@
       <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h2>
 
-    <p class="article-card__excerpt">{{ .Summary | plainify }}</p>
+    <p class="article-card__excerpt">{{ .Plain | truncate 160 }}</p>
 
     <div class="article-card__meta">
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>

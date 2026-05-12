@@ -1,5 +1,5 @@
 <svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="450" fill="#0d0d0d"/>
+  <rect width="800" height="450" fill="#141414"/>
   <!-- CD Player chassis -->
   <rect x="100" y="200" width="600" height="160" rx="8" fill="#181818" stroke="#2a2a2a" stroke-width="1.5"/>
   <rect x="100" y="200" width="600" height="18" rx="6" fill="#1e1e1e" stroke="#2a2a2a" stroke-width="1"/>
