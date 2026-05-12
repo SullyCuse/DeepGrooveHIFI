@@ -10,8 +10,6 @@ paginate = 12
   # ─── AdSense ───────────────────────────────────────────────────────────────
   # Add your publisher ID here once approved: ca-pub-XXXXXXXXXXXXXXXXXX
   adsenseID = "ca-pub-8677522350792212"
-  # ─── Amazon Associates ─────────────────────────────────────────────────────
-  amazonTag = "audiochainhif-20"
   # ─── Site meta ─────────────────────────────────────────────────────────────
   logo = "/images/logo.svg"
   favicon = "/images/favicon.png"
@@ -22,10 +20,6 @@ paginate = 12
     name = "Guides"
     url = "/categories/guides/"
     weight = 1
-  [[menu.main]]
-    name = "Gear"
-    url = "/categories/gear/"
-    weight = 2
   [[menu.main]]
     name = "Features"
     url = "/categories/features/"

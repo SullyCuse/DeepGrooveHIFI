@@ -2,7 +2,7 @@
 title: "The Best CD Players for Audiophiles"
 date: 2026-02-27
 description: "From budget-friendly one-box solutions to high-end transports, these are our recommended CD players and transports for serious listening."
-categories: ["Gear"]
+categories: ["Guides"]
 tags: ["cd players", "digital audio", "buying guide"]
 image: "/images/articles/cdplayer.svg"
 ---

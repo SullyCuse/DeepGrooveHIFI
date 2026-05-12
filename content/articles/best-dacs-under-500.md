@@ -2,7 +2,7 @@
 title: "The Best DACs Under $500: Our Top Picks for Every Use Case"
 date: 2026-04-28
 description: "Five excellent DACs under $500 for desktop listening, headphone rigs, and full stereo systems — with honest notes on what each does best."
-categories: ["Gear"]
+categories: ["Guides"]
 tags: ["dac", "buying guide", "desktop audio"]
 image: "/images/articles/dac.svg"
 ---

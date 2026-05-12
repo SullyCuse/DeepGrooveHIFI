@@ -2,7 +2,7 @@
 title: "Building Your First Hi-Fi System Under $2,000"
 date: 2025-12-30
 description: "A complete, carefully considered starter system — turntable, streamer, integrated amp, and speakers — for under $2,000. All the components, and why each made the list."
-categories: ["Gear"]
+categories: ["Guides"]
 tags: ["buying guide", "system", "integrated", "speakers", "beginners"]
 image: "/images/articles/amp.svg"
 ---

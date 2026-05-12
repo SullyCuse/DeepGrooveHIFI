@@ -2,7 +2,7 @@
 title: "The Best Phono Preamps Under $300"
 date: 2026-04-01
 description: "Excellent phono stages from $99 to $299 that cover moving magnet and moving coil cartridges without breaking the bank."
-categories: ["Gear"]
+categories: ["Guides"]
 tags: ["turntables", "phono preamp", "vinyl", "buying guide"]
 image: "/images/articles/phono.svg"
 ---
