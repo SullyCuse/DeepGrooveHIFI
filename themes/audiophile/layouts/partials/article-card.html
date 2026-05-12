@@ -1,0 +1,40 @@
+{{/* article-card.html — reusable card for article grids */}}
+<article class="article-card">
+
+  <div class="article-card__img">
+    {{ with .Params.image }}
+      <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+    {{ else }}
+      {{ with .Params.categories }}
+        {{ $emoji := "🎵" }}
+        {{ $cat := index . 0 | lower }}
+        {{ if eq $cat "guides"   }}{{ $emoji = "📖" }}{{ end }}
+        {{ if eq $cat "gear"     }}{{ $emoji = "🔊" }}{{ end }}
+        {{ if eq $cat "reviews"  }}{{ $emoji = "⭐" }}{{ end }}
+        {{ if eq $cat "features" }}{{ $emoji = "🎶" }}{{ end }}
+        <span style="font-size:3rem;" aria-hidden="true">{{ $emoji }}</span>
+      {{ end }}
+    {{ end }}
+  </div>
+
+  <div class="article-card__body">
+    {{ with .Params.categories }}
+      {{ range first 1 . }}
+        <span class="article-card__tag tag--{{ . | lower | urlize }}">{{ . }}</span>
+      {{ end }}
+    {{ end }}
+
+    <h2 class="article-card__title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+
+    <p class="article-card__excerpt">{{ .Summary | plainify }}</p>
+
+    <div class="article-card__meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+      <span class="article-card__meta-dot">·</span>
+      <span>{{ .ReadingTime }} min read</span>
+    </div>
+  </div>
+
+</article>

@@ -1,0 +1,65 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0d0d0d"/>
+  <!-- Subtle floor shadow -->
+  <ellipse cx="400" cy="390" rx="310" ry="18" fill="#1a1000" opacity="0.6"/>
+  <!-- Amp chassis -->
+  <rect x="90" y="300" width="620" height="80" rx="4" fill="#181818" stroke="#2a2a2a" stroke-width="1"/>
+  <!-- Tube sockets row -->
+  <rect x="150" y="270" width="60" height="35" rx="3" fill="#222" stroke="#333" stroke-width="1"/>
+  <rect x="270" y="270" width="60" height="35" rx="3" fill="#222" stroke="#333" stroke-width="1"/>
+  <rect x="390" y="270" width="60" height="35" rx="3" fill="#222" stroke="#333" stroke-width="1"/>
+  <rect x="510" y="270" width="60" height="35" rx="3" fill="#222" stroke="#333" stroke-width="1"/>
+  <!-- Vacuum tubes -->
+  <!-- Tube 1 -->
+  <path d="M165 270 L155 160 Q180 140 205 160 L195 270 Z" fill="#1a1a1a" stroke="#3a3a3a" stroke-width="1"/>
+  <ellipse cx="180" cy="160" rx="25" ry="10" fill="#222" stroke="#3a3a3a" stroke-width="1"/>
+  <line x1="180" y1="175" x2="180" y2="250" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
+  <line x1="168" y1="195" x2="192" y2="195" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+  <line x1="165" y1="220" x2="195" y2="220" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+  <ellipse cx="180" cy="165" rx="8" ry="4" fill="#c9a84c" opacity="0.25"/>
+  <!-- Tube glow 1 -->
+  <ellipse cx="180" cy="215" rx="22" ry="50" fill="#c97820" opacity="0.06"/>
+  <!-- Tube 2 -->
+  <path d="M285 270 L275 160 Q300 140 325 160 L315 270 Z" fill="#1a1a1a" stroke="#3a3a3a" stroke-width="1"/>
+  <ellipse cx="300" cy="160" rx="25" ry="10" fill="#222" stroke="#3a3a3a" stroke-width="1"/>
+  <line x1="300" y1="175" x2="300" y2="250" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
+  <line x1="288" y1="195" x2="312" y2="195" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+  <line x1="285" y1="220" x2="315" y2="220" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+  <ellipse cx="300" cy="165" rx="8" ry="4" fill="#c9a84c" opacity="0.25"/>
+  <ellipse cx="300" cy="215" rx="22" ry="50" fill="#c97820" opacity="0.06"/>
+  <!-- Tube 3 -->
+  <path d="M405 270 L395 160 Q420 140 445 160 L435 270 Z" fill="#1a1a1a" stroke="#3a3a3a" stroke-width="1"/>
+  <ellipse cx="420" cy="160" rx="25" ry="10" fill="#222" stroke="#3a3a3a" stroke-width="1"/>
+  <line x1="420" y1="175" x2="420" y2="250" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
+  <line x1="408" y1="195" x2="432" y2="195" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+  <line x1="405" y1="220" x2="435" y2="220" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+  <ellipse cx="420" cy="165" rx="8" ry="4" fill="#c9a84c" opacity="0.3"/>
+  <ellipse cx="420" cy="215" rx="22" ry="50" fill="#c97820" opacity="0.08"/>
+  <!-- Tube 4 -->
+  <path d="M525 270 L515 160 Q540 140 565 160 L555 270 Z" fill="#1a1a1a" stroke="#3a3a3a" stroke-width="1"/>
+  <ellipse cx="540" cy="160" rx="25" ry="10" fill="#222" stroke="#3a3a3a" stroke-width="1"/>
+  <line x1="540" y1="175" x2="540" y2="250" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
+  <line x1="528" y1="195" x2="552" y2="195" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+  <line x1="525" y1="220" x2="555" y2="220" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+  <ellipse cx="540" cy="165" rx="8" ry="4" fill="#c9a84c" opacity="0.25"/>
+  <ellipse cx="540" cy="215" rx="22" ry="50" fill="#c97820" opacity="0.06"/>
+  <!-- VU Meter on chassis -->
+  <rect x="630" y="310" width="60" height="40" rx="2" fill="#111" stroke="#333" stroke-width="1"/>
+  <path d="M635 348 Q660 315 685 348" stroke="#c9a84c" stroke-width="1.5" fill="none"/>
+  <line x1="660" y1="348" x2="660" y2="320" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
+  <!-- Knobs -->
+  <circle cx="130" cy="330" r="14" fill="#222" stroke="#3a3a3a" stroke-width="1"/>
+  <line x1="130" y1="330" x2="130" y2="318" stroke="#c9a84c" stroke-width="1.5"/>
+  <circle cx="200" cy="330" r="14" fill="#222" stroke="#3a3a3a" stroke-width="1"/>
+  <line x1="200" y1="330" x2="206" y2="319" stroke="#c9a84c" stroke-width="1.5"/>
+  <circle cx="270" cy="330" r="14" fill="#222" stroke="#3a3a3a" stroke-width="1"/>
+  <line x1="270" y1="330" x2="270" y2="318" stroke="#c9a84c" stroke-width="1.5"/>
+  <!-- Warm glow from tubes -->
+  <rect x="90" y="150" width="620" height="160" fill="url(#tubeGlow)" opacity="0.04"/>
+  <defs>
+    <linearGradient id="tubeGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c97820"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,31 @@
+{{/*
+  ad-slot.html
+  Usage: {{ partial "ad-slot.html" (dict "id" "homepage-top" "context" .) }}
+
+  When .Site.Params.adsenseID is set, renders the real AdSense unit.
+  Until then, shows a clearly-labeled placeholder so layout is visible.
+*/}}
+
+{{ $ctx := .context }}
+{{ $id  := .id }}
+
+<div class="ad-slot ad-slot--{{ $id }}">
+  <div class="ad-slot__label">Advertisement</div>
+
+  {{ if $ctx.Site.Params.adsenseID }}
+    {{/* ── Live AdSense unit ── */}}
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="{{ $ctx.Site.Params.adsenseID }}"
+         data-ad-slot="{{ $id }}"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  {{ else }}
+    {{/* ── Placeholder (pre-approval) ── */}}
+    <div class="ad-slot__placeholder">
+      Ad Slot: {{ $id }} — Add your AdSense Publisher ID to hugo.toml to activate
+    </div>
+  {{ end }}
+
+</div>

@@ -1,0 +1,41 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0d0d0d"/>
+  <!-- Network nodes -->
+  <circle cx="400" cy="225" r="35" fill="#1a1208" stroke="#c9a84c" stroke-width="1.5"/>
+  <text x="400" y="221" text-anchor="middle" font-family="monospace" font-size="8" fill="#c9a84c">STREAM</text>
+  <text x="400" y="233" text-anchor="middle" font-family="monospace" font-size="8" fill="#c9a84c">ER</text>
+  <!-- Connecting lines to sources -->
+  <line x1="365" y1="210" x2="250" y2="155" stroke="#333" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="365" y1="225" x2="230" y2="225" stroke="#333" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="365" y1="240" x2="250" y2="295" stroke="#333" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <!-- Connecting lines to output -->
+  <line x1="435" y1="210" x2="550" y2="155" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.7"/>
+  <line x1="435" y1="225" x2="570" y2="225" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.7"/>
+  <line x1="435" y1="240" x2="550" y2="295" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.7"/>
+  <!-- Source nodes (left) -->
+  <circle cx="220" cy="145" r="28" fill="#181818" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="220" y="141" text-anchor="middle" font-family="monospace" font-size="8" fill="#5a8db5">TIDAL</text>
+  <text x="220" y="153" text-anchor="middle" font-family="monospace" font-size="7" fill="#444">HiFi</text>
+  <circle cx="195" cy="225" r="28" fill="#181818" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="195" y="221" text-anchor="middle" font-family="monospace" font-size="7" fill="#5a8db5">QOBUZ</text>
+  <text x="195" y="233" text-anchor="middle" font-family="monospace" font-size="7" fill="#444">HiRes</text>
+  <circle cx="220" cy="305" r="28" fill="#181818" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="220" y="301" text-anchor="middle" font-family="monospace" font-size="7" fill="#5a8db5">LOCAL</text>
+  <text x="220" y="313" text-anchor="middle" font-family="monospace" font-size="7" fill="#444">FLAC</text>
+  <!-- Output nodes (right) -->
+  <circle cx="580" cy="145" r="28" fill="#181818" stroke="#c9a84c" stroke-width="1" opacity="0.7"/>
+  <text x="580" y="141" text-anchor="middle" font-family="monospace" font-size="7" fill="#c9a84c">USB</text>
+  <text x="580" y="153" text-anchor="middle" font-family="monospace" font-size="7" fill="#555">DAC</text>
+  <circle cx="605" cy="225" r="28" fill="#181818" stroke="#c9a84c" stroke-width="1" opacity="0.7"/>
+  <text x="605" y="221" text-anchor="middle" font-family="monospace" font-size="7" fill="#c9a84c">SPDIF</text>
+  <text x="605" y="233" text-anchor="middle" font-family="monospace" font-size="7" fill="#555">Coax</text>
+  <circle cx="580" cy="305" r="28" fill="#181818" stroke="#c9a84c" stroke-width="1" opacity="0.7"/>
+  <text x="580" y="301" text-anchor="middle" font-family="monospace" font-size="7" fill="#c9a84c">AES</text>
+  <text x="580" y="313" text-anchor="middle" font-family="monospace" font-size="7" fill="#555">EBU</text>
+  <!-- WiFi rings around streamer -->
+  <circle cx="400" cy="225" r="65"  stroke="#c9a84c" stroke-width="0.8" fill="none" opacity="0.2" stroke-dasharray="3,5"/>
+  <circle cx="400" cy="225" r="100" stroke="#c9a84c" stroke-width="0.6" fill="none" opacity="0.1" stroke-dasharray="3,8"/>
+  <!-- Waveform at bottom -->
+  <path d="M100 400 Q150 370 200 400 Q250 430 300 400 Q350 370 400 400 Q450 430 500 400 Q550 370 600 400 Q650 430 700 400"
+        stroke="#c9a84c" stroke-width="1.5" fill="none" opacity="0.25"/>
+</svg>

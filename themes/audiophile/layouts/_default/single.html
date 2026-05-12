@@ -1,0 +1,77 @@
+{{ define "main" }}
+
+<!-- Ad slot: top of article page -->
+{{ partial "ad-slot.html" (dict "id" "top-article" "context" .) }}
+
+<div class="article-layout">
+
+  <!-- ── Article main column ── -->
+  <article>
+
+    <header class="article-header">
+      {{ with .Params.categories }}
+        {{ range first 1 . }}
+          <span class="article-header__tag tag--{{ . | lower | urlize }}">{{ . }}</span>
+        {{ end }}
+      {{ end }}
+
+      <h1 class="article-header__title">{{ .Title }}</h1>
+
+      <div class="article-header__meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date.Format "January 2, 2006" }}
+        </time>
+        <span class="article-header__meta-dot">·</span>
+        <span>{{ .ReadingTime }} min read</span>
+        {{ with .Params.tags }}
+          <span class="article-header__meta-dot">·</span>
+          {{ range . }}
+            <a href="/tags/{{ . | urlize }}/" style="color:var(--text-muted);font-size:13px;">#{{ . }}</a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </header>
+
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+
+    <!-- Amazon affiliate disclaimer -->
+    <p class="amazon-disclaimer">
+      Audio Chain HiFi is a participant in the Amazon Services LLC Associates Program,
+      an affiliate advertising program designed to provide a means for sites to earn
+      advertising fees by advertising and linking to Amazon.com. As an Amazon Associate,
+      we earn from qualifying purchases at no additional cost to you.
+    </p>
+
+  </article>
+
+  <!-- ── Sidebar ── -->
+  <aside class="article-sidebar">
+
+    <!-- Sidebar ad slot -->
+    <div class="sidebar-widget">
+      {{ partial "ad-slot.html" (dict "id" "sidebar" "context" .) }}
+    </div>
+
+    <!-- Recent articles widget -->
+    <div class="sidebar-widget">
+      <h3 class="sidebar-widget__title">Recent Articles</h3>
+      <div class="sidebar-recent">
+        {{ $current := . }}
+        {{ range first 6 (where .Site.RegularPages "Type" "articles") }}
+          {{ if ne .Permalink $current.Permalink }}
+            <a href="{{ .Permalink }}">
+              <span class="sidebar-recent__title">{{ .Title }}</span>
+              <span class="sidebar-recent__meta">{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min</span>
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+{{ end }}

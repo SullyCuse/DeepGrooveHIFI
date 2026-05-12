@@ -1,0 +1,51 @@
+baseURL = "https://deepgroovehifi.com/"
+languageCode = "en-us"
+title = "Deep Groove HiFi"
+theme = "audiophile"
+paginate = 12
+
+[params]
+  description = "Expert audiophile reviews, buying guides, and gear recommendations for DACs, amplifiers, turntables, speakers, and more."
+  author = "Deep Groove HiFi"
+  # ─── AdSense ───────────────────────────────────────────────────────────────
+  # Add your publisher ID here once approved: ca-pub-XXXXXXXXXXXXXXXXXX
+  adsenseID = ""
+  # ─── Amazon Associates ─────────────────────────────────────────────────────
+  amazonTag = "audiochainhif-20"
+  # ─── Site meta ─────────────────────────────────────────────────────────────
+  logo = "/images/logo.svg"
+  favicon = "/images/favicon.png"
+  contactEmail = "contact@deepgroovehifi.com"
+
+[menu]
+  [[menu.main]]
+    name = "Reviews"
+    url = "/categories/reviews/"
+    weight = 1
+  [[menu.main]]
+    name = "Guides"
+    url = "/categories/guides/"
+    weight = 2
+  [[menu.main]]
+    name = "Gear"
+    url = "/categories/gear/"
+    weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true   # Allows HTML in markdown (needed for ad shortcodes)
+  [markup.highlight]
+    style = "monokai"

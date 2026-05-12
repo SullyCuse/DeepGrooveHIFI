@@ -1,0 +1,30 @@
+<header class="nav">
+  <div class="nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="nav__logo" aria-label="{{ .Site.Title }} home">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="18" cy="18" r="17" stroke="#c9a84c" stroke-width="2"/>
+        <circle cx="18" cy="18" r="5" fill="#c9a84c"/>
+        <path d="M6 18 Q9 11 12 18 Q15 25 18 18 Q21 11 24 18 Q27 25 30 18"
+              stroke="#c9a84c" stroke-width="1.75" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="nav__logo-text">Deep Groove <span>HiFi</span></span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <ul class="nav__links" id="nav-links">
+      {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>

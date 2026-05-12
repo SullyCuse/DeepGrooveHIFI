@@ -1,0 +1,13 @@
+<svg width="200" height="48" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Vinyl record icon -->
+  <circle cx="24" cy="24" r="22" stroke="#c9a84c" stroke-width="1.5"/>
+  <circle cx="24" cy="24" r="15" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
+  <circle cx="24" cy="24" r="8"  stroke="#c9a84c" stroke-width="1" opacity="0.35"/>
+  <circle cx="24" cy="24" r="3"  fill="#c9a84c"/>
+  <!-- Groove waveform line across record -->
+  <path d="M6 24 Q9 18 12 24 Q15 30 18 24 Q21 18 24 24 Q27 30 30 24 Q33 18 36 24 Q39 30 42 24"
+        stroke="#c9a84c" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <!-- Wordmark -->
+  <text x="56" y="17" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="700" fill="#f0f0f0" letter-spacing="1">DEEP GROOVE</text>
+  <text x="56" y="35" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="400" fill="#c9a84c" letter-spacing="3">HiFi</text>
+</svg>

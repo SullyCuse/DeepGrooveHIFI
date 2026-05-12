@@ -1,0 +1,50 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#0d0d0d"/>
+  <!-- CD Player chassis -->
+  <rect x="100" y="200" width="600" height="160" rx="8" fill="#181818" stroke="#2a2a2a" stroke-width="1.5"/>
+  <rect x="100" y="200" width="600" height="18" rx="6" fill="#1e1e1e" stroke="#2a2a2a" stroke-width="1"/>
+  <!-- CD tray slot -->
+  <rect x="200" y="248" width="250" height="8" rx="4" fill="#111" stroke="#333" stroke-width="1"/>
+  <!-- CD disc floating above -->
+  <ellipse cx="330" cy="160" rx="120" ry="14" fill="#1a1a1a" opacity="0.4"/>
+  <circle cx="330" cy="148" r="118" fill="#111"/>
+  <!-- Rainbow/iridescent effect on CD -->
+  <circle cx="330" cy="148" r="118" fill="url(#cdSheen)" opacity="0.15"/>
+  <circle cx="330" cy="148" r="118" stroke="#2a2a2a" stroke-width="1"/>
+  <circle cx="330" cy="148" r="108" stroke="#222" stroke-width="0.5"/>
+  <circle cx="330" cy="148" r="95"  stroke="#2a2a2a" stroke-width="0.5"/>
+  <circle cx="330" cy="148" r="80"  stroke="#222" stroke-width="0.5"/>
+  <!-- Label area -->
+  <circle cx="330" cy="148" r="50"  fill="#1a1208" stroke="#c9a84c" stroke-width="0.8" opacity="0.6"/>
+  <circle cx="330" cy="148" r="10"  fill="#333"/>
+  <text x="330" y="143" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#c9a84c" letter-spacing="1">DEEP</text>
+  <text x="330" y="157" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#c9a84c" letter-spacing="1">GROOVE</text>
+  <!-- Laser beam -->
+  <line x1="330" y1="218" x2="330" y2="260" stroke="#5a8db5" stroke-width="1.5" opacity="0.6" stroke-dasharray="4,3"/>
+  <circle cx="330" cy="260" r="3" fill="#5a8db5" opacity="0.8"/>
+  <!-- Display panel -->
+  <rect x="490" y="228" width="160" height="50" rx="3" fill="#0a0f0a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="570" y="248" text-anchor="middle" font-family="monospace" font-size="12" fill="#00cc44" letter-spacing="2">00:00</text>
+  <text x="570" y="265" text-anchor="middle" font-family="monospace" font-size="8" fill="#005522" letter-spacing="1">TRACK 01</text>
+  <!-- Transport buttons -->
+  <circle cx="170" cy="310" r="16" fill="#222" stroke="#3a3a3a" stroke-width="1"/>
+  <polygon points="163,310 177,303 177,317" fill="#555"/>
+  <circle cx="220" cy="310" r="16" fill="#222" stroke="#3a3a3a" stroke-width="1"/>
+  <rect x="212" y="303" width="5" height="14" fill="#555" rx="1"/>
+  <rect x="220" y="303" width="5" height="14" fill="#555" rx="1"/>
+  <circle cx="270" cy="310" r="16" fill="#222" stroke="#3a3a3a" stroke-width="1"/>
+  <polygon points="262,303 276,310 262,317" fill="#555"/>
+  <polygon points="270,303 284,310 270,317" fill="#555"/>
+  <!-- Power LED -->
+  <circle cx="650" cy="310" r="5" fill="#c9a84c" opacity="0.9"/>
+  <circle cx="650" cy="310" r="9" fill="#c9a84c" opacity="0.1"/>
+  <!-- CD sheen gradient -->
+  <defs>
+    <radialGradient id="cdSheen" cx="40%" cy="35%">
+      <stop offset="0%"   stop-color="#5a8db5"/>
+      <stop offset="30%"  stop-color="#c9a84c"/>
+      <stop offset="60%"  stop-color="#8b5aa0"/>
+      <stop offset="100%" stop-color="#5a8db5"/>
+    </radialGradient>
+  </defs>
+</svg>

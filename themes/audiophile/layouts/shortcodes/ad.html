@@ -1,0 +1,6 @@
+{{/*
+  In-article ad shortcode
+  Usage in markdown: {{< ad id="in-article-1" >}}
+  Place after the 3rd paragraph in articles.
+*/}}
+{{ partial "ad-slot.html" (dict "id" (.Get "id" | default "in-article") "context" .) }}

@@ -1,0 +1,96 @@
+{{ define "main" }}
+
+<!-- ── Hero ────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero__eyebrow">Expert Audiophile Coverage</div>
+  <h1 class="hero__title">Where Signal Meets Passion</h1>
+  <p class="hero__subtitle">
+    In-depth reviews, buying guides, and technical deep-dives for DACs,
+    amplifiers, turntables, speakers, and the pursuit of pure sound.
+  </p>
+  <a href="/articles/" class="btn">Explore All Articles</a>
+</section>
+
+<!-- ── Leaderboard ad ───────────────────────────────────────── -->
+{{ partial "ad-slot.html" (dict "id" "homepage-top" "context" .) }}
+
+<div class="container">
+
+  <!-- ── Featured article ─────────────────────────────────── -->
+  {{ $articles := where .Site.RegularPages "Type" "articles" }}
+  {{ $featured := first 1 (where $articles "Params.featured" true) }}
+  {{ if not $featured }}{{ $featured = first 1 $articles }}{{ end }}
+
+  {{ range $featured }}
+  <section class="section">
+    <div class="section__header">
+      <h2 class="section__title">Editor's Pick</h2>
+    </div>
+    <article class="featured">
+      <div class="featured__img">🎵</div>
+      <div class="featured__body">
+        <div class="featured__label">
+          {{ with .Params.categories }}{{ index . 0 }}{{ end }}
+        </div>
+        <h2 class="featured__title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h2>
+        <p class="featured__excerpt">{{ .Summary | plainify | truncate 200 }}</p>
+        <a href="{{ .Permalink }}" class="btn">Read Article</a>
+      </div>
+    </article>
+  </section>
+  {{ end }}
+
+  <!-- ── Latest Articles ──────────────────────────────────── -->
+  {{ $latest := after 1 (first 7 $articles) }}
+  <section class="section">
+    <div class="section__header">
+      <h2 class="section__title">Latest Articles</h2>
+      <a href="/articles/" class="section__link">View All →</a>
+    </div>
+    <div class="article-grid">
+      {{ range $latest }}
+        {{ partial "article-card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- ── Mid-page ad ──────────────────────────────────────── -->
+  {{ partial "ad-slot.html" (dict "id" "homepage-mid" "context" .) }}
+
+  <!-- ── Guides section ───────────────────────────────────── -->
+  {{ $guides := first 3 (where $articles "Params.categories" "intersect" (slice "Guides")) }}
+  {{ if $guides }}
+  <section class="section">
+    <div class="section__header">
+      <h2 class="section__title">Guides & Explainers</h2>
+      <a href="/categories/guides/" class="section__link">All Guides →</a>
+    </div>
+    <div class="article-grid">
+      {{ range $guides }}
+        {{ partial "article-card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- ── Gear Picks section ───────────────────────────────── -->
+  {{ $gear := first 3 (where $articles "Params.categories" "intersect" (slice "Gear")) }}
+  {{ if $gear }}
+  <section class="section">
+    <div class="section__header">
+      <h2 class="section__title">Gear Picks</h2>
+      <a href="/categories/gear/" class="section__link">All Gear →</a>
+    </div>
+    <div class="article-grid">
+      {{ range $gear }}
+        {{ partial "article-card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+</div>
+
+{{ end }}

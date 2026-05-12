@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<div class="container">
+
+  <div class="list-header">
+    <div class="list-header__eyebrow">
+      {{ if .IsHome }}All Articles{{ else }}Category{{ end }}
+    </div>
+    <h1 class="list-header__title">{{ .Title }}</h1>
+    {{ with .Description }}
+      <p style="color:var(--text-muted);margin-top:.75rem;">{{ . }}</p>
+    {{ end }}
+  </div>
+
+  <!-- Ad slot -->
+  {{ partial "ad-slot.html" (dict "id" "list-top" "context" .) }}
+
+  <div class="article-grid section">
+    {{ range .Paginator.Pages }}
+      {{ partial "article-card.html" . }}
+    {{ end }}
+  </div>
+
+  <!-- Pagination -->
+  {{ template "_internal/pagination.html" . }}
+
+</div>
+
+{{ end }}

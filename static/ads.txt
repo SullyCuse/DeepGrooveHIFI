@@ -1,0 +1,14 @@
+# ads.txt — Required by Google AdSense
+# Replace XXXXXXXXXXXXXXXXXX with your actual AdSense Publisher ID
+# Format: google.com, ca-pub-XXXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#
+# Until you have your Publisher ID, leave this placeholder in place.
+# Google will check this file when reviewing your AdSense application.
+#
+# HOW TO UPDATE:
+# 1. Log into Google AdSense
+# 2. Go to Account > Account information
+# 3. Copy your Publisher ID (starts with ca-pub-)
+# 4. Replace the line below with the real one:
+
+google.com, pub-XXXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
