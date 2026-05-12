@@ -81,22 +81,6 @@
   </section>
   {{ end }}
 
-  <!-- ── Gear Picks section ───────────────────────────────── -->
-  {{ $gear := first 3 (where $articles "Params.categories" "intersect" (slice "Gear")) }}
-  {{ if $gear }}
-  <section class="section">
-    <div class="section__header">
-      <h2 class="section__title">Gear Picks</h2>
-      <a href="/categories/gear/" class="section__link">All Gear →</a>
-    </div>
-    <div class="article-grid">
-      {{ range $gear }}
-        {{ partial "article-card.html" . }}
-      {{ end }}
-    </div>
-  </section>
-  {{ end }}
-
 </div>
 
 {{ end }}
