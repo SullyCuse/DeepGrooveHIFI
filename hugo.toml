@@ -9,7 +9,7 @@ paginate = 12
   author = "Deep Groove HiFi"
   # ─── AdSense ───────────────────────────────────────────────────────────────
   # Add your publisher ID here once approved: ca-pub-XXXXXXXXXXXXXXXXXX
-  adsenseID = ""
+  adsenseID = "ca-pub-8677522350792212"
   # ─── Amazon Associates ─────────────────────────────────────────────────────
   amazonTag = "audiochainhif-20"
   # ─── Site meta ─────────────────────────────────────────────────────────────

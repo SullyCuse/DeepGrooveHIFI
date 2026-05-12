@@ -42,16 +42,11 @@
     }
   </style>
 
-  <!-- Google AdSense
-       ─────────────────────────────────────────────────────
-       STEP 1: Once approved, replace XXXXXXXXXXXXXXXXXX with
-               your actual publisher ID, then uncomment below.
-       ─────────────────────────────────────────────────────
+  <!-- Google AdSense -->
   {{ if .Site.Params.adsenseID }}
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ .Site.Params.adsenseID }}"
      crossorigin="anonymous"></script>
   {{ end }}
-  -->
 
 </head>
 <body>
