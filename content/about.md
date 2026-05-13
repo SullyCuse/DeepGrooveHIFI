@@ -3,8 +3,13 @@ title: "About Deep Groove HiFi"
 description: "Who we are, why we built this site, and what we believe about high-fidelity audio."
 date: 2026-05-13
 lastmod: 2026-05-13
-layout: "page"
+layout: "single"
+type: "page"
 ---
+
+<div class="static-page">
+
+# About Deep Groove HiFi
 
 ## Where Signal Meets Passion
 
@@ -56,3 +61,5 @@ Deep Groove HiFi is part of a small network of audio-focused publications:
 ## Get in Touch
 
 Questions, feedback, review requests, or just want to talk audio? Use our [contact page](/contact/) — we read every message.
+
+</div>

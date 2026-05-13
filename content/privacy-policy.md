@@ -3,8 +3,13 @@ title: "Privacy Policy"
 description: "How Deep Groove HiFi collects, uses, and protects your information."
 date: 2026-05-13
 lastmod: 2026-05-13
-layout: "page"
+layout: "single"
+type: "page"
 ---
+
+<div class="static-page">
+
+# Privacy Policy
 
 *Last updated: May 13, 2026*
 
@@ -35,7 +40,7 @@ We display advertisements served by Google AdSense. Google uses cookies to serve
 We participate in the Amazon Services LLC Associates Program. When you click an Amazon link on this site, Amazon may place a cookie on your device to track referrals. Amazon's privacy policy applies to any data collected through those links.
 
 ### Affiliate Networks
-We work with affiliate networks including Sovrn Commerce, FlexOffers, and direct merchant programs. These services may use cookies to track clicks and purchases originating from our site.
+We work with affiliate networks including FlexOffers and direct merchant programs. These services may use cookies to track clicks and purchases originating from our site.
 
 ---
 
@@ -68,3 +73,5 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
 ## Contact
 
 If you have questions about this Privacy Policy, please use our [contact page](/contact/).
+
+</div>

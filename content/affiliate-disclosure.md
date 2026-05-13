@@ -3,8 +3,13 @@ title: "Affiliate Disclosure"
 description: "How Deep Groove HiFi earns revenue through affiliate partnerships."
 date: 2026-05-13
 lastmod: 2026-05-13
-layout: "page"
+layout: "single"
+type: "page"
 ---
+
+<div class="static-page">
+
+# Affiliate Disclosure
 
 *Last updated: May 13, 2026*
 
@@ -28,7 +33,7 @@ In accordance with the Federal Trade Commission's guidelines on endorsements and
 Deep Groove HiFi is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. Our Amazon Associate tag is `audiochainhif-20`.
 
 **Crutchfield**
-We participate in the Crutchfield affiliate program through Sovrn Commerce. Qualifying purchases made through Crutchfield links on this site may earn us a commission.
+We participate in the Crutchfield affiliate program. Qualifying purchases made through Crutchfield links on this site may earn us a commission.
 
 **Audio Advice**
 We participate in the Audio Advice affiliate program. Qualifying purchases made through Audio Advice links on this site may earn us a commission.
@@ -55,3 +60,5 @@ This site also displays advertisements served by Google AdSense and other advert
 ## Questions
 
 If you have any questions about our affiliate relationships or how we earn revenue, please reach out via our [contact page](/contact/).
+
+</div>
