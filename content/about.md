@@ -1,37 +1,58 @@
 ---
 title: "About Deep Groove HiFi"
-description: "Learn about Deep Groove HiFi — who we are, what we cover, and why we're passionate about high-fidelity audio."
-layout: "single"
-type: "page"
+description: "Who we are, why we built this site, and what we believe about high-fidelity audio."
+date: 2026-05-13
+lastmod: 2026-05-13
+layout: "page"
 ---
 
-<div class="static-page">
+## Where Signal Meets Passion
 
-# About Deep Groove HiFi
+Deep Groove HiFi exists because great audio writing is hard to find.
 
-Deep Groove HiFi is an independent publication dedicated to serious, accessible coverage of high-fidelity audio equipment and the culture surrounding it.
+Most of what's out there falls into one of two camps: overly technical specs pages that tell you nothing about how something actually sounds, or breathless marketing copy dressed up as a review. We wanted something different — honest, in-depth coverage written by someone who genuinely cares about the music first and the gear second.
 
-We believe that great sound is not the exclusive domain of those with unlimited budgets or engineering degrees. Whether you're spinning vinyl on a carefully chosen turntable, streaming lossless audio through a precision DAC, or carefully matching an integrated amplifier to a pair of bookshelf speakers — the pursuit of better sound is something worth taking seriously.
+---
 
-## What We Cover
+## Who We Are
 
-We focus on the components that make up a serious listening system:
+I'm Kevin — Sully to my friends — based in Georgia, originally from the Adirondack Mountain region of Northern New York. I had strayed away from HiFi for about 25 years when, a couple of years ago, I realized how much I missed truly listening to music. I started slow, but quickly worked my way through a lot of used and new equipment over the past two years. Along the way I noticed something: there aren't many genuinely useful websites, calculators, or guides for people who want to learn and build their dream system from the ground up. That's the reason Deep Groove HiFi was born. Enjoy the site — and please reach out with feedback on what you'd like to see next.
 
-- **DACs and Streamers** — the digital front end, from entry-level USB DACs to network players capable of resolving every detail in a hi-res file
-- **Amplification** — integrated amplifiers, stereo power amps, headphone amplifiers, and the preamplifiers that sit upstream of them
-- **Turntables and Vinyl Playback** — turntables, tonearms, cartridges, phono stages, and everything required to get the most from a record
-- **Speakers** — bookshelf monitors, floorstanders, and the room interactions that shape everything
-- **CD and Disc Players** — because silver discs still have something to say
-- **Cables and Accessories** — approached honestly, without the mysticism
+We cover DACs, amplifiers, turntables, speakers, streamers, and the cables and accessories that connect them. Our focus is the sub-$5,000 space where the real value decisions get made — where a $400 amplifier can genuinely outperform one that costs four times as much if you know what to look for.
 
-## Our Approach
+---
 
-Every article on Deep Groove HiFi is written with a single goal: to give you information you can actually use. We explain the engineering clearly, acknowledge where measurements and listening impressions agree or diverge, and always answer the question that matters most — is this worth your money?
+## What We Believe
 
-We are reader-supported through affiliate commissions from Amazon. When you purchase a product we've linked to, we may earn a small commission at no additional cost to you. This never influences our editorial positions. We link only to products we would recommend regardless.
+**Measurements matter. So does listening.**
+We pay attention to objective data — frequency response, THD, SNR — because they tell part of the story. But we never forget that the point of all this equipment is to make music more emotionally engaging. Numbers alone can't tell you whether something will make you want to stay up until 2am listening to records.
 
-## Contact Us
+**Transparency over hype.**
+We participate in affiliate programs and display advertising — that's how the site pays for itself. But those relationships don't influence our editorial content. When something isn't worth buying, we say so. When a budget option outperforms a flagship, we say that too.
 
-Have a question, product suggestion, or correction? We'd love to hear from you. Reach us on our [contact page](/contact/).
+**The music is the point.**
+Gear is a means to an end. The end is the music. We never lose sight of that.
 
-</div>
+---
+
+## Our Coverage
+
+- **Buying guides** — curated recommendations at every price point, updated regularly
+- **Deep dives** — technical explainers that don't require an engineering degree to follow
+- **Calculators** — tools to help you match gear to your room and your ears
+- **Features** — longer reads on the culture, history, and craft of high-fidelity audio
+
+---
+
+## Sister Sites
+
+Deep Groove HiFi is part of a small network of audio-focused publications:
+
+- [AudioChainHiFi.com](https://audiochainhifi.com) — focused on signal chain optimization and component matching
+- [AudioScopeHiFi.com](https://audioscopehifi.com) — measurement-forward audio coverage
+
+---
+
+## Get in Touch
+
+Questions, feedback, review requests, or just want to talk audio? Use our [contact page](/contact/) — we read every message.
