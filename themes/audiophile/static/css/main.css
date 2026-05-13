@@ -978,3 +978,18 @@ a:hover { color: var(--accent-hover); }
 .tag--gear    { color: #e0b07e; }
 .tag--reviews { color: #90e09e; }
 .tag--feature { color: #c97eb8; }
+
+/* ============================================================
+   WARM CREAM THEME — Dark surface text overrides
+   Nav and hero sit on dark backgrounds; keep their text light.
+   ============================================================ */
+.nav__logo-text            { color: #ffffff; }
+.nav__links a              { color: rgba(255,255,255,0.8); }
+.nav__links a:hover        { color: var(--accent); }
+.nav__toggle span          { background: #ffffff; }
+
+.hero__title               { color: #ffffff; }
+.hero__subtitle            { color: rgba(255,255,255,0.75); }
+
+.footer__logo-text         { color: #ffffff; }
+.footer__col h4            { color: #ffffff; }
