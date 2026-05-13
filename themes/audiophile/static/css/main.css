@@ -3,31 +3,31 @@
    To retheme the entire site, edit only this section.
    ============================================================ */
 :root {
-  /* ── Colors ── */
-  --bg:           #141414;   /* Page background      */
-  --bg-card:      #1e1e1e;   /* Article cards        */
-  --bg-nav:       #161616;   /* Navigation bar       */
-  --bg-sidebar:   #1a1a1a;   /* Sidebar background   */
-  --accent:       #d4a94c;   /* Gold accent color    */
-  --accent-hover: #f0c96a;   /* Accent on hover      */
-  --text:         #f0f0f0;   /* Primary body text    */
-  --text-muted:   #9a9a9a;   /* Dates, meta info     */
-  --text-head:    #ffffff;   /* Headings             */
-  --border:       #333333;   /* Borders, dividers    */
-  --tag-bg:       #272727;   /* Category tag pill bg */
+  /* — Colors — */
+  --bg:           #FAF7F2;   /* Page background      */
+  --bg-card:      #EDE6DA;   /* Article cards        */
+  --bg-nav:       #1C1C1C;   /* Navigation bar       */
+  --bg-sidebar:   #EDE6DA;   /* Sidebar background   */
+  --accent:       #B8860B;   /* Gold accent color    */
+  --accent-hover: #9A6F09;   /* Accent on hover      */
+  --text:         #2C2416;   /* Primary body text    */
+  --text-muted:   #7A6A58;   /* Dates, meta info     */
+  --text-head:    #1A1208;   /* Headings             */
+  --border:       #D8CFBF;   /* Borders, dividers    */
+  --tag-bg:       #E0D5C5;   /* Category tag pill bg */
 
-  /* ── Typography ── */
+  /* — Typography — */
   --font-head:    'Playfair Display', Georgia, serif;
   --font-body:    'Inter', system-ui, -apple-system, sans-serif;
   --size-body:    18px;
   --size-sm:      15px;
   --line-body:    1.85;
 
-  /* ── Layout ── */
-  --max-width:    1200px;
-  --article-width: 740px;
-  --radius:       5px;
-  --nav-height:   68px;
+  /* — Layout — */
+  --max-width:      1200px;
+  --article-width:  740px;
+  --radius:         5px;
+  --nav-height:     68px;
 }
 
 /* ============================================================
