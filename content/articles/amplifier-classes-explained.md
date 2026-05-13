@@ -71,3 +71,6 @@ That said, if sonic character matters to you and you've heard specific descripti
 
 The best amplifier for your system is the one that drives your specific speakers to your preferred listening levels without running out of headroom, while sounding the way you like and fitting your budget.
 
+
+Use our [Amplifier Power & Speaker SPL Calculator](/calculators/amplifier-power/) 
+to find out exactly how many watts your setup needs.
