@@ -21,6 +21,10 @@ paginate = 12
     url = "/categories/guides/"
     weight = 1
   [[menu.main]]
+    name = "Calculators"
+    url = "/calculators/"
+    weight = 2
+  [[menu.main]]
     name = "Features"
     url = "/categories/features/"
     weight = 3

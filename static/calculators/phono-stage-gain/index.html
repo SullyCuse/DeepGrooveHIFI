@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phono Stage Gain Calculator | Deep Groove HiFi</title>
+  <meta name="description" content="Find exactly how much gain your phono stage needs for your MM or MC cartridge. Free calculator from Deep Groove HiFi — includes step-up transformer recommendations." />
+  <meta name="author" content="Deep Groove HiFi" />
+  <meta property="og:title" content="Phono Stage Gain Calculator | Deep Groove HiFi" />
+  <meta property="og:description" content="Find exactly how much gain your phono stage needs for your MM or MC cartridge." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://deepgroovehifi.com/calculators/phono-stage-gain/" />
+  <meta property="og:site_name" content="Deep Groove HiFi" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Phono Stage Gain Calculator | Deep Groove HiFi" />
+  <meta name="twitter:description" content="Find exactly how much gain your phono stage needs for your MM or MC cartridge." />
+  <link rel="canonical" href="https://deepgroovehifi.com/calculators/phono-stage-gain/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-page:      #FAF7F2;
+      --bg-hero:      #EDE6DA;
+      --bg-card:      #EDE6DA;
+      --bg-input:     #E8DDD0;
+      --bg-nav:       #1C1C1C;
+      --gold:         #B8860B;
+      --gold-hover:   #9A6F09;
+      --gold-dim:     rgba(184,134,11,0.12);
+      --gold-border:  rgba(184,134,11,0.35);
+      --text-white:   #1A1208;
+      --text-body:    #2C2416;
+      --text-muted:   #7A6A58;
+      --text-dim:     #9A8A78;
+      --border:       #D8CFBF;
+      --border-light: #E0D5C5;
+      --serif:        'Playfair Display', Georgia, serif;
+      --sans:         'Inter', system-ui, -apple-system, sans-serif;
+      --radius:       5px;
+      --radius-lg:    10px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg-page); color: var(--text-body); font-family: var(--sans); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-hover); }
+
+    /* ── NETWORK BAR ── */
+    .network-bar { background: #0e0e0e; border-bottom: 1px solid #222; padding: .4rem 1.5rem; }
+    .network-bar__inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: .6rem; flex-wrap: wrap; }
+    .network-bar__label { font-size: 11px; color: #9a9a9a; letter-spacing: .04em; }
+    .network-bar a { font-size: 11px; color: var(--gold); font-weight: 500; letter-spacing: .04em; }
+    .network-bar a:hover { color: var(--gold-hover); }
+    .network-bar__dot { color: #333; font-size: 10px; }
+
+    /* ── NAV ── */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--bg-nav); border-bottom: 0.5px solid #333; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo-text { font-family: var(--sans); font-size: 15px; font-weight: 500; color: #ffffff; letter-spacing: .01em; }
+    .nav-logo-text span { color: var(--gold); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; transition: color .15s; }
+    .nav-links a:hover { color: var(--gold); }
+    @media (max-width: 420px) { .nav-links { display: none; } }
+
+    /* ── HERO ── */
+    .hero { background: var(--bg-hero); padding: 3.5rem 1.5rem 3rem; border-bottom: 0.5px solid var(--border); }
+    .hero-inner { max-width: 700px; margin: 0 auto; }
+    .hero-breadcrumb { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .hero-breadcrumb a { color: var(--gold); }
+    .hero-breadcrumb span { color: var(--text-dim); margin: 0 6px; }
+    .hero h1 { font-family: var(--serif); font-size: clamp(26px, 4vw, 40px); font-weight: 700; line-height: 1.2; color: #1A1208; margin-bottom: 1rem; }
+    .hero-sub { font-size: 16px; color: var(--text-muted); max-width: 580px; line-height: 1.7; }
+
+    /* ── LAYOUT ── */
+    .main { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    .section-label { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1rem; padding-bottom: .75rem; border-bottom: 0.5px solid var(--border); }
+
+    /* ── CARTRIDGE TYPE SELECTOR ── */
+    .type-card { background: var(--bg-card); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 18px 20px; margin-bottom: 12px; }
+    .type-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    @media (max-width: 480px) { .type-grid { grid-template-columns: 1fr; } }
+    .type-btn { background: var(--bg-input); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 12px 10px; text-align: center; cursor: pointer; transition: all .15s; }
+    .type-btn:hover { border-color: var(--gold-border); }
+    .type-btn.active { background: var(--gold); border-color: var(--gold); }
+    .type-btn-name { font-size: 14px; font-weight: 500; color: var(--text-white); }
+    .type-btn.active .type-btn-name { color: #fff; }
+    .type-btn-range { font-size: 12px; color: var(--text-dim); margin-top: 3px; }
+    .type-btn.active .type-btn-range { color: rgba(255,255,255,0.8); }
+
+    /* ── INPUTS ── */
+    .inputs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 1.5rem; }
+    @media (max-width: 560px) { .inputs-grid { grid-template-columns: 1fr; } }
+    .input-card { background: var(--bg-card); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 18px 20px; }
+    .input-card-label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 12px; display: block; }
+    .slider-readout { display: flex; align-items: baseline; gap: 6px; margin-bottom: 8px; }
+    .slider-val { font-family: var(--serif); font-size: 30px; font-weight: 600; color: var(--text-white); line-height: 1; }
+    .slider-unit { font-size: 13px; color: var(--text-dim); }
+    input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; background: var(--border); border-radius: 2px; outline: none; cursor: pointer; }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: var(--gold); border: 2px solid var(--bg-page); cursor: pointer; }
+    input[type="range"]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--gold); border: 2px solid var(--bg-page); cursor: pointer; }
+    .range-labels { display: flex; justify-content: space-between; margin-top: 5px; }
+    .range-labels span { font-size: 10px; color: var(--text-dim); }
+
+    /* ── RESULTS ── */
+    .results-card { background: var(--bg-input); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 1.5rem; }
+    .results-grid { display: grid; grid-template-columns: 1fr 1px 1fr 1px 1fr; gap: 0; margin-bottom: 24px; }
+    @media (max-width: 480px) { .results-grid { grid-template-columns: 1fr; } .results-divider { display: none; } }
+    .results-divider { background: var(--border); }
+    .result-block { padding: 0 20px; }
+    .result-block:first-child { padding-left: 0; }
+    .result-block:last-child { padding-right: 0; }
+    .result-label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 8px; }
+    .result-value { font-family: var(--serif); font-size: 44px; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 4px; }
+    .result-unit { font-size: 13px; color: var(--text-dim); margin-bottom: 10px; }
+    .result-note { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+    /* ── METER ── */
+    .meter-section { border-top: 0.5px solid var(--border); padding-top: 20px; }
+    .meter-label { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
+    .meter-track { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; margin-bottom: 5px; }
+    .meter-fill { height: 100%; border-radius: 3px; background: var(--gold); transition: width .35s ease, background .35s ease; }
+    .meter-ticks { display: flex; justify-content: space-between; margin-bottom: 16px; }
+    .meter-ticks span { font-size: 10px; color: var(--text-dim); }
+    .verdict-box { background: var(--bg-card); border-left: 2px solid var(--gold); border-radius: 0 var(--radius) var(--radius) 0; padding: 12px 16px; font-size: 14px; color: var(--text-muted); line-height: 1.6; transition: border-color .35s ease; }
+    .verdict-box strong { color: var(--text-body); font-weight: 500; }
+
+    /* ── AFFILIATE ── */
+    .aff-section { margin-bottom: 2.5rem; }
+    .aff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+    .aff-card { background: var(--bg-card); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; text-decoration: none; transition: border-color .2s; }
+    .aff-card:hover { border-color: var(--gold-border); }
+    .aff-retailer { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+    .aff-desc { font-size: 13px; color: var(--text-muted); line-height: 1.45; }
+    .aff-arrow { font-size: 13px; color: var(--text-dim); margin-top: 4px; }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 2.5rem; }
+    .faq-item { border-top: 0.5px solid var(--border); padding: 18px 0; }
+    .faq-item:last-child { border-bottom: 0.5px solid var(--border); }
+    .faq-q { font-family: var(--serif); font-size: 17px; font-weight: 600; color: var(--text-white); margin-bottom: 8px; line-height: 1.35; }
+    .faq-a { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ── RELATED ── */
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .related-card { background: var(--bg-card); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 18px 20px; text-decoration: none; display: block; transition: border-color .2s; }
+    .related-card:hover { border-color: var(--gold-border); }
+    .related-tag { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .related-title { font-family: var(--serif); font-size: 16px; font-weight: 600; color: var(--text-white); line-height: 1.35; }
+
+    /* ── FOOTER ── */
+    .footer { border-top: 0.5px solid var(--border); padding: 2.5rem 1.5rem; background: var(--bg-nav); }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
+    @media (max-width: 680px) { .footer-inner { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+    .footer-brand-name { font-family: var(--sans); font-size: 15px; font-weight: 500; color: #ffffff; margin-bottom: 8px; }
+    .footer-brand-name span { color: var(--gold); }
+    .footer-brand-desc { font-size: 13px; color: #666; line-height: 1.6; max-width: 260px; }
+    .footer-col-head { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #666; margin-bottom: 12px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { font-size: 13px; color: #888; text-decoration: none; transition: color .15s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom { max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 0.5px solid #333; font-size: 12px; color: #555; }
+  </style>
+</head>
+
+<body>
+
+  <!-- NETWORK BAR -->
+  <div class="network-bar">
+    <div class="network-bar__inner">
+      <span class="network-bar__label">Also from our network:</span>
+      <a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a>
+      <span class="network-bar__dot">·</span>
+      <a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="https://deepgroovehifi.com/" class="nav-logo" aria-label="Deep Groove HiFi home">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="18" cy="18" r="17" stroke="#d4a94c" stroke-width="2"/>
+          <circle cx="18" cy="18" r="5" fill="#d4a94c"/>
+          <path d="M6 18 Q9 11 12 18 Q15 25 18 18 Q21 11 24 18 Q27 25 30 18" stroke="#d4a94c" stroke-width="1.75" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="nav-logo-text">Deep Groove <span>HiFi</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
+        <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
+        <li><a href="https://deepgroovehifi.com/calculators/">Calculators</a></li>
+        <li><a href="https://deepgroovehifi.com/about/">About</a></li>
+        <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-breadcrumb">
+        <a href="https://deepgroovehifi.com/">Deep Groove HiFi</a>
+        <span>›</span>
+        <a href="https://deepgroovehifi.com/calculators/">Calculators</a>
+        <span>›</span>
+        Phono Stage Gain
+      </div>
+      <h1>Phono stage gain calculator</h1>
+      <p class="hero-sub">Enter your cartridge's output voltage to find exactly how much gain your phono stage needs — and whether you require a step-up transformer.</p>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- CARTRIDGE TYPE -->
+    <div class="section-label">Your cartridge</div>
+    <div class="type-card">
+      <label class="input-card-label">Cartridge type</label>
+      <div class="type-grid">
+        <button class="type-btn" id="btn-mm" onclick="setType('mm')" aria-pressed="false">
+          <div class="type-btn-name">MM</div>
+          <div class="type-btn-range">2 – 6 mV output</div>
+        </button>
+        <button class="type-btn active" id="btn-homc" onclick="setType('homc')" aria-pressed="true">
+          <div class="type-btn-name">High-output MC</div>
+          <div class="type-btn-range">1 – 2.5 mV output</div>
+        </button>
+        <button class="type-btn" id="btn-lomc" onclick="setType('lomc')" aria-pressed="false">
+          <div class="type-btn-name">Low-output MC</div>
+          <div class="type-btn-range">0.1 – 0.6 mV output</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- SLIDERS -->
+    <div class="inputs-grid">
+      <div class="input-card">
+        <label class="input-card-label" for="cart">Cartridge output voltage</label>
+        <div class="slider-readout">
+          <span class="slider-val" id="cartVal">1.8</span>
+          <span class="slider-unit">mV</span>
+        </div>
+        <input type="range" id="cart" min="0.5" max="2.5" value="1.8" step="0.1" aria-label="Cartridge output voltage in millivolts" />
+        <div class="range-labels"><span id="rangeMin">0.5 mV</span><span id="rangeMax">2.5 mV</span></div>
+      </div>
+      <div class="input-card">
+        <label class="input-card-label" for="target">Target output (line level)</label>
+        <div class="slider-readout">
+          <span class="slider-val" id="targetVal">200</span>
+          <span class="slider-unit">mV</span>
+        </div>
+        <input type="range" id="target" min="100" max="400" value="200" step="10" aria-label="Target line level output in millivolts" />
+        <div class="range-labels"><span>100 mV</span><span>400 mV</span></div>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="section-label">Results</div>
+    <div class="results-card" role="region" aria-label="Calculator results" aria-live="polite">
+      <div class="results-grid">
+        <div class="result-block">
+          <div class="result-label">Gain required</div>
+          <div class="result-value" id="gainDb">—</div>
+          <div class="result-unit">dB</div>
+          <div class="result-note" id="gainNote"></div>
+        </div>
+        <div class="results-divider" aria-hidden="true"></div>
+        <div class="result-block">
+          <div class="result-label">Voltage multiplier</div>
+          <div class="result-value" id="gainMult">—</div>
+          <div class="result-unit">× ratio</div>
+          <div class="result-note" id="multNote"></div>
+        </div>
+        <div class="results-divider" aria-hidden="true"></div>
+        <div class="result-block">
+          <div class="result-label">Stage required</div>
+          <div class="result-value" id="stageType" style="font-size:28px; padding-top:8px;">—</div>
+          <div class="result-unit" id="stageNote"></div>
+        </div>
+      </div>
+      <div class="meter-section">
+        <div class="meter-label">Gain range indicator</div>
+        <div class="meter-track"><div class="meter-fill" id="gainMeter" style="width:0%"></div></div>
+        <div class="meter-ticks">
+          <span>30 dB</span>
+          <span>40 dB (MM)</span>
+          <span>55 dB</span>
+          <span>65 dB (LOMC)</span>
+          <span>75 dB+</span>
+        </div>
+        <div class="verdict-box" id="verdict">Select your cartridge type and adjust the output voltage above.</div>
+      </div>
+    </div>
+
+    <!-- AFFILIATE -->
+    <div class="aff-section">
+      <div class="section-label">Shop phono stages</div>
+      <div class="aff-grid">
+        <a href="https://www.awin1.com/cread.php?awinmid=119395&awinaffid=2894963&clickref=DeepGrooveHifi+PhonoStage&ued=https%3A%2F%2Ffosiaudio.com%2Fcollections%2Fphono-preamp" class="aff-card" target="_blank" rel="noopener sponsored">
+          <div class="aff-retailer">Fosi Audio</div>
+          <div class="aff-desc">Compact phono preamps with strong value at every gain level</div>
+          <div class="aff-arrow">Browse phono stages →</div>
+        </a>
+        <a href="https://www.audioadvice.com/phono-preamps" class="aff-card" target="_blank" rel="noopener sponsored">
+          <div class="aff-retailer">Audio Advice</div>
+          <div class="aff-desc">Curated phono stage selection with expert guidance at every budget</div>
+          <div class="aff-arrow">Browse phono stages →</div>
+        </a>
+        <a href="https://www.amazon.com/s?k=phono+stage+preamp&tag=audiochainhif-20" class="aff-card" target="_blank" rel="noopener sponsored">
+          <div class="aff-retailer">Amazon</div>
+          <div class="aff-desc">Wide selection of phono preamps from budget to audiophile-grade</div>
+          <div class="aff-arrow">Browse phono stages →</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <div class="section-label">Understanding the numbers</div>
+      <div class="faq-item">
+        <div class="faq-q">What is phono stage gain and why does it matter?</div>
+        <div class="faq-a">A phono stage amplifies the tiny signal from your cartridge — typically between 0.1 mV and 6 mV — up to line level so your integrated amplifier or preamplifier can work with it. Too little gain and your music sounds thin, quiet, and distant. Too much and you introduce noise and distortion. Matching gain to your cartridge's output voltage is one of the most important and most overlooked setup decisions in a vinyl system.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between MM and MC gain requirements?</div>
+        <div class="faq-a">Moving Magnet cartridges typically output 2–6 mV and need around 36–42 dB of gain — a requirement easily met by almost any phono stage on the market. Moving Coil cartridges output far less, sometimes under 0.2 mV, and require 60–75 dB of gain. Using an MM-only phono stage with a low-output MC cartridge results in a very weak, noise-prone signal that no amount of downstream volume adjustment can properly fix.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">When do I need a step-up transformer?</div>
+        <div class="faq-a">When your cartridge outputs less than 0.2 mV, even the best high-gain MC phono stages struggle to amplify cleanly without introducing noise. A step-up transformer (SUT) passively boosts the signal — typically by 20–26 dB — before it reaches the phono stage, allowing a lower-gain MM or moderate-gain MC stage to handle very low-output cartridges with exceptional noise performance. Many audiophiles consider a quality SUT paired with a good MM stage to sound superior to any active MC stage at the same price point.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does the voltage multiplier figure mean?</div>
+        <div class="faq-a">The voltage multiplier (or gain ratio) shows the same result as the dB figure in a different form. A multiplier of 100× means your phono stage takes the cartridge's output voltage and amplifies it one hundred times to reach line level. Some audiophiles find this figure more intuitive than decibels when comparing phono stage specifications — many manufacturers list both.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does cartridge loading affect gain requirements?</div>
+        <div class="faq-a">Loading — the input impedance your phono stage presents to the cartridge — affects tonal character and high-frequency response, particularly with MC cartridges, but it does not change the gain requirement. Set your loading according to your cartridge manufacturer's recommendations, then use this calculator to confirm you have adequate gain. The two adjustments are independent of each other.</div>
+      </div>
+    </div>
+
+    <!-- RELATED -->
+    <div class="section-label">Related calculators &amp; guides</div>
+    <div class="related-grid">
+      <a href="https://deepgroovehifi.com/calculators/amplifier-power/" class="related-card">
+        <div class="related-tag">Calculator</div>
+        <div class="related-title">Amplifier power &amp; speaker SPL calculator</div>
+      </a>
+      <a href="https://deepgroovehifi.com/articles/what-is-a-dac/" class="related-card">
+        <div class="related-tag">Guide</div>
+        <div class="related-title">What is a DAC? Understanding digital-to-analog conversion</div>
+      </a>
+      <a href="https://deepgroovehifi.com/calculators/" class="related-card">
+        <div class="related-tag">Tools</div>
+        <div class="related-title">All HiFi calculators &amp; system tools</div>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Deep Groove <span>HiFi</span></div>
+        <p class="footer-brand-desc">Expert audiophile coverage for enthusiasts who care about the signal chain — from source to speaker.</p>
+      </div>
+      <div>
+        <div class="footer-col-head">Topics</div>
+        <ul class="footer-links">
+          <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
+          <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
+          <li><a href="https://deepgroovehifi.com/calculators/">Calculators</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-head">Gear types</div>
+        <ul class="footer-links">
+          <li><a href="https://deepgroovehifi.com/tags/amplifiers/">Amplifiers</a></li>
+          <li><a href="https://deepgroovehifi.com/tags/turntables/">Turntables</a></li>
+          <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
+          <li><a href="https://deepgroovehifi.com/tags/speakers/">Speakers</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-head">Site</div>
+        <ul class="footer-links">
+          <li><a href="https://deepgroovehifi.com/about/">About</a></li>
+          <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
+          <li><a href="https://deepgroovehifi.com/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="https://deepgroovehifi.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Deep Groove HiFi. All rights reserved.</div>
+  </footer>
+
+  <script>
+    var cartridgeType = 'homc';
+
+    var typeRanges = {
+      mm:   { min: 2,   max: 6,   val: 4.0,  label: 'MM',            note: 'standard MM phono stage' },
+      homc: { min: 0.5, max: 2.5, val: 1.8,  label: 'MC',            note: 'standard MC phono stage' },
+      lomc: { min: 0.1, max: 0.6, val: 0.3,  label: 'MC / SUT',      note: 'high-gain MC or step-up transformer' }
+    };
+
+    function setType(t) {
+      cartridgeType = t;
+      Object.keys(typeRanges).forEach(function(k) {
+        var btn = document.getElementById('btn-' + k);
+        btn.classList.toggle('active', k === t);
+        btn.setAttribute('aria-pressed', k === t ? 'true' : 'false');
+      });
+      var r = typeRanges[t];
+      var s = document.getElementById('cart');
+      s.min = r.min; s.max = r.max; s.value = r.val; s.step = t === 'lomc' ? 0.05 : 0.1;
+      document.getElementById('rangeMin').textContent = r.min + ' mV';
+      document.getElementById('rangeMax').textContent = r.max + ' mV';
+      document.getElementById('cartVal').textContent = parseFloat(r.val).toFixed(t === 'lomc' ? 2 : 1);
+      calc();
+    }
+
+    function calc() {
+      var cart   = parseFloat(document.getElementById('cart').value);
+      var target = parseFloat(document.getElementById('target').value);
+      var t      = cartridgeType;
+
+      var gainDb   = 20 * Math.log10(target / cart);
+      var gainMult = Math.round(target / cart);
+
+      document.getElementById('gainDb').textContent   = Math.round(gainDb);
+      document.getElementById('gainMult').textContent = gainMult + '×';
+
+      var meterPct = Math.min(100, Math.max(0, ((gainDb - 30) / 45) * 100));
+      document.getElementById('gainMeter').style.width = meterPct.toFixed(0) + '%';
+
+      var stageType, stageNote, verdictText, verdictColor, gainNote, multNote;
+
+      if (gainDb < 38) {
+        stageType    = 'MM';
+        stageNote    = 'standard MM stage';
+        gainNote     = 'Well within MM stage range.';
+        multNote     = 'Low multiplier — easy for any MM stage.';
+        verdictColor = '#B8860B';
+        verdictText  = '<strong>Standard MM phono stage.</strong> A gain of ' + Math.round(gainDb) + ' dB is comfortably within the range of any quality MM phono stage. You have a wide selection available from $50 to $1,000+.';
+      } else if (gainDb < 48) {
+        stageType    = 'MM / MC';
+        stageNote    = 'MM or MC stage';
+        gainNote     = 'Upper MM or lower MC range.';
+        multNote     = 'Moderate multiplier.';
+        verdictColor = '#B8860B';
+        verdictText  = '<strong>MM or entry MC phono stage.</strong> At ' + Math.round(gainDb) + ' dB, a high-output MM stage or a dedicated MC stage will both work well. Verify your chosen phono stage\'s gain spec matches this figure.';
+      } else if (gainDb < 62) {
+        stageType    = 'MC';
+        stageNote    = 'dedicated MC stage';
+        gainNote     = 'Standard MC gain range.';
+        multNote     = 'Typical MC multiplication.';
+        verdictColor = '#9A7010';
+        verdictText  = '<strong>Dedicated MC phono stage.</strong> A gain of ' + Math.round(gainDb) + ' dB requires a phono stage specifically designed for MC cartridges. Confirm the gain spec of your chosen stage — many MC stages offer switchable gain settings.';
+      } else if (gainDb < 72) {
+        stageType    = 'High-gain MC';
+        stageNote    = 'high-gain MC stage';
+        gainNote     = 'High gain — specify carefully.';
+        multNote     = 'High multiplication ratio.';
+        verdictColor = '#8B5E0A';
+        verdictText  = '<strong>High-gain MC phono stage required.</strong> At ' + Math.round(gainDb) + ' dB you need a stage built for low-output MC cartridges. Not all MC stages reach this level — check the specification sheet carefully before purchasing.';
+      } else {
+        stageType    = 'SUT + MM';
+        stageNote    = 'step-up transformer recommended';
+        gainNote     = 'SUT territory.';
+        multNote     = 'Very high — active gain alone is noisy.';
+        verdictColor = '#A0522D';
+        verdictText  = '<strong>Step-up transformer (SUT) recommended.</strong> At ' + Math.round(gainDb) + ' dB, a passive step-up transformer before a quality MM stage will deliver cleaner amplification than any active phono stage alone. This is standard practice for very low-output MC cartridges.';
+      }
+
+      document.getElementById('stageType').textContent  = stageType;
+      document.getElementById('stageNote').textContent  = stageNote;
+      document.getElementById('gainNote').textContent   = gainNote;
+      document.getElementById('multNote').textContent   = multNote;
+      document.getElementById('verdict').innerHTML      = verdictText;
+      document.getElementById('verdict').style.borderColor = verdictColor;
+      document.getElementById('gainMeter').style.background = verdictColor;
+    }
+
+    document.getElementById('cart').addEventListener('input', function() {
+      var t = cartridgeType;
+      var decimals = t === 'lomc' ? 2 : 1;
+      document.getElementById('cartVal').textContent = parseFloat(this.value).toFixed(decimals);
+      calc();
+    });
+    document.getElementById('target').addEventListener('input', function() {
+      document.getElementById('targetVal').textContent = this.value;
+      calc();
+    });
+
+    setType('homc');
+  </script>
+
+</body>
+</html>
