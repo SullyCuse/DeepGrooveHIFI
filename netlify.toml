@@ -11,6 +11,17 @@
   to   = "/articles/"
   status = 301
 
+# Fix 404s flagged by Google Search Console
+[[redirects]]
+  from = "/articles/first-hifi-system-under-2000/"
+  to   = "/articles/"
+  status = 301
+
+[[redirects]]
+  from = "/tags/system/"
+  to   = "/tags/"
+  status = 301
+
 # 404 page
 [[redirects]]
   from   = "/*"
