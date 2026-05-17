@@ -20,7 +20,7 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg-page: #FAF7F2; --bg-hero: #EDE6DA; --bg-card: #EDE6DA; --bg-nav: #1C1C1C;
+      --bg-page: #FAF7F2; --bg-hero: #EDE6DA; --bg-nav: #1C1C1C;
       --gold: #B8860B; --gold-hover: #9A6F09; --gold-border: rgba(184,134,11,0.35);
       --text-head: #1A1208; --text-body: #2C2416; --text-muted: #7A6A58; --text-dim: #9A8A78;
       --border: #D8CFBF; --serif: 'Playfair Display', Georgia, serif; --sans: 'Inter', system-ui, sans-serif;
@@ -31,15 +31,19 @@
     a { color: var(--gold); text-decoration: none; }
     a:hover { color: var(--gold-hover); }
 
+    /* ── NETWORK BAR ── */
     .network-bar { background: #0e0e0e; border-bottom: 1px solid #222; padding: .4rem 1.5rem; }
     .network-bar__inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: .6rem; flex-wrap: wrap; }
     .network-bar__label { font-size: 11px; color: #9a9a9a; letter-spacing: .04em; }
     .network-bar a { font-size: 11px; color: var(--gold); font-weight: 500; letter-spacing: .04em; }
+    .network-bar a:hover { color: var(--gold-hover); }
     .network-bar__dot { color: #333; font-size: 10px; }
 
+    /* ── NAV ── */
     .nav { position: sticky; top: 0; z-index: 100; background: var(--bg-nav); border-bottom: 0.5px solid #333; }
     .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { width: 34px; height: 34px; display: block; }
     .nav-logo-text { font-family: var(--sans); font-size: 15px; font-weight: 500; color: #ffffff; }
     .nav-logo-text span { color: var(--gold); }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -47,6 +51,7 @@
     .nav-links a:hover, .nav-links a.active { color: var(--gold); }
     @media (max-width: 420px) { .nav-links { display: none; } }
 
+    /* ── HERO ── */
     .hero { background: var(--bg-hero); padding: 3.5rem 1.5rem 3rem; border-bottom: 0.5px solid var(--border); }
     .hero-inner { max-width: 700px; margin: 0 auto; }
     .hero-breadcrumb { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
@@ -55,27 +60,28 @@
     .hero h1 { font-family: var(--serif); font-size: clamp(26px, 4vw, 40px); font-weight: 700; color: var(--text-head); line-height: 1.2; margin-bottom: 1rem; }
     .hero-sub { font-size: 16px; color: var(--text-muted); line-height: 1.7; }
 
+    /* ── LAYOUT ── */
     .main { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
     .section-label { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1.25rem; padding-bottom: .75rem; border-bottom: 0.5px solid var(--border); }
 
+    /* ── CALC CARDS ── */
     .calc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin-bottom: 2.5rem; }
-
     .calc-card { background: #fff; border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; transition: border-color .2s, box-shadow .2s; }
     .calc-card:hover { border-color: var(--gold-border); }
     .calc-card.live { border-left: 2px solid var(--gold); }
     .calc-card.soon { opacity: 0.65; cursor: default; pointer-events: none; }
-
     .calc-status { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
     .calc-status.live { color: var(--gold); }
     .calc-status.soon { color: var(--text-dim); }
-
     .calc-name { font-family: var(--serif); font-size: 17px; font-weight: 600; color: var(--text-head); line-height: 1.3; }
     .calc-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
     .calc-link { font-size: 13px; color: var(--gold); margin-top: auto; padding-top: 4px; }
 
+    /* ── FOOTER ── */
     .footer { border-top: 0.5px solid var(--border); padding: 2.5rem 1.5rem; background: var(--bg-nav); }
-    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
-    @media (max-width: 680px) { .footer-inner { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 2rem; }
+    @media (max-width: 860px) { .footer-inner { grid-template-columns: 1fr 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+    @media (max-width: 540px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
     .footer-brand-name { font-size: 15px; font-weight: 500; color: #ffffff; margin-bottom: 8px; }
     .footer-brand-name span { color: var(--gold); }
     .footer-brand-desc { font-size: 13px; color: #666; line-height: 1.6; max-width: 260px; }
@@ -89,6 +95,7 @@
 
 <body>
 
+  <!-- NETWORK BAR -->
   <div class="network-bar">
     <div class="network-bar__inner">
       <span class="network-bar__label">Also from our network:</span>
@@ -98,9 +105,11 @@
     </div>
   </div>
 
+  <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="https://deepgroovehifi.com/" class="nav-logo">
+        <img src="/images/logo.svg" alt="Deep Groove HiFi" width="34" height="34" />
         <span class="nav-logo-text">Deep Groove <span>HiFi</span></span>
       </a>
       <ul class="nav-links">
@@ -113,6 +122,7 @@
     </div>
   </nav>
 
+  <!-- HERO -->
   <div class="hero">
     <div class="hero-inner">
       <div class="hero-breadcrumb">
@@ -125,6 +135,7 @@
     </div>
   </div>
 
+  <!-- MAIN -->
   <main class="main">
 
     <div class="section-label">Available now</div>
@@ -177,6 +188,7 @@
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
@@ -187,17 +199,19 @@
         <div class="footer-col-head">Topics</div>
         <ul class="footer-links">
           <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
+          <li><a href="https://deepgroovehifi.com/tags/reviews/">Reviews</a></li>
           <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
-          <li><a href="https://deepgroovehifi.com/calculators/">Calculators</a></li>
+          <li><a href="https://deepgroovehifi.com/articles/">All Articles</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-head">Gear types</div>
+        <div class="footer-col-head">Gear Types</div>
         <ul class="footer-links">
+          <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
           <li><a href="https://deepgroovehifi.com/tags/amplifiers/">Amplifiers</a></li>
           <li><a href="https://deepgroovehifi.com/tags/turntables/">Turntables</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
           <li><a href="https://deepgroovehifi.com/tags/speakers/">Speakers</a></li>
+          <li><a href="https://deepgroovehifi.com/tags/streamers/">Streamers</a></li>
         </ul>
       </div>
       <div>
@@ -207,6 +221,13 @@
           <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
           <li><a href="https://deepgroovehifi.com/privacy-policy/">Privacy Policy</a></li>
           <li><a href="https://deepgroovehifi.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-head">Sister Sites</div>
+        <ul class="footer-links">
+          <li><a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a></li>
+          <li><a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a></li>
         </ul>
       </div>
     </div>

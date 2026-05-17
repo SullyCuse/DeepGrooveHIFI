@@ -49,6 +49,7 @@
     .nav { position: sticky; top: 0; z-index: 100; background: var(--bg-nav); border-bottom: 0.5px solid #333; }
     .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { width: 34px; height: 34px; display: block; }
     .nav-logo-text { font-family: var(--sans); font-size: 15px; font-weight: 500; color: #ffffff; }
     .nav-logo-text span { color: var(--gold); }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -153,8 +154,9 @@
 
     /* ── FOOTER ── */
     .footer { border-top: 0.5px solid var(--border); padding: 2.5rem 1.5rem; background: var(--bg-nav); }
-    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
-    @media (max-width: 680px) { .footer-inner { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 2rem; }
+    @media (max-width: 860px) { .footer-inner { grid-template-columns: 1fr 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+    @media (max-width: 540px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
     .footer-brand-name { font-size: 15px; font-weight: 500; color: #ffffff; margin-bottom: 8px; }
     .footer-brand-name span { color: var(--gold); }
     .footer-brand-desc { font-size: 13px; color: #666; line-height: 1.6; max-width: 260px; }
@@ -181,6 +183,7 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="https://deepgroovehifi.com/" class="nav-logo">
+        <img src="/images/logo.svg" alt="Deep Groove HiFi" width="34" height="34" />
         <span class="nav-logo-text">Deep Groove <span>HiFi</span></span>
       </a>
       <ul class="nav-links">
@@ -358,17 +361,19 @@
         <div class="footer-col-head">Topics</div>
         <ul class="footer-links">
           <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
+          <li><a href="https://deepgroovehifi.com/tags/reviews/">Reviews</a></li>
           <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
-          <li><a href="https://deepgroovehifi.com/calculators/">Calculators</a></li>
+          <li><a href="https://deepgroovehifi.com/articles/">All Articles</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-head">Gear types</div>
+        <div class="footer-col-head">Gear Types</div>
         <ul class="footer-links">
+          <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
           <li><a href="https://deepgroovehifi.com/tags/amplifiers/">Amplifiers</a></li>
           <li><a href="https://deepgroovehifi.com/tags/turntables/">Turntables</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
           <li><a href="https://deepgroovehifi.com/tags/speakers/">Speakers</a></li>
+          <li><a href="https://deepgroovehifi.com/tags/streamers/">Streamers</a></li>
         </ul>
       </div>
       <div>
@@ -378,6 +383,13 @@
           <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
           <li><a href="https://deepgroovehifi.com/privacy-policy/">Privacy Policy</a></li>
           <li><a href="https://deepgroovehifi.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-head">Sister Sites</div>
+        <ul class="footer-links">
+          <li><a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a></li>
+          <li><a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a></li>
         </ul>
       </div>
     </div>
