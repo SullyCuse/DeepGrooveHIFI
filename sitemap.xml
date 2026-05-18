@@ -1,0 +1,34 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  {{/* ── Hugo content pages (articles, static pages, taxonomies) ── */}}
+  {{ range .Data.Pages }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    {{ if not .Lastmod.IsZero }}<lastmod>{{ .Lastmod.Format "2006-01-02" }}</lastmod>{{ end }}
+    {{ with .Sitemap.ChangeFreq }}<changefreq>{{ . }}</changefreq>{{ end }}
+    {{ if ge .Sitemap.Priority 0.0 }}<priority>{{ .Sitemap.Priority }}</priority>{{ end }}
+  </url>
+  {{ end }}
+
+  {{/* ── Static calculator pages (not in Hugo content, must be listed manually) ── */}}
+  {{ $today := now.Format "2006-01-02" }}
+  {{ $baseURL := .Site.BaseURL }}
+  {{ $calculators := slice
+    "calculators/"
+    "calculators/amplifier-power/"
+    "calculators/speaker-impedance/"
+    "calculators/phono-stage-gain/"
+    "calculators/room-acoustics/"
+    "calculators/listening-room-size/"
+  }}
+  {{ range $calculators }}
+  <url>
+    <loc>{{ $baseURL }}{{ . }}</loc>
+    <lastmod>{{ $today }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {{ end }}
+
+</urlset>
