@@ -1,6 +1,6 @@
 ---
 title: "Affiliate Disclosure"
-description: "How Deep Groove HiFi earns revenue through affiliate partnerships."
+description: "Deep Groove HiFi is reader-supported. We earn commissions from affiliate links at no extra cost to you. Here's exactly how that works and which partners we use."
 date: 2026-05-13
 lastmod: 2026-05-13
 layout: "single"

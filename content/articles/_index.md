@@ -1,4 +1,4 @@
 ---
 title: "All Articles"
-description: "Reviews, guides, and gear recommendations for audiophiles and hi-fi enthusiasts."
+description: "Browse all Deep Groove HiFi articles — amplifier guides, turntable reviews, DAC comparisons, speaker advice, and more for audiophiles at every budget."
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-description: "How Deep Groove HiFi collects, uses, and protects your information."
+description: "Read the Deep Groove HiFi privacy policy to understand what data we collect, how we use it, and how your information is protected on our site."
 date: 2026-05-13
 lastmod: 2026-05-13
 layout: "single"

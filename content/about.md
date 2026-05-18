@@ -1,6 +1,6 @@
 ---
 title: "About Deep Groove HiFi"
-description: "Who we are, why we built this site, and what we believe about high-fidelity audio."
+description: "Deep Groove HiFi is an audiophile resource built by music lovers who returned to hi-fi after a long break. Honest gear coverage, no hype, no filler."
 date: 2026-05-13
 lastmod: 2026-05-13
 layout: "single"
