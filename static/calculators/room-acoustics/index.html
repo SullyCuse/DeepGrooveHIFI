@@ -29,29 +29,35 @@
       --warn: #B85C0B; --warn-bg: rgba(184,92,11,0.08);
       --good: #2E7D32; --good-bg: rgba(46,125,50,0.08);
     }
-    html { scroll-behavior: smooth; }
+    html { font-size: 18px; scroll-behavior: smooth; }
     body { background: var(--bg-page); color: var(--text-body); font-family: var(--sans); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     a { color: var(--gold); text-decoration: none; }
     a:hover { color: var(--gold-hover); }
 
     /* ── NETWORK BAR ── */
     .network-bar { background: #0e0e0e; border-bottom: 1px solid #222; padding: .4rem 1.5rem; }
-    .network-bar__inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: .6rem; flex-wrap: wrap; }
-    .network-bar__label { font-size: 11px; color: #9a9a9a; letter-spacing: .04em; }
+    .network-bar__inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: .6rem; flex-wrap: wrap; }
+    .network-bar__label { font-size: 11px; color: #7A6A58; letter-spacing: .04em; }
     .network-bar a { font-size: 11px; color: var(--gold); font-weight: 500; letter-spacing: .04em; }
     .network-bar a:hover { color: var(--gold-hover); }
-    .network-bar__dot { color: #333; font-size: 10px; }
+    .network-bar__dot { color: #333; font-size: 11px; }
 
-    /* ── NAV ── */
-    .nav { position: sticky; top: 0; z-index: 100; background: var(--bg-nav); border-bottom: 0.5px solid #333; }
-    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo-text { font-family: var(--sans); font-size: 15px; font-weight: 500; color: #ffffff; letter-spacing: .01em; }
-    .nav-logo-text span { color: var(--gold); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; transition: color .15s; }
-    .nav-links a:hover { color: var(--gold); }
-    @media (max-width: 420px) { .nav-links { display: none; } }
+        /* ── NAV ── */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--bg-nav); border-bottom: 1px solid var(--border); height: 68px; }
+    .nav__inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .nav__logo { display: flex; align-items: center; gap: .75rem; text-decoration: none; flex-shrink: 0; }
+    .nav__logo-text { font-family: var(--serif); font-size: 1.25rem; color: #ffffff; letter-spacing: .01em; white-space: nowrap; }
+    .nav__logo-text span { color: var(--gold); }
+    .nav__links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+    .nav__links a { font-size: 15px; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; transition: color .15s; }
+    .nav__links a:hover { color: var(--gold); }
+    .nav__toggle { display: none; background: none; border: none; cursor: pointer; padding: .5rem; flex-direction: column; gap: 5px; }
+    .nav__toggle span { display: block; width: 24px; height: 2px; background: #ffffff; transition: all .3s; }
+    @media (max-width: 768px) {
+      .nav__toggle { display: flex; }
+      .nav__links { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--bg-nav); flex-direction: column; padding: 1.5rem; border-bottom: 1px solid var(--border); gap: 1.25rem; align-items: flex-start; }
+      .nav__links.is-open { display: flex; }
+    }
 
     /* ── HERO ── */
     .hero { background: var(--bg-hero); padding: 3.5rem 1.5rem 3rem; border-bottom: 0.5px solid var(--border); }
@@ -150,23 +156,28 @@
     .related-tag { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
     .related-title { font-family: var(--serif); font-size: 15px; font-weight: 600; color: var(--text-head); line-height: 1.35; }
 
-    /* ── FOOTER ── */
-    .footer { border-top: 0.5px solid var(--border); padding: 2.5rem 1.5rem; background: var(--bg-nav); }
-    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 2rem; }
-    @media (max-width: 860px) { .footer-inner { grid-template-columns: 1fr 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
-    @media (max-width: 540px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
-    .footer-brand-name { font-size: 15px; font-weight: 500; color: #ffffff; margin-bottom: 8px; }
-    .footer-brand-name span { color: var(--gold); }
-    .footer-brand-desc { font-size: 13px; color: #666; line-height: 1.6; max-width: 260px; }
-    .footer-col-head { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #666; margin-bottom: 12px; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .footer-links a { font-size: 13px; color: #888; text-decoration: none; transition: color .15s; }
-    .footer-links a:hover { color: var(--gold); }
-    .footer-bottom { max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 0.5px solid #333; font-size: 12px; color: #555; }
+        /* ── FOOTER ── */
+    .footer { background: var(--bg-nav); border-top: 1px solid var(--border); padding: 3rem 0 2rem; margin-top: 4rem; }
+    .footer__inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    @media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+    @media (max-width: 500px) { .footer__grid { grid-template-columns: 1fr; } }
+    .footer__brand p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-top: .75rem; max-width: 300px; }
+    .footer__logo-text { font-family: var(--serif); font-size: 1.2rem; color: #ffffff; }
+    .footer__logo-text span { color: var(--gold); }
+    .footer__col h4 { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #ffffff; margin-bottom: 1rem; }
+    .footer__col ul { list-style: none; }
+    .footer__col li { margin-bottom: .6rem; }
+    .footer__col a { font-size: 15px; color: var(--text-muted); transition: color .2s; }
+    .footer__col a:hover { color: var(--gold); }
+    .footer__bottom { padding-top: 2rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer__copy { font-size: 13px; color: var(--text-muted); }
   </style>
+
 </head>
 <body>
 
+  
   <!-- NETWORK BAR -->
   <div class="network-bar">
     <div class="network-bar__inner">
@@ -178,25 +189,31 @@
   </div>
 
   <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="https://deepgroovehifi.com/" class="nav-logo" aria-label="Deep Groove HiFi home">
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="https://deepgroovehifi.com/" class="nav__logo" aria-label="Deep Groove HiFi home">
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="18" cy="18" r="17" stroke="#d4a94c" stroke-width="2"/>
-          <circle cx="18" cy="18" r="5" fill="#d4a94c"/>
-          <path d="M6 18 Q9 11 12 18 Q15 25 18 18 Q21 11 24 18 Q27 25 30 18" stroke="#d4a94c" stroke-width="1.75" fill="none" stroke-linecap="round"/>
+          <circle cx="18" cy="18" r="17" stroke="#c9a84c" stroke-width="2"/>
+          <circle cx="18" cy="18" r="5" fill="#c9a84c"/>
+          <path d="M6 18 Q9 11 12 18 Q15 25 18 18 Q21 11 24 18 Q27 25 30 18" stroke="#c9a84c" stroke-width="1.75" fill="none" stroke-linecap="round"/>
         </svg>
-        <span class="nav-logo-text">Deep Groove <span>HiFi</span></span>
+        <span class="nav__logo-text">Deep Groove <span>HiFi</span></span>
       </a>
-      <ul class="nav-links">
+      <ul class="nav__links" id="nav-links">
         <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
         <li><a href="https://deepgroovehifi.com/calculators/" class="active">Calculators</a></li>
         <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
         <li><a href="https://deepgroovehifi.com/about/">About</a></li>
         <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
       </ul>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </nav>
+  </header>
+
 
   <!-- HERO -->
   <div class="hero">
@@ -349,305 +366,71 @@
 
   </main>
 
+  
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="footer-brand-name">Deep Groove <span>HiFi</span></div>
-        <p class="footer-brand-desc">Expert audiophile coverage for enthusiasts who care about the signal chain — from source to speaker.</p>
+    <div class="footer__inner">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <div class="footer__logo-text">Deep Groove <span>HiFi</span></div>
+          <p>Expert audiophile coverage for enthusiasts who care about the signal chain — from source to speaker.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Topics</h4>
+          <ul>
+            <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
+            <li><a href="https://deepgroovehifi.com/categories/reviews/">Reviews</a></li>
+            <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
+            <li><a href="https://deepgroovehifi.com/articles/">All Articles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Gear Types</h4>
+          <ul>
+            <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/amplifiers/">Amplifiers</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/turntables/">Turntables</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/speakers/">Speakers</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/streamers/">Streamers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="https://deepgroovehifi.com/about/">About</a></li>
+            <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
+            <li><a href="https://deepgroovehifi.com/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="https://deepgroovehifi.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Sister Sites</h4>
+          <ul>
+            <li><a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a></li>
+            <li><a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a></li>
+          </ul>
+        </div>
+
       </div>
-      <div>
-        <div class="footer-col-head">Topics</div>
-        <ul class="footer-links">
-          <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/reviews/">Reviews</a></li>
-          <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
-          <li><a href="https://deepgroovehifi.com/articles/">All Articles</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-head">Gear Types</div>
-        <ul class="footer-links">
-          <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/amplifiers/">Amplifiers</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/turntables/">Turntables</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/speakers/">Speakers</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/streamers/">Streamers</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-head">Site</div>
-        <ul class="footer-links">
-          <li><a href="https://deepgroovehifi.com/about/">About</a></li>
-          <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
-          <li><a href="https://deepgroovehifi.com/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="https://deepgroovehifi.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-head">Sister Sites</div>
-        <ul class="footer-links">
-          <li><a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a></li>
-          <li><a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a></li>
-        </ul>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Deep Groove HiFi. All rights reserved.</p>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Deep Groove HiFi. All rights reserved. Affiliate links may earn a commission — see our <a href="https://deepgroovehifi.com/affiliate-disclosure/" style="color:var(--gold)">disclosure</a>.</div>
   </footer>
 
-<script>
-  // ── CONSTANTS ──────────────────────────────────────────────────────────────
-  const C_FPS = 1125;  // speed of sound, feet/second
-  const C_MPS = 343;   // speed of sound, meters/second
-  const NUM_HARMONICS = 4;
-  const COINCIDENCE_THRESHOLD = 0.07; // 7% = flagged as coinciding
-
-  let unit = 'ft'; // current unit
-
-  // ── UNIT TOGGLE ────────────────────────────────────────────────────────────
-  function setUnit(u) {
-    const prevUnit = unit;
-    unit = u;
-    document.getElementById('btnFt').classList.toggle('active', u === 'ft');
-    document.getElementById('btnM').classList.toggle('active', u === 'm');
-    ['L','W','H'].forEach(dim => {
-      document.getElementById('unit' + dim).textContent = u;
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links  = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
     });
+  </script>
 
-    // Convert current values
-    if (prevUnit !== u) {
-      ['inpL','inpW','inpH'].forEach(id => {
-        const el = document.getElementById(id);
-        const v = parseFloat(el.value);
-        if (!isNaN(v)) {
-          el.value = u === 'm'
-            ? (v * 0.3048).toFixed(2)
-            : (v * 3.28084).toFixed(1);
-        }
-      });
-    }
-    calculate();
-  }
-
-  // ── MATH ──────────────────────────────────────────────────────────────────
-  function toFeet(val) {
-    return unit === 'm' ? val * 3.28084 : val;
-  }
-
-  function axialModes(dim_ft) {
-    const c = C_FPS;
-    return Array.from({length: NUM_HARMONICS}, (_, i) => ({
-      n: i + 1,
-      freq: +((i + 1) * c / (2 * dim_ft)).toFixed(1)
-    }));
-  }
-
-  function schroederFreq(l_ft, w_ft, h_ft) {
-    const v_m3 = l_ft * w_ft * h_ft * 0.0283168;
-    const rt60 = 0.4; // furnished room estimate
-    return Math.round(2000 * Math.sqrt(rt60 / v_m3));
-  }
-
-  function findCoincidences(axes) {
-    const all = axes.flatMap(a =>
-      a.modes.map(m => ({ freq: m.freq, axis: a.label, n: m.n }))
-    );
-    const sorted = [...all].sort((a, b) => a.freq - b.freq);
-    const found = [];
-    for (let i = 0; i < sorted.length - 1; i++) {
-      const a = sorted[i], b = sorted[i + 1];
-      if (a.axis !== b.axis && b.freq > 0) {
-        const diff = Math.abs(a.freq - b.freq) / ((a.freq + b.freq) / 2);
-        if (diff < COINCIDENCE_THRESHOLD) {
-          found.push({
-            freq: Math.round((a.freq + b.freq) / 2),
-            axes: `${a.axis} ${a.n === 1 ? '1st' : a.n === 2 ? '2nd' : a.n === 3 ? '3rd' : '4th'} / ${b.axis} ${b.n === 1 ? '1st' : b.n === 2 ? '2nd' : b.n === 3 ? '3rd' : '4th'}`
-          });
-        }
-      }
-    }
-    return found;
-  }
-
-  // Set of coinciding frequencies for row flagging
-  function coincidingFreqSet(axes) {
-    const all = axes.flatMap(a =>
-      a.modes.map(m => ({ freq: m.freq, axis: a.label, n: m.n }))
-    );
-    const sorted = [...all].sort((a, b) => a.freq - b.freq);
-    const flagged = new Set();
-    for (let i = 0; i < sorted.length - 1; i++) {
-      const a = sorted[i], b = sorted[i + 1];
-      if (a.axis !== b.axis && b.freq > 0) {
-        const diff = Math.abs(a.freq - b.freq) / ((a.freq + b.freq) / 2);
-        if (diff < COINCIDENCE_THRESHOLD) {
-          flagged.add(`${a.axis}:${a.freq}`);
-          flagged.add(`${b.axis}:${b.freq}`);
-        }
-      }
-    }
-    return flagged;
-  }
-
-  function ratioProblems(l_ft, w_ft, h_ft) {
-    const pairs = [
-      { ratio: l_ft / w_ft, label: 'Length / Width' },
-      { ratio: l_ft / h_ft, label: 'Length / Height' },
-      { ratio: w_ft / h_ft, label: 'Width / Height' }
-    ];
-    const problems = [];
-    for (const p of pairs) {
-      const r = p.ratio;
-      // Check if close to an integer (1, 2, 3, 4) within 8%
-      for (const n of [1, 2, 3, 4]) {
-        if (Math.abs(r - n) / n < 0.08) {
-          problems.push(`${p.label} ≈ ${r.toFixed(2)} (near ${n}:1)`);
-          break;
-        }
-      }
-    }
-    return problems;
-  }
-
-  function harmLabel(n) {
-    return ['1st','2nd','3rd','4th'][n-1] || `${n}th`;
-  }
-
-  // ── RENDER ─────────────────────────────────────────────────────────────────
-  function calculate() {
-    const rawL = parseFloat(document.getElementById('inpL').value);
-    const rawW = parseFloat(document.getElementById('inpW').value);
-    const rawH = parseFloat(document.getElementById('inpH').value);
-
-    if (isNaN(rawL) || isNaN(rawW) || isNaN(rawH) || rawL <= 0 || rawW <= 0 || rawH <= 0) return;
-
-    const l = toFeet(rawL);
-    const w = toFeet(rawW);
-    const h = toFeet(rawH);
-
-    const axes = [
-      { label: 'Length', cssClass: 'length', modes: axialModes(l) },
-      { label: 'Width',  cssClass: 'width',  modes: axialModes(w) },
-      { label: 'Height', cssClass: 'height', modes: axialModes(h) }
-    ];
-
-    const flagged = coincidingFreqSet(axes);
-    const coincidences = findCoincidences(axes);
-    const schroeder = schroederFreq(l, w, h);
-    const volFt = Math.round(l * w * h);
-    const volM = (l * w * h * 0.0283168).toFixed(1);
-    const problems = ratioProblems(l, w, h);
-
-    // ── Modes grid
-    const modesGrid = document.getElementById('modesGrid');
-    modesGrid.innerHTML = axes.map(axis => `
-      <div class="mode-col">
-        <div class="mode-col-head ${axis.cssClass}">${axis.label} (${unit === 'ft' ? rawL === (axis.label === 'Length' ? rawL : axis.label === 'Width' ? rawW : rawH) : ''}${formatDim(axis.label, rawL, rawW, rawH)} ${unit})</div>
-        ${axis.modes.map(m => {
-          const key = `${axis.label}:${m.freq}`;
-          const isCoin = flagged.has(key);
-          return `
-            <div class="mode-row">
-              <span class="mode-harmonic">${harmLabel(m.n)}</span>
-              <span class="mode-freq">${m.freq}</span>
-              <span class="mode-hz">Hz</span>
-              <span class="mode-flag ${isCoin ? 'coincides' : 'empty'}" title="${isCoin ? 'Mode coincidence — double buildup' : ''}"></span>
-            </div>`;
-        }).join('')}
-      </div>`).join('');
-
-    // ── Schroeder
-    document.getElementById('schroederVal').textContent = schroeder;
-    document.getElementById('schroederNote').textContent =
-      schroeder > 250
-        ? `Bass modal issues extend up to ${schroeder} Hz — this is a small room. Modal treatment matters even into the mid-bass.`
-        : `Modal region ends around ${schroeder} Hz. Standard broadband treatment handles everything above this.`;
-
-    // ── Volume
-    document.getElementById('volumeVal').textContent = unit === 'ft' ? volFt : volM;
-    document.getElementById('volumeUnit').textContent = unit === 'ft' ? 'cubic feet' : 'cubic meters';
-
-    // ── Ratio note
-    document.getElementById('ratioNote').textContent = problems.length === 0
-      ? 'Room proportions look reasonable — no obvious integer-multiple relationships detected.'
-      : `Dimension ratio concern: ${problems[0]}.`;
-
-    // ── Alerts
-    const alertsZone = document.getElementById('alertsZone');
-    let alertsHtml = '';
-    if (coincidences.length > 0) {
-      const freqList = coincidences.map(c => `<strong>${c.freq} Hz</strong> (${c.axes})`).join(', ');
-      alertsHtml += `<div class="alert warn">⚠ <strong>Mode coincidences detected.</strong> Two axes share a resonant frequency at: ${freqList}. These frequencies will have double the bass buildup — prioritize corner bass trapping to address them.</div>`;
-    }
-    if (problems.length > 0) {
-      alertsHtml += `<div class="alert warn">⚠ <strong>Dimension ratio concern.</strong> ${problems.join('; ')}. When two room dimensions are multiples of each other, their fundamental modes and harmonics reinforce the same frequencies. This makes the modal problems harder to treat.</div>`;
-    }
-    if (coincidences.length === 0 && problems.length === 0) {
-      alertsHtml += `<div class="alert good">✓ <strong>No major mode coincidences or ratio problems detected.</strong> Your room's dimensions don't create obvious stacking of room modes. That doesn't mean it sounds perfect — corner bass trapping is still the highest-return acoustic treatment in any room.</div>`;
-    }
-    alertsZone.innerHTML = alertsHtml;
-
-    // ── Recommendations
-    const firstMode = Math.min(...axes.map(a => a.modes[0].freq));
-    const recsHtml = buildRecs(schroeder, coincidences, firstMode, volFt, problems);
-    document.getElementById('recsZone').innerHTML = recsHtml;
-  }
-
-  function formatDim(label, rawL, rawW, rawH) {
-    if (label === 'Length') return rawL;
-    if (label === 'Width') return rawW;
-    return rawH;
-  }
-
-  function buildRecs(schroeder, coincidences, firstMode, volFt, problems) {
-    const recs = [];
-
-    recs.push({
-      num: 1,
-      text: `<strong>Start with corner bass traps.</strong> Place floor-to-ceiling bass trapping in all four front corners (and rear if possible). Corners are where bass pressure is maximum — it is the highest-return acoustic treatment in any room. Use rigid fiberglass or mineral wool at 4 inches or thicker. Two-inch acoustic foam is not effective for bass.`
-    });
-
-    if (coincidences.length > 0) {
-      const freqStr = coincidences.map(c => `${c.freq} Hz`).join(' and ');
-      recs.push({
-        num: 2,
-        text: `<strong>Target ${freqStr} specifically.</strong> These are your coincident mode frequencies — the ones most likely to produce audible bass bloat or one-note bass. More bass trapping in corners, and experimenting with speaker placement away from room boundaries, will help the most at these frequencies.`
-      });
-    }
-
-    recs.push({
-      num: recs.length + 1,
-      text: `<strong>Treat first reflection points after bass trapping.</strong> Identify where sound from each speaker first bounces off the side walls and ceiling. A 2-inch panel of rigid fiberglass or quality acoustic foam at each first reflection point eliminates comb filtering and improves imaging. This is the single most effective step for improving midrange and treble clarity.`
-    });
-
-    recs.push({
-      num: recs.length + 1,
-      text: `<strong>Measure before buying more treatment.</strong> After initial bass trapping and first-reflection panels, use REW (Room EQ Wizard, free) with a calibrated USB microphone to measure your room's actual frequency response. This prevents over-treating and tells you exactly where remaining problems are.`
-    });
-
-    if (schroeder > 300) {
-      recs.push({
-        num: recs.length + 1,
-        text: `<strong>This room has a high Schroeder frequency (${schroeder} Hz).</strong> Modal behavior extends well into the mid-bass, meaning even notes around 200–300 Hz may be affected by room resonances. Bass trapping matters more than usual here, and EQ correction with software like Dirac Live or REW convolution filters can help above the Schroeder frequency where treatment becomes difficult.`
-      });
-    }
-
-    if (problems.length > 0) {
-      recs.push({
-        num: recs.length + 1,
-        text: `<strong>Consider adjusting room dimensions if possible.</strong> If you are designing or renovating a listening space, avoid dimension ratios that are simple multiples of each other. Even adding a few inches to one dimension by adjusting a partition wall can meaningfully improve the mode distribution.`
-      });
-    }
-
-    return recs.map(r => `<div class="rec-item"><span class="rec-num">${r.num}</span><span>${r.text}</span></div>`).join('');
-  }
-
-  // ── WIRE UP ────────────────────────────────────────────────────────────────
-  ['inpL','inpW','inpH'].forEach(id => {
-    document.getElementById(id).addEventListener('input', calculate);
-  });
-
-  calculate(); // initial run
-</script>
 </body>
 </html>

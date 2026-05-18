@@ -32,29 +32,35 @@
       --listen-color: #4A7C8E;
       --reflect-color: #9A6A8A;
     }
-    html { scroll-behavior: smooth; }
+    html { font-size: 18px; scroll-behavior: smooth; }
     body { background: var(--bg-page); color: var(--text-body); font-family: var(--sans); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     a { color: var(--gold); text-decoration: none; }
     a:hover { color: var(--gold-hover); }
 
     /* ── NETWORK BAR ── */
     .network-bar { background: #0e0e0e; border-bottom: 1px solid #222; padding: .4rem 1.5rem; }
-    .network-bar__inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: .6rem; flex-wrap: wrap; }
-    .network-bar__label { font-size: 11px; color: #9a9a9a; letter-spacing: .04em; }
+    .network-bar__inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: .6rem; flex-wrap: wrap; }
+    .network-bar__label { font-size: 11px; color: #7A6A58; letter-spacing: .04em; }
     .network-bar a { font-size: 11px; color: var(--gold); font-weight: 500; letter-spacing: .04em; }
     .network-bar a:hover { color: var(--gold-hover); }
-    .network-bar__dot { color: #333; font-size: 10px; }
+    .network-bar__dot { color: #333; font-size: 11px; }
 
-    /* ── NAV ── */
-    .nav { position: sticky; top: 0; z-index: 100; background: var(--bg-nav); border-bottom: 0.5px solid #333; }
-    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo-text { font-family: var(--sans); font-size: 15px; font-weight: 500; color: #ffffff; letter-spacing: .01em; }
-    .nav-logo-text span { color: var(--gold); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; transition: color .15s; }
-    .nav-links a:hover { color: var(--gold); }
-    @media (max-width: 420px) { .nav-links { display: none; } }
+        /* ── NAV ── */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--bg-nav); border-bottom: 1px solid var(--border); height: 68px; }
+    .nav__inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .nav__logo { display: flex; align-items: center; gap: .75rem; text-decoration: none; flex-shrink: 0; }
+    .nav__logo-text { font-family: var(--serif); font-size: 1.25rem; color: #ffffff; letter-spacing: .01em; white-space: nowrap; }
+    .nav__logo-text span { color: var(--gold); }
+    .nav__links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+    .nav__links a { font-size: 15px; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; transition: color .15s; }
+    .nav__links a:hover { color: var(--gold); }
+    .nav__toggle { display: none; background: none; border: none; cursor: pointer; padding: .5rem; flex-direction: column; gap: 5px; }
+    .nav__toggle span { display: block; width: 24px; height: 2px; background: #ffffff; transition: all .3s; }
+    @media (max-width: 768px) {
+      .nav__toggle { display: flex; }
+      .nav__links { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--bg-nav); flex-direction: column; padding: 1.5rem; border-bottom: 1px solid var(--border); gap: 1.25rem; align-items: flex-start; }
+      .nav__links.is-open { display: flex; }
+    }
 
     /* ── HERO ── */
     .hero { background: var(--bg-hero); padding: 3.5rem 1.5rem 3rem; border-bottom: 0.5px solid var(--border); }
@@ -151,23 +157,28 @@
     .related-tag { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
     .related-title { font-family: var(--serif); font-size: 15px; font-weight: 600; color: var(--text-head); line-height: 1.35; }
 
-    /* ── FOOTER ── */
-    .footer { border-top: 0.5px solid var(--border); padding: 2.5rem 1.5rem; background: var(--bg-nav); }
-    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 2rem; }
-    @media (max-width: 860px) { .footer-inner { grid-template-columns: 1fr 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
-    @media (max-width: 540px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
-    .footer-brand-name { font-size: 15px; font-weight: 500; color: #ffffff; margin-bottom: 8px; }
-    .footer-brand-name span { color: var(--gold); }
-    .footer-brand-desc { font-size: 13px; color: #666; line-height: 1.6; max-width: 260px; }
-    .footer-col-head { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #666; margin-bottom: 12px; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .footer-links a { font-size: 13px; color: #888; text-decoration: none; transition: color .15s; }
-    .footer-links a:hover { color: var(--gold); }
-    .footer-bottom { max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 0.5px solid #333; font-size: 12px; color: #555; }
+        /* ── FOOTER ── */
+    .footer { background: var(--bg-nav); border-top: 1px solid var(--border); padding: 3rem 0 2rem; margin-top: 4rem; }
+    .footer__inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    @media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+    @media (max-width: 500px) { .footer__grid { grid-template-columns: 1fr; } }
+    .footer__brand p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-top: .75rem; max-width: 300px; }
+    .footer__logo-text { font-family: var(--serif); font-size: 1.2rem; color: #ffffff; }
+    .footer__logo-text span { color: var(--gold); }
+    .footer__col h4 { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #ffffff; margin-bottom: 1rem; }
+    .footer__col ul { list-style: none; }
+    .footer__col li { margin-bottom: .6rem; }
+    .footer__col a { font-size: 15px; color: var(--text-muted); transition: color .2s; }
+    .footer__col a:hover { color: var(--gold); }
+    .footer__bottom { padding-top: 2rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer__copy { font-size: 13px; color: var(--text-muted); }
   </style>
+
 </head>
 <body>
 
+  
   <!-- NETWORK BAR -->
   <div class="network-bar">
     <div class="network-bar__inner">
@@ -179,25 +190,31 @@
   </div>
 
   <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="https://deepgroovehifi.com/" class="nav-logo" aria-label="Deep Groove HiFi home">
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="https://deepgroovehifi.com/" class="nav__logo" aria-label="Deep Groove HiFi home">
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="18" cy="18" r="17" stroke="#d4a94c" stroke-width="2"/>
-          <circle cx="18" cy="18" r="5" fill="#d4a94c"/>
-          <path d="M6 18 Q9 11 12 18 Q15 25 18 18 Q21 11 24 18 Q27 25 30 18" stroke="#d4a94c" stroke-width="1.75" fill="none" stroke-linecap="round"/>
+          <circle cx="18" cy="18" r="17" stroke="#c9a84c" stroke-width="2"/>
+          <circle cx="18" cy="18" r="5" fill="#c9a84c"/>
+          <path d="M6 18 Q9 11 12 18 Q15 25 18 18 Q21 11 24 18 Q27 25 30 18" stroke="#c9a84c" stroke-width="1.75" fill="none" stroke-linecap="round"/>
         </svg>
-        <span class="nav-logo-text">Deep Groove <span>HiFi</span></span>
+        <span class="nav__logo-text">Deep Groove <span>HiFi</span></span>
       </a>
-      <ul class="nav-links">
+      <ul class="nav__links" id="nav-links">
         <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
         <li><a href="https://deepgroovehifi.com/calculators/" class="active">Calculators</a></li>
         <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
         <li><a href="https://deepgroovehifi.com/about/">About</a></li>
         <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
       </ul>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </nav>
+  </header>
+
 
   <!-- HERO -->
   <div class="hero">
@@ -354,379 +371,71 @@
 
   </main>
 
+  
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="footer-brand-name">Deep Groove <span>HiFi</span></div>
-        <p class="footer-brand-desc">Expert audiophile coverage for enthusiasts who care about the signal chain — from source to speaker.</p>
+    <div class="footer__inner">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <div class="footer__logo-text">Deep Groove <span>HiFi</span></div>
+          <p>Expert audiophile coverage for enthusiasts who care about the signal chain — from source to speaker.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Topics</h4>
+          <ul>
+            <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
+            <li><a href="https://deepgroovehifi.com/categories/reviews/">Reviews</a></li>
+            <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
+            <li><a href="https://deepgroovehifi.com/articles/">All Articles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Gear Types</h4>
+          <ul>
+            <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/amplifiers/">Amplifiers</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/turntables/">Turntables</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/speakers/">Speakers</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/streamers/">Streamers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="https://deepgroovehifi.com/about/">About</a></li>
+            <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
+            <li><a href="https://deepgroovehifi.com/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="https://deepgroovehifi.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Sister Sites</h4>
+          <ul>
+            <li><a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a></li>
+            <li><a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a></li>
+          </ul>
+        </div>
+
       </div>
-      <div>
-        <div class="footer-col-head">Topics</div>
-        <ul class="footer-links">
-          <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/reviews/">Reviews</a></li>
-          <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
-          <li><a href="https://deepgroovehifi.com/articles/">All Articles</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-head">Gear Types</div>
-        <ul class="footer-links">
-          <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/amplifiers/">Amplifiers</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/turntables/">Turntables</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/speakers/">Speakers</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/streamers/">Streamers</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-head">Site</div>
-        <ul class="footer-links">
-          <li><a href="https://deepgroovehifi.com/about/">About</a></li>
-          <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
-          <li><a href="https://deepgroovehifi.com/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="https://deepgroovehifi.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-head">Sister Sites</div>
-        <ul class="footer-links">
-          <li><a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a></li>
-          <li><a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a></li>
-        </ul>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Deep Groove HiFi. All rights reserved.</p>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Deep Groove HiFi. All rights reserved. Affiliate links may earn a commission — see our <a href="https://deepgroovehifi.com/affiliate-disclosure/" style="color:var(--gold)">disclosure</a>.</div>
   </footer>
 
-<script>
-  // ── STATE ──────────────────────────────────────────────────────────────────
-  let unit = 'ft';
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links  = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
 
-  // ── UNIT TOGGLE ────────────────────────────────────────────────────────────
-  function setUnit(u) {
-    const prev = unit;
-    unit = u;
-    document.getElementById('btnFt').classList.toggle('active', u === 'ft');
-    document.getElementById('btnM').classList.toggle('active', u === 'm');
-    ['L','W','H'].forEach(d => { document.getElementById('unit' + d).textContent = u; });
-    if (prev !== u) {
-      ['inpL','inpW','inpH'].forEach(id => {
-        const el = document.getElementById(id);
-        const v = parseFloat(el.value);
-        if (!isNaN(v)) {
-          el.value = u === 'm' ? (v * 0.3048).toFixed(2) : (v * 3.28084).toFixed(1);
-        }
-      });
-    }
-    calculate();
-  }
-
-  // ── HELPERS ────────────────────────────────────────────────────────────────
-  function toFeet(v) { return unit === 'm' ? v * 3.28084 : v; }
-
-  function fmt(v_ft) {
-    // Return feet or meters depending on unit, with appropriate decimal places
-    if (unit === 'ft') {
-      return {
-        val: v_ft.toFixed(1),
-        unit: 'feet',
-        valIn: Math.round(v_ft * 12) + ' in',
-        feetInt: Math.floor(v_ft),
-        inchesInt: Math.round((v_ft - Math.floor(v_ft)) * 12),
-        display: `${Math.floor(v_ft)}′ ${Math.round((v_ft - Math.floor(v_ft)) * 12)}″`
-      };
-    } else {
-      const v_m = v_ft * 0.3048;
-      return {
-        val: v_m.toFixed(2),
-        unit: 'meters',
-        valIn: (v_m * 100).toFixed(0) + ' cm',
-        display: v_m.toFixed(2) + ' m'
-      };
-    }
-  }
-
-  // Calculates the side-wall first reflection point distance from front wall.
-  // Speaker at (xs, ys) from front-left corner, listener at (xl, yl)
-  // Left wall is y=0, right wall is y=width
-  function sideWallReflection(xs_ft, spkOffset_ft, listenX_ft, width_ft) {
-    // Left speaker at (xs_ft, spkOffset_ft), listener at (listenX_ft, width_ft/2)
-    // Reflection off left wall (y=0):
-    // Image of left speaker in left wall: (xs_ft, -spkOffset_ft)
-    // Line from image to listener intersects y=0 at:
-    const ys = spkOffset_ft;          // speaker y from left wall
-    const yl = width_ft / 2;          // listener y from left wall
-    // t parameter at y=0
-    const t = (0 - (-ys)) / (yl - (-ys));   // = ys / (yl + ys)
-    const reflX = xs_ft + t * (listenX_ft - xs_ft);
-    return Math.max(0.5, reflX);
-  }
-
-  // Ceiling first reflection distance from front wall
-  function ceilingReflection(xs_ft, listenX_ft, height_ft, earHeight_ft) {
-    // Speaker tweeter at height ≈ 0.9 * height (approx 3.5 ft) — use 3.5 ft default
-    const spkH = Math.min(3.5, height_ft * 0.6);
-    const listenH = earHeight_ft;
-    // Reflection off ceiling: image of speaker at (xs_ft, 2*height - spkH)
-    const imgH = 2 * height_ft - spkH;
-    const t = (height_ft - spkH) / (imgH - listenH);
-    // x where ray hits ceiling
-    const reflX = xs_ft + t * (listenX_ft - xs_ft);
-    return Math.max(0.5, reflX);
-  }
-
-  function suitability(l_ft, w_ft) {
-    const ratio = l_ft / w_ft;
-    if (ratio >= 1.25 && ratio <= 1.7 && l_ft >= 12 && w_ft >= 10) return 'excellent';
-    if (ratio >= 1.1 && ratio <= 2.0 && l_ft >= 10 && w_ft >= 8) return 'good';
-    return 'marginal';
-  }
-
-  // ── DIAGRAM ────────────────────────────────────────────────────────────────
-  function drawDiagram(results) {
-    const svg = document.getElementById('roomDiagram');
-    const W = 580, H = 360;
-    const margin = { top: 40, right: 30, bottom: 30, left: 30 };
-    const drawW = W - margin.left - margin.right;
-    const drawH = H - margin.top - margin.bottom;
-
-    // Scale: room length = drawH (top-to-bottom), room width = drawW
-    const scaleX = drawW / results.roomW_ft;  // width direction (left-right)
-    const scaleY = drawH / results.roomL_ft;  // length direction (top-bottom)
-
-    // Room coords in SVG: front wall at top, rear wall at bottom
-    // x = 0 is left wall, x = roomW is right wall (left to right in SVG)
-    const rx = (x_ft) => margin.left + x_ft * scaleX;
-    const ry = (y_ft) => margin.top + y_ft * scaleY;  // y_ft = distance from front wall
-
-    // Speaker positions
-    const lSpkX = results.spkFromSideWall_ft;
-    const rSpkX = results.roomW_ft - results.spkFromSideWall_ft;
-    const spkY  = results.spkFromFrontWall_ft;
-
-    // Listener
-    const listenX = results.roomW_ft / 2;
-    const listenY = results.listenFromFront_ft;
-
-    // Reflection points
-    const lReflX = results.spkFromSideWall_ft / 2; // approx left side wall reflection midpoint
-    const lReflY = results.sideReflFromFront_ft;
-    const rReflX = results.roomW_ft - results.spkFromSideWall_ft / 2;
-    const rReflY = results.sideReflFromFront_ft;
-
-    const roomColor = '#EDE6DA';
-    const wallColor = '#D8CFBF';
-    const spkColor  = '#B8860B';
-    const lisColor  = '#4A7C8E';
-    const refColor  = '#9A6A8A';
-    const textColor = '#7A6A58';
-    const goldLight = 'rgba(184,134,11,0.15)';
-    const lisLight  = 'rgba(74,124,142,0.12)';
-
-    let s = ``;
-
-    // Room background
-    s += `<rect x="${margin.left}" y="${margin.top}" width="${drawW}" height="${drawH}" fill="${roomColor}" stroke="${wallColor}" stroke-width="2" rx="3"/>`;
-
-    // Wall labels
-    s += `<text x="${W/2}" y="${margin.top - 10}" text-anchor="middle" fill="${textColor}" font-size="11" font-family="Inter,sans-serif" letter-spacing="0.08em" text-transform="uppercase">FRONT WALL</text>`;
-    s += `<text x="${W/2}" y="${margin.top + drawH + 20}" text-anchor="middle" fill="${textColor}" font-size="11" font-family="Inter,sans-serif" letter-spacing="0.08em">REAR WALL</text>`;
-
-    // Equilateral triangle (dashed)
-    const triPts = [
-      `${rx(lSpkX)},${ry(spkY)}`,
-      `${rx(rSpkX)},${ry(spkY)}`,
-      `${rx(listenX)},${ry(listenY)}`
-    ].join(' ');
-    s += `<polygon points="${triPts}" fill="${goldLight}" stroke="${spkColor}" stroke-width="1.2" stroke-dasharray="5,4" opacity="0.8"/>`;
-
-    // Side wall reflection lines (dashed, from speaker to reflection point to listener)
-    s += `<line x1="${rx(lSpkX)}" y1="${ry(spkY)}" x2="${rx(0)}" y2="${ry(lReflY)}" stroke="${refColor}" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>`;
-    s += `<line x1="${rx(0)}" y1="${ry(lReflY)}" x2="${rx(listenX)}" y2="${ry(listenY)}" stroke="${refColor}" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>`;
-    s += `<line x1="${rx(rSpkX)}" y1="${ry(spkY)}" x2="${rx(results.roomW_ft)}" y2="${ry(rReflY)}" stroke="${refColor}" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>`;
-    s += `<line x1="${rx(results.roomW_ft)}" y1="${ry(rReflY)}" x2="${rx(listenX)}" y2="${ry(listenY)}" stroke="${refColor}" stroke-width="1" stroke-dasharray="4,3" opacity="0.6"/>`;
-
-    // Reflection dots on walls
-    s += `<circle cx="${rx(0)}" cy="${ry(lReflY)}" r="5" fill="${refColor}" opacity="0.85"/>`;
-    s += `<circle cx="${rx(results.roomW_ft)}" cy="${ry(rReflY)}" r="5" fill="${refColor}" opacity="0.85"/>`;
-
-    // Listening position circle
-    s += `<circle cx="${rx(listenX)}" cy="${ry(listenY)}" r="14" fill="${lisLight}" stroke="${lisColor}" stroke-width="2"/>`;
-    s += `<text x="${rx(listenX)}" y="${ry(listenY) + 4}" text-anchor="middle" fill="${lisColor}" font-size="10" font-family="Inter,sans-serif" font-weight="600">EAR</text>`;
-
-    // Speaker rectangles
-    const sw = Math.max(10, 18 * Math.min(scaleX, 1));
-    const sh = Math.max(14, 24 * Math.min(scaleY, 1));
-    s += `<rect x="${rx(lSpkX) - sw/2}" y="${ry(spkY) - sh/2}" width="${sw}" height="${sh}" rx="2" fill="${spkColor}" opacity="0.85"/>`;
-    s += `<rect x="${rx(rSpkX) - sw/2}" y="${ry(spkY) - sh/2}" width="${sw}" height="${sh}" rx="2" fill="${spkColor}" opacity="0.85"/>`;
-    s += `<text x="${rx(lSpkX)}" y="${ry(spkY) + 4}" text-anchor="middle" fill="#fff" font-size="9" font-family="Inter,sans-serif" font-weight="600">L</text>`;
-    s += `<text x="${rx(rSpkX)}" y="${ry(spkY) + 4}" text-anchor="middle" fill="#fff" font-size="9" font-family="Inter,sans-serif" font-weight="600">R</text>`;
-
-    // Dimension annotation: speaker front-wall distance
-    const annotColor = '#9A8A78';
-    s += `<line x1="${rx(lSpkX)}" y1="${ry(0)}" x2="${rx(lSpkX)}" y2="${ry(spkY)}" stroke="${annotColor}" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.5"/>`;
-
-    // Listening position front-wall distance annotation
-    s += `<line x1="${rx(listenX + 0.3)}" y1="${ry(0)}" x2="${rx(listenX + 0.3)}" y2="${ry(listenY)}" stroke="${annotColor}" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.5"/>`;
-
-    svg.innerHTML = s;
-    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
-  }
-
-  // ── CALCULATE ──────────────────────────────────────────────────────────────
-  function calculate() {
-    const rawL = parseFloat(document.getElementById('inpL').value);
-    const rawW = parseFloat(document.getElementById('inpW').value);
-    const rawH = parseFloat(document.getElementById('inpH').value);
-    if (isNaN(rawL) || isNaN(rawW) || isNaN(rawH) || rawL <= 0 || rawW <= 0 || rawH <= 0) return;
-
-    const l = toFeet(rawL);
-    const w = toFeet(rawW);
-    const h = toFeet(rawH);
-
-    // ── Speaker placement
-    // Front wall: 20–30% of room length, min 2 ft, max 5 ft
-    const spkFront = Math.max(2.0, Math.min(5.0, l * 0.24));
-    // Side wall: 15–22% of room width, min 1.5 ft
-    const spkSide  = Math.max(1.5, Math.min(w * 0.28, w * 0.22));
-    // Speaker spacing = width - 2 × side offset
-    const spkSpacing = w - 2 * spkSide;
-    // Triangle depth: distance from speakers to listener
-    const triDepth = spkSpacing; // equilateral triangle → depth = spacing
-
-    // ── Listening position (38% rule)
-    const listenFront = l * 0.38;
-    const listenRear  = l - listenFront;
-
-    // ── Equilateral check: how equilateral is the triangle?
-    const actualTriDepth = listenFront - spkFront;
-    const equilateral = Math.abs(actualTriDepth - spkSpacing) / spkSpacing < 0.12;
-
-    // ── Side wall first reflection
-    const sideRefl = sideWallReflection(spkFront, spkSide, listenFront, w);
-
-    // ── Ceiling first reflection
-    const earHeight = 3.5; // seated ear height
-    const ceilRefl = ceilingReflection(spkFront, listenFront, h, earHeight);
-
-    // ── Suitability
-    const suit = suitability(l, w);
-
-    // ── Results object for diagram
-    const results = {
-      roomL_ft: l, roomW_ft: w, roomH_ft: h,
-      spkFromFrontWall_ft: spkFront,
-      spkFromSideWall_ft: spkSide,
-      spkSpacing_ft: spkSpacing,
-      listenFromFront_ft: listenFront,
-      listenFromRear_ft: listenRear,
-      sideReflFromFront_ft: sideRefl,
-      ceilReflFromFront_ft: ceilRefl,
-    };
-
-    // ── Render speaker grid
-    const fmtSpkFront = fmt(spkFront);
-    const fmtSpkSide  = fmt(spkSide);
-    const fmtSpkSpacing = fmt(spkSpacing);
-    document.getElementById('speakerGrid').innerHTML = `
-      <div class="placement-block">
-        <div class="placement-label">From Front Wall</div>
-        <div class="placement-value spk">${fmtSpkFront.val}</div>
-        <div class="placement-unit">${fmtSpkFront.unit}</div>
-        <div class="placement-note">Move speakers forward from the front wall to control bass buildup.</div>
-      </div>
-      <div class="placement-block">
-        <div class="placement-label">From Side Walls</div>
-        <div class="placement-value spk">${fmtSpkSide.val}</div>
-        <div class="placement-unit">${fmtSpkSide.unit}</div>
-        <div class="placement-note">Asymmetric if needed — shifting one speaker can help reduce a standing wave.</div>
-      </div>
-      <div class="placement-block">
-        <div class="placement-label">Speaker Spacing</div>
-        <div class="placement-value spk">${fmtSpkSpacing.val}</div>
-        <div class="placement-unit">${fmtSpkSpacing.unit}</div>
-        <div class="placement-note">Center-to-center distance between speakers (between tweeter axes).</div>
-      </div>`;
-
-    // ── Render listening grid
-    const fmtListen = fmt(listenFront);
-    const fmtRear   = fmt(listenRear);
-    const fmtDist   = fmt(Math.sqrt(Math.pow(listenFront - spkFront, 2) + Math.pow(spkSpacing / 2, 2)));
-    document.getElementById('listenGrid').innerHTML = `
-      <div class="placement-block">
-        <div class="placement-label">From Front Wall</div>
-        <div class="placement-value listen">${fmtListen.val}</div>
-        <div class="placement-unit">${fmtListen.unit}</div>
-        <div class="placement-note">The 38% position balances length-mode bass pressure across the listening seat.</div>
-      </div>
-      <div class="placement-block">
-        <div class="placement-label">From Rear Wall</div>
-        <div class="placement-value listen">${fmtRear.val}</div>
-        <div class="placement-unit">${fmtRear.unit}</div>
-        <div class="placement-note">${listenRear < 2.5 ? 'Warning: close to rear wall. Add broadband absorption directly behind your chair.' : 'Enough clearance from the rear wall for bass to develop freely.'}</div>
-      </div>
-      <div class="placement-block">
-        <div class="placement-label">Distance to Each Speaker</div>
-        <div class="placement-value listen">${fmtDist.val}</div>
-        <div class="placement-unit">${fmtDist.unit}</div>
-        <div class="placement-note">${equilateral ? 'Approximately equilateral triangle — good stereo geometry.' : 'Triangle is not equilateral. Adjust speaker toe-in to compensate for imaging.'}</div>
-      </div>`;
-
-    // ── Render reflection grid
-    const fmtSideR = fmt(sideRefl);
-    const fmtCeilR = fmt(ceilRefl);
-    document.getElementById('reflectGrid').innerHTML = `
-      <div class="placement-block">
-        <div class="placement-label">Side Wall Reflection</div>
-        <div class="placement-value reflect">${fmtSideR.val}</div>
-        <div class="placement-unit">${fmtSideR.unit} from front wall</div>
-        <div class="placement-note">Place a 2″+ absorption panel on the side walls at this distance. Use a mirror to confirm: where you see the tweeter is where to treat.</div>
-      </div>
-      <div class="placement-block">
-        <div class="placement-label">Ceiling Reflection</div>
-        <div class="placement-value reflect">${fmtCeilR.val}</div>
-        <div class="placement-unit">${fmtCeilR.unit} from front wall</div>
-        <div class="placement-note">A ceiling panel here reduces comb filtering and improves image focus. Often overlooked but highly effective.</div>
-      </div>
-      <div class="placement-block">
-        <div class="placement-label">Floor Reflection</div>
-        <div class="placement-value reflect">Use rug</div>
-        <div class="placement-unit">between speakers & chair</div>
-        <div class="placement-note">A thick rug or carpet between the speakers and listening position controls the floor reflection without calculation needed.</div>
-      </div>`;
-
-    // ── Suitability
-    const suitLabels = {
-      excellent: 'Excellent room for HiFi',
-      good: 'Good room for HiFi',
-      marginal: 'Room has constraints'
-    };
-    const suitBodies = {
-      excellent: `Your room's ${unit === 'ft' ? rawL + '×' + rawW + ' ft' : rawL + '×' + rawW + ' m'} dimensions give a length-to-width ratio of ${(l/w).toFixed(2)} — close to ideal for a dedicated listening space. Proper placement and treatment will give you excellent results.`,
-      good: `Your room's ratio of ${(l/w).toFixed(2)} is workable. With careful placement using the distances above and some acoustic treatment, this room can sound very good. The main focus should be on first reflection treatment and corner bass trapping.`,
-      marginal: `Your room's dimensions create some challenges. ${l/w < 1.1 ? 'The room is nearly square — this causes all three length/width modes to reinforce the same frequencies. Consider placing speakers along the short wall to maximize distance.' : 'The room is quite long and narrow, which limits speaker spacing and the equilateral triangle.'} Use the placement distances above as a starting point, but expect to experiment more than usual.`
-    };
-    document.getElementById('suitZone').innerHTML = `
-      <div class="suit-card">
-        <div class="suit-header">
-          <span class="suit-badge ${suit}">${suitLabels[suit]}</span>
-          <span class="suit-title">${(l/w).toFixed(2)} length-to-width ratio</span>
-        </div>
-        <p class="suit-body">${suitBodies[suit]}</p>
-      </div>`;
-
-    // ── Draw diagram
-    drawDiagram(results);
-  }
-
-  // ── WIRE UP ────────────────────────────────────────────────────────────────
-  ['inpL','inpW','inpH'].forEach(id => {
-    document.getElementById(id).addEventListener('input', calculate);
-  });
-
-  calculate();
-</script>
 </body>
 </html>
