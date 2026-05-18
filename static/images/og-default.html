@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; overflow: hidden; background: #1C1C1C; }
+
+  .card {
+    width: 1200px;
+    height: 630px;
+    background: #1C1C1C;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #2E2E2E;
+  }
+
+  /* Subtle warm noise overlay */
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(184,134,11,0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Gold left accent bar */
+  .accent-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: #B8860B;
+  }
+
+  /* Content left */
+  .content {
+    position: absolute;
+    left: 80px;
+    top: 0;
+    width: 580px;
+    height: 630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #B8860B;
+    margin-bottom: 18px;
+  }
+
+  .brand-line1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 0.92;
+    color: #FAF7F2;
+    letter-spacing: -0.01em;
+  }
+
+  .brand-line2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 0.92;
+    color: #B8860B;
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+  }
+
+  .divider {
+    width: 260px;
+    height: 1.5px;
+    background: #B8860B;
+    opacity: 0.6;
+    margin-bottom: 28px;
+  }
+
+  .tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #9A8A78;
+    line-height: 1.5;
+    margin-bottom: 36px;
+    max-width: 420px;
+  }
+
+  .url {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #B8860B;
+    letter-spacing: 0.04em;
+    opacity: 0.8;
+  }
+
+  /* Vinyl record right side */
+  .vinyl {
+    position: absolute;
+    right: -90px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 540px;
+    height: 540px;
+  }
+
+  /* Waveform bottom decoration */
+  .waveform {
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    right: 0;
+    height: 48px;
+    opacity: 0.12;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="accent-bar"></div>
+
+  <div class="content">
+    <div class="eyebrow">Audiophile Resource</div>
+    <div class="brand-line1">Deep Groove</div>
+    <div class="brand-line2">HiFi</div>
+    <div class="divider"></div>
+    <div class="tagline">Reviews, guides &amp; calculators for the serious audio enthusiast</div>
+    <div class="url">deepgroovehifi.com</div>
+  </div>
+
+  <!-- Vinyl Record SVG -->
+  <svg class="vinyl" viewBox="0 0 540 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Outer record body -->
+    <circle cx="270" cy="270" r="265" fill="#141414" stroke="#2C2C2C" stroke-width="1"/>
+
+    <!-- Groove rings — concentric circles from outer to inner -->
+    <circle cx="270" cy="270" r="258" stroke="#282828" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="251" stroke="#2A2A2A" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="244" stroke="#282828" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="237" stroke="#2C2C2C" stroke-width="0.8"/>
+    <circle cx="270" cy="270" r="230" stroke="#282828" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="223" stroke="#2A2A2A" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="216" stroke="#282828" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="209" stroke="#2C2C2C" stroke-width="0.8"/>
+    <circle cx="270" cy="270" r="202" stroke="#282828" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="195" stroke="#2A2A2A" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="188" stroke="#282828" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="181" stroke="#2C2C2C" stroke-width="0.8"/>
+    <circle cx="270" cy="270" r="174" stroke="#282828" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="167" stroke="#2A2A2A" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="160" stroke="#282828" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="153" stroke="#2C2C2C" stroke-width="0.8"/>
+    <circle cx="270" cy="270" r="146" stroke="#2E2A24" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="139" stroke="#2C2816" stroke-width="0.6"/>
+    <circle cx="270" cy="270" r="132" stroke="#2E2A24" stroke-width="0.6"/>
+
+    <!-- Subtle gold sheen on outer edge -->
+    <circle cx="270" cy="270" r="264" stroke="#B8860B" stroke-width="0.5" opacity="0.15"/>
+
+    <!-- Label area -->
+    <circle cx="270" cy="270" r="118" fill="#1E1A10" stroke="#B8860B" stroke-width="1" opacity="0.9"/>
+    <circle cx="270" cy="270" r="112" fill="none" stroke="#B8860B" stroke-width="0.4" opacity="0.4"/>
+
+    <!-- Label text -->
+    <text x="270" y="248" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="#FAF7F2" text-anchor="middle" letter-spacing="0.5">Deep Groove</text>
+    <text x="270" y="276" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="#B8860B" text-anchor="middle" letter-spacing="0.5">HiFi</text>
+
+    <!-- Label divider -->
+    <line x1="220" y1="286" x2="320" y2="286" stroke="#B8860B" stroke-width="0.8" opacity="0.5"/>
+
+    <!-- Spindle hole -->
+    <circle cx="270" cy="270" r="8" fill="#1C1C1C" stroke="#2E2E2E" stroke-width="0.5"/>
+
+    <!-- Highlight arc for depth -->
+    <path d="M 110 200 A 190 190 0 0 1 430 200" stroke="#FFFFFF" stroke-width="0.6" fill="none" opacity="0.04"/>
+  </svg>
+
+  <!-- Bottom waveform decoration -->
+  <svg class="waveform" viewBox="0 0 1120 48" fill="none" preserveAspectRatio="none">
+    <polyline points="0,24 30,10 60,38 90,14 120,32 150,8 180,36 210,18 240,30 270,6 300,40 330,16 360,28 390,4 420,38 450,20 480,32 510,10 540,36 570,14 600,26 630,8 660,40 690,18 720,30 750,4 780,34 810,22 840,28 870,6 900,38 930,16 960,24 990,10 1020,34 1050,18 1080,28 1120,24"
+      stroke="#B8860B" stroke-width="1.5" fill="none"/>
+  </svg>
+
+</div>
+</body>
+</html>

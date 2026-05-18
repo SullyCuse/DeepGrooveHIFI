@@ -24,7 +24,8 @@
   <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta property="og:url"         content="{{ .Permalink }}">
   <meta property="og:site_name"   content="{{ .Site.Title }}">
-  <meta property="og:type"        content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:type"        content="{{ if and .IsPage (eq .Type `articles`) }}article{{ else }}website{{ end }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}images/og-default.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image">
