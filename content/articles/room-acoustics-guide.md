@@ -1,7 +1,7 @@
 ---
 title: "Room Acoustics: Practical HiFi Improvements"
 date: 2026-01-09
-description: "Your room shapes what you hear more than almost any component change. Here's how to diagnose acoustic problems and fix them without turning your listening room into an isolation chamber."
+description: "Your room shapes sound more than almost any component change. Here's how to fix acoustic problems without making your room an isolation chamber."
 categories: ["Guides"]
 tags: ["room acoustics", "treatment", "setup", "speakers"]
 image: "/images/articles/room.svg"

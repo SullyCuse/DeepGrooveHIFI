@@ -1,7 +1,7 @@
 ---
 title: "Streaming vs. Local Files: Which Sounds Better?"
 date: 2025-12-20
-description: "Tidal and Qobuz now offer lossless and hi-res streaming. Does it actually sound as good as your local FLAC library? The honest answer is more interesting than you might expect."
+description: "Tidal and Qobuz offer lossless hi-res streaming. Does it sound as good as your local FLAC library? The honest answer is more interesting than you'd expect."
 categories: ["Features"]
 tags: ["streaming", "digital audio", "tidal", "qobuz", "flac"]
 image: "/images/articles/streaming.svg"

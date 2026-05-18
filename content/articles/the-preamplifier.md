@@ -1,7 +1,7 @@
 ---
 title: "Preamplifiers Explained: Do You Need One?"
 date: 2026-01-16
-description: "A preamplifier handles source selection and volume control. But not every system needs one, and the wrong preamp can hurt more than help. Here's how to think about it."
+description: "A preamp handles source selection and volume control. Not every system needs one, and the wrong preamp can hurt more than help. Here's how to decide."
 categories: ["Guides"]
 tags: ["preamplifier", "amplifiers", "signal chain", "beginners"]
 image: "/images/articles/amp.svg"
