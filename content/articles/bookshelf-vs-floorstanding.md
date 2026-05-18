@@ -1,5 +1,5 @@
 ---
-title: "Bookshelf vs. Floorstanding Speakers: How to Choose"
+title: "Bookshelf vs. Floorstanding: How to Choose"
 date: 2026-02-06
 description: "Bigger isn't always better. The case for bookshelf speakers is stronger than many audiophiles admit. Here's how to match speaker size to your room."
 categories: ["Guides"]
