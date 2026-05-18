@@ -113,30 +113,28 @@
       flex-shrink: 0;
     }
     .nav-logo-icon svg { display: block; }
-    .nav-logo-text {
+      .nav-logo-text {
       font-family: var(--sans);
       font-size: 15px;
       font-weight: 500;
       letter-spacing: 0.01em;
+      color: #ffffff;
     }
-    .nav-logo-text span { color: var(--gold); }
-    .nav-links {
+    .nav-logo-text span { color: var(--gold); }    .nav-links {
       display: flex;
       gap: 2rem;
       list-style: none;
     }
-    .nav-links a {
+   .nav-links a {
       font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--text-white);
+      color: rgba(255,255,255,0.8);
       text-decoration: none;
-      opacity: 0.85;
-      transition: opacity 0.15s, color 0.15s;
+      transition: color 0.15s;
     }
-    .nav-links a:hover { opacity: 1; color: var(--gold); }
-
+    .nav-links a:hover { color: var(--gold); }
     /* ── HERO ── */
     .hero {
       background: var(--bg-hero);
@@ -585,6 +583,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
+        <li><a href="https://deepgroovehifi.com/calculators/">Calculators</a></li>
         <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
         <li><a href="https://deepgroovehifi.com/about/">About</a></li>
         <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
