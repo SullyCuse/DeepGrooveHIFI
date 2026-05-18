@@ -1,5 +1,5 @@
 ---
-title: "Integrated Amps vs. Separates: Which Setup Is Right for You?"
+title: "Integrated Amps vs. Separates: Which to Choose?"
 date: 2026-04-15
 description: "One box or two? The case for integrated amplifiers is stronger than you might think — but separates still have their place. Here's how to decide."
 categories: ["Guides"]

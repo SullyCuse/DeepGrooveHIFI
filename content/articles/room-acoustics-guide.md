@@ -1,5 +1,5 @@
 ---
-title: "Room Acoustics for Audiophiles: Practical Improvements Without Breaking the Bank"
+title: "Room Acoustics: Practical HiFi Improvements"
 date: 2026-01-09
 description: "Your room shapes what you hear more than almost any component change. Here's how to diagnose acoustic problems and fix them without turning your listening room into an isolation chamber."
 categories: ["Guides"]

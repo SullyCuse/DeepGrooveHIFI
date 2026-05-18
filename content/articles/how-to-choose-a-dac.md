@@ -1,5 +1,5 @@
 ---
-title: "How to Choose a DAC: What Actually Matters at Every Price Point"
+title: "Choosing a DAC: What Actually Matters"
 date: 2026-05-12
 description: "R2R vs delta-sigma, chip vs implementation, and what you should actually be listening for when choosing a digital-to-analog converter for your system."
 categories: ["Guides"]

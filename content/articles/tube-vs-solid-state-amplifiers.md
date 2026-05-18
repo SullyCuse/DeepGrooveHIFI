@@ -1,5 +1,5 @@
 ---
-title: "Tube vs. Solid-State Amplifiers: An Honest Comparison"
+title: "Tube vs. Solid-State Amplifiers Compared"
 date: 2026-06-02
 description: "Tubes glow, solid-state measures better, and both camps have devoted followers. Here's what the differences actually are — and which is right for your system."
 categories: ["Guides"]

@@ -1,5 +1,5 @@
 ---
-title: "Balanced vs. Unbalanced Audio Connections: Does XLR Actually Matter?"
+title: "Balanced vs. Unbalanced: Does XLR Matter?"
 date: 2026-01-23
 description: "XLR connectors look professional and expensive. But do balanced connections actually sound better, and when are they worth the extra cost?"
 categories: ["Guides"]

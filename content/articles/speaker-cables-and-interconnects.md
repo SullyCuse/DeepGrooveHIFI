@@ -1,5 +1,5 @@
 ---
-title: "Speaker Cables and Interconnects: What Actually Matters"
+title: "Speaker Cables: What Actually Matters"
 date: 2026-06-04
 description: "Cable marketing is rife with pseudoscience and inflated prices. Here's what the physics says actually matters in speaker cable and interconnect selection."
 categories: ["Guides"]

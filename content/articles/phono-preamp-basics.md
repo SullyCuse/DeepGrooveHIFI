@@ -1,5 +1,5 @@
 ---
-title: "Phono Preamp Basics: Moving Magnet vs. Moving Coil Cartridges"
+title: "Phono Preamp Basics: MM vs. MC Cartridges"
 date: 2026-04-08
 description: "Your turntable cartridge produces a signal too small and too colored for a line-level input. A phono preamp fixes both problems — here's how it works and what to look for."
 categories: ["Guides"]

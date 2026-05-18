@@ -1,5 +1,5 @@
 ---
-title: "Open-Back vs. Closed-Back Headphones: Which Type Is Right for You"
+title: "Open-Back vs. Closed-Back Headphones"
 date: 2026-05-17
 description: "Open-back headphones sound more spacious and natural, but closed-back designs have genuine advantages. Here's how to choose the right type for how and where you actually listen."
 categories: ["Guides"]

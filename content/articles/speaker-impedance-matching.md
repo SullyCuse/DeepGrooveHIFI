@@ -1,5 +1,5 @@
 ---
-title: "Speaker Impedance and Amplifier Matching: What You Need to Know"
+title: "Speaker Impedance and Amplifier Matching"
 date: 2026-02-13
 description: "Nominal impedance, minimum impedance, phase angle — what these measurements mean and why mismatching an amplifier and speaker can cause problems."
 categories: ["Guides"]

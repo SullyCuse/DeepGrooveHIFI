@@ -1,5 +1,5 @@
 ---
-title: "Network Streamers Explained: Bringing Hi-Fi Into the Digital Age"
+title: "Network Streamers Explained for Hi-Fi Systems"
 date: 2026-02-20
 description: "What is a network streamer, how does it differ from a smart speaker or phone, and why does it matter for serious audio? Everything you need to know."
 categories: ["Guides"]

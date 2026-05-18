@@ -1,5 +1,5 @@
 ---
-title: "Turntable Cartridge Types: MM, MC, and Everything In Between"
+title: "Turntable Cartridges: MM, MC, and Beyond"
 date: 2026-03-12
 description: "MM or MC? High output or low? This guide explains cartridge types, generator technologies, and how to choose the right one for your setup."
 categories: ["Guides"]

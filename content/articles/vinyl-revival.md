@@ -1,5 +1,5 @@
 ---
-title: "Vinyl Revival: Why Turntables Are Back and Better Than Ever"
+title: "Vinyl Revival: Why Turntables Are Back"
 date: 2026-03-25
 description: "Vinyl record sales have outpaced CDs for years running. But is this nostalgia, genuine sound quality, or something more interesting? We make the case."
 categories: ["Features"]

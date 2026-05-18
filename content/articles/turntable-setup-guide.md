@@ -1,5 +1,5 @@
 ---
-title: "How to Set Up a Turntable: A Step-by-Step Guide"
+title: "Turntable Setup: A Step-by-Step Guide"
 date: 2026-03-18
 description: "First turntable? This guide walks you through everything — from leveling and cartridge alignment to tracking force, anti-skate, and first play."
 categories: ["Guides"]

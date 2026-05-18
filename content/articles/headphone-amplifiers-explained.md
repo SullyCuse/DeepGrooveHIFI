@@ -1,5 +1,5 @@
 ---
-title: "Headphone Amplifiers: Do You Actually Need One?"
+title: "Headphone Amplifiers: Do You Need One?"
 date: 2026-06-12
 description: "A dedicated headphone amplifier can transform how your headphones perform — or make no difference at all. The answer depends entirely on what headphones you own."
 categories: ["Guides"]

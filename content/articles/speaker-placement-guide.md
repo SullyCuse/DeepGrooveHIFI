@@ -1,5 +1,5 @@
 ---
-title: "Speaker Placement: The Free Upgrade Most Audiophiles Overlook"
+title: "Speaker Placement: The Free Hi-Fi Upgrade"
 date: 2026-05-14
 description: "Where your speakers sit in the room matters more than almost any upgrade you could buy. Here's how to find the positions that unlock what your speakers can actually do."
 categories: ["Guides"]
