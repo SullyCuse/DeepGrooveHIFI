@@ -12,6 +12,8 @@ FILES = [
     'static/calculators/phono-stage-gain/index.html',
     'static/calculators/room-acoustics/index.html',
     'static/calculators/listening-room-size/index.html',
+    'static/calculators/hifi-budget-builder/index.html',
+    'static/calculators/cable-resistance/index.html',
 ]
 
 # ── Replacement blocks ────────────────────────────────────────────────────────
