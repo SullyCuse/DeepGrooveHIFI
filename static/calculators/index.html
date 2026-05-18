@@ -43,8 +43,7 @@
     .nav { position: sticky; top: 0; z-index: 100; background: var(--bg-nav); border-bottom: 0.5px solid #333; }
     .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo img { width: 42px; height: 42px; display: block; }
-    .nav-logo-text { font-family: var(--sans); font-size: 15px; font-weight: 500; color: #ffffff; }
+    .nav-logo-text { font-family: var(--sans); font-size: 15px; font-weight: 500; color: #ffffff; letter-spacing: .01em; }
     .nav-logo-text span { color: var(--gold); }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; transition: color .15s; }
@@ -108,8 +107,12 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="https://deepgroovehifi.com/" class="nav-logo">
-        <img src="/images/logo.svg" alt="Deep Groove HiFi" width="34" height="34" />
+      <a href="https://deepgroovehifi.com/" class="nav-logo" aria-label="Deep Groove HiFi home">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="18" cy="18" r="17" stroke="#d4a94c" stroke-width="2"/>
+          <circle cx="18" cy="18" r="5" fill="#d4a94c"/>
+          <path d="M6 18 Q9 11 12 18 Q15 25 18 18 Q21 11 24 18 Q27 25 30 18" stroke="#d4a94c" stroke-width="1.75" fill="none" stroke-linecap="round"/>
+        </svg>
         <span class="nav-logo-text">Deep Groove <span>HiFi</span></span>
       </a>
       <ul class="nav-links">

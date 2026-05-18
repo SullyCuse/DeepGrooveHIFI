@@ -180,9 +180,9 @@
 
     /* ── FOOTER ── */
     .footer { border-top: 0.5px solid var(--border); padding: 2.5rem 1.5rem; background: var(--bg-nav); }
-    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
-    @media (max-width: 680px) { .footer-inner { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
-    .footer-brand-name { font-size: 15px; font-weight: 500; color: #ffffff; margin-bottom: 8px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 2rem; }
+    @media (max-width: 860px) { .footer-inner { grid-template-columns: 1fr 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
+    @media (max-width: 540px) { .footer-inner { grid-template-columns: 1fr 1fr; } }    .footer-brand-name { font-size: 15px; font-weight: 500; color: #ffffff; margin-bottom: 8px; }
     .footer-brand-name span { color: var(--gold); }
     .footer-brand-desc { font-size: 13px; color: #666; line-height: 1.6; max-width: 260px; }
     .footer-col-head { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #666; margin-bottom: 12px; }
@@ -471,17 +471,19 @@
         <div class="footer-col-head">Topics</div>
         <ul class="footer-links">
           <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
+          <li><a href="https://deepgroovehifi.com/tags/reviews/">Reviews</a></li>
           <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
-          <li><a href="https://deepgroovehifi.com/calculators/">Calculators</a></li>
+          <li><a href="https://deepgroovehifi.com/articles/">All Articles</a></li>
         </ul>
       </div>
       <div>
-        <div class="footer-col-head">Gear types</div>
+        <div class="footer-col-head">Gear Types</div>
         <ul class="footer-links">
+          <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
           <li><a href="https://deepgroovehifi.com/tags/amplifiers/">Amplifiers</a></li>
           <li><a href="https://deepgroovehifi.com/tags/turntables/">Turntables</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
           <li><a href="https://deepgroovehifi.com/tags/speakers/">Speakers</a></li>
+          <li><a href="https://deepgroovehifi.com/tags/streamers/">Streamers</a></li>
         </ul>
       </div>
       <div>
@@ -493,9 +495,17 @@
           <li><a href="https://deepgroovehifi.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
         </ul>
       </div>
+      <div>
+        <div class="footer-col-head">Sister Sites</div>
+        <ul class="footer-links">
+          <li><a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a></li>
+          <li><a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a></li>
+        </ul>
+      </div>
     </div>
     <div class="footer-bottom">© 2026 Deep Groove HiFi. All rights reserved.</div>
   </footer>
+
 
   <script>
     var connMode = 'discrete';
