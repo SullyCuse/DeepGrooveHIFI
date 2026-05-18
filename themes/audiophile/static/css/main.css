@@ -330,7 +330,7 @@ a:hover { color: var(--accent-hover); }
   overflow: hidden;
 }
 
-.article-card__img img { width: 100%; height: 100%; object-fit: cover; }
+.article-card__img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(1.7) contrast(1.05); }
 
 .article-card__body {
   padding: 1.4rem 1.5rem 1.6rem;
