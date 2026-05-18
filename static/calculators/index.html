@@ -40,15 +40,21 @@
     .network-bar__dot { color: #333; font-size: 10px; }
 
     /* ── NAV ── */
-    .nav { position: sticky; top: 0; z-index: 100; background: var(--bg-nav); border-bottom: 0.5px solid #333; }
-    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; height: 60px; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo-text { font-family: var(--sans); font-size: 15px; font-weight: 500; color: #ffffff; letter-spacing: .01em; }
-    .nav-logo-text span { color: var(--gold); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: 12px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; transition: color .15s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-    @media (max-width: 420px) { .nav-links { display: none; } }
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--bg-nav); border-bottom: 1px solid var(--border); height: 68px; }
+    .nav__inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .nav__logo { display: flex; align-items: center; gap: .75rem; text-decoration: none; flex-shrink: 0; }
+    .nav__logo-text { font-family: var(--serif); font-size: 1.25rem; color: #ffffff; letter-spacing: .01em; white-space: nowrap; }
+    .nav__logo-text span { color: var(--gold); }
+    .nav__links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+    .nav__links a { font-size: 13px; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; transition: color .15s; }
+    .nav__links a:hover, .nav__links a.active { color: var(--gold); }
+    .nav__toggle { display: none; background: none; border: none; cursor: pointer; padding: .5rem; flex-direction: column; gap: 5px; }
+    .nav__toggle span { display: block; width: 24px; height: 2px; background: #ffffff; transition: all .3s; }
+    @media (max-width: 768px) {
+      .nav__toggle { display: flex; }
+      .nav__links { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--bg-nav); flex-direction: column; padding: 1.5rem; border-bottom: 1px solid var(--border); gap: 1.25rem; align-items: flex-start; }
+      .nav__links.is-open { display: flex; }
+    }
 
     /* ── HERO ── */
     .hero { background: var(--bg-hero); padding: 3.5rem 1.5rem 3rem; border-bottom: 0.5px solid var(--border); }
@@ -77,18 +83,21 @@
     .calc-link { font-size: 13px; color: var(--gold); margin-top: auto; padding-top: 4px; }
 
     /* ── FOOTER ── */
-    .footer { border-top: 0.5px solid var(--border); padding: 2.5rem 1.5rem; background: var(--bg-nav); }
-    .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 2rem; }
-    @media (max-width: 860px) { .footer-inner { grid-template-columns: 1fr 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
-    @media (max-width: 540px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
-    .footer-brand-name { font-size: 15px; font-weight: 500; color: #ffffff; margin-bottom: 8px; }
-    .footer-brand-name span { color: var(--gold); }
-    .footer-brand-desc { font-size: 13px; color: #666; line-height: 1.6; max-width: 260px; }
-    .footer-col-head { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #666; margin-bottom: 12px; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .footer-links a { font-size: 13px; color: #888; text-decoration: none; transition: color .15s; }
-    .footer-links a:hover { color: var(--gold); }
-    .footer-bottom { max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 0.5px solid #333; font-size: 12px; color: #555; }
+    .footer { background: var(--bg-nav); border-top: 1px solid var(--border); padding: 3rem 0 2rem; margin-top: 4rem; }
+    .footer__inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    @media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+    @media (max-width: 500px) { .footer__grid { grid-template-columns: 1fr; } }
+    .footer__brand p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-top: .75rem; max-width: 300px; }
+    .footer__logo-text { font-family: var(--serif); font-size: 1.2rem; color: #ffffff; }
+    .footer__logo-text span { color: var(--gold); }
+    .footer__col h4 { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #ffffff; margin-bottom: 1rem; }
+    .footer__col ul { list-style: none; }
+    .footer__col li { margin-bottom: .6rem; }
+    .footer__col a { font-size: 15px; color: var(--text-muted); transition: color .2s; }
+    .footer__col a:hover { color: var(--gold); }
+    .footer__bottom { padding-top: 2rem; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer__copy { font-size: 13px; color: var(--text-muted); }
   </style>
 </head>
 
@@ -105,25 +114,30 @@
   </div>
 
   <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="https://deepgroovehifi.com/" class="nav-logo" aria-label="Deep Groove HiFi home">
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="https://deepgroovehifi.com/" class="nav__logo" aria-label="Deep Groove HiFi home">
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="18" cy="18" r="17" stroke="#d4a94c" stroke-width="2"/>
-          <circle cx="18" cy="18" r="5" fill="#d4a94c"/>
-          <path d="M6 18 Q9 11 12 18 Q15 25 18 18 Q21 11 24 18 Q27 25 30 18" stroke="#d4a94c" stroke-width="1.75" fill="none" stroke-linecap="round"/>
+          <circle cx="18" cy="18" r="17" stroke="#c9a84c" stroke-width="2"/>
+          <circle cx="18" cy="18" r="5" fill="#c9a84c"/>
+          <path d="M6 18 Q9 11 12 18 Q15 25 18 18 Q21 11 24 18 Q27 25 30 18" stroke="#c9a84c" stroke-width="1.75" fill="none" stroke-linecap="round"/>
         </svg>
-        <span class="nav-logo-text">Deep Groove <span>HiFi</span></span>
+        <span class="nav__logo-text">Deep Groove <span>HiFi</span></span>
       </a>
-      <ul class="nav-links">
+      <ul class="nav__links" id="nav-links">
         <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
         <li><a href="https://deepgroovehifi.com/calculators/" class="active">Calculators</a></li>
         <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
         <li><a href="https://deepgroovehifi.com/about/">About</a></li>
         <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
       </ul>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </nav>
+  </header>
 
   <!-- HERO -->
   <div class="hero">
@@ -193,49 +207,68 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="footer-brand-name">Deep Groove <span>HiFi</span></div>
-        <p class="footer-brand-desc">Expert audiophile coverage for enthusiasts who care about the signal chain — from source to speaker.</p>
+    <div class="footer__inner">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <div class="footer__logo-text">Deep Groove <span>HiFi</span></div>
+          <p>Expert audiophile coverage for enthusiasts who care about the signal chain — from source to speaker.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Topics</h4>
+          <ul>
+            <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
+            <li><a href="https://deepgroovehifi.com/categories/reviews/">Reviews</a></li>
+            <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
+            <li><a href="https://deepgroovehifi.com/articles/">All Articles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Gear Types</h4>
+          <ul>
+            <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/amplifiers/">Amplifiers</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/turntables/">Turntables</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/speakers/">Speakers</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/streamers/">Streamers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="https://deepgroovehifi.com/about/">About</a></li>
+            <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
+            <li><a href="https://deepgroovehifi.com/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="https://deepgroovehifi.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Sister Sites</h4>
+          <ul>
+            <li><a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a></li>
+            <li><a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a></li>
+          </ul>
+        </div>
+
       </div>
-      <div>
-        <div class="footer-col-head">Topics</div>
-        <ul class="footer-links">
-          <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/reviews/">Reviews</a></li>
-          <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
-          <li><a href="https://deepgroovehifi.com/articles/">All Articles</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-head">Gear Types</div>
-        <ul class="footer-links">
-          <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/amplifiers/">Amplifiers</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/turntables/">Turntables</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/speakers/">Speakers</a></li>
-          <li><a href="https://deepgroovehifi.com/tags/streamers/">Streamers</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-head">Site</div>
-        <ul class="footer-links">
-          <li><a href="https://deepgroovehifi.com/about/">About</a></li>
-          <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
-          <li><a href="https://deepgroovehifi.com/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="https://deepgroovehifi.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-head">Sister Sites</div>
-        <ul class="footer-links">
-          <li><a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a></li>
-          <li><a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a></li>
-        </ul>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Deep Groove HiFi. All rights reserved.</p>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Deep Groove HiFi. All rights reserved.</div>
   </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links  = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
 
 </body>
 </html>
