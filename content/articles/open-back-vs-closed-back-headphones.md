@@ -33,7 +33,7 @@ Open-back designs sidestep most of this. The driver interacts primarily with the
 
 The tradeoff is isolation and leakage. Open-back headphones in a quiet room, listened to alone, are superb. Open-back headphones in an office, on a train, or anywhere others are present are not viable — they disturb others and provide no isolation from ambient sound.
 
-{{< amazon name="Sennheiser HD 560S Open-Back Headphones" asin="B08G16WSNG" price="~$199" desc="A reference-class open-back design with accurate, neutral tuning. Excellent imaging and soundstage for the price." >}}
+The Sennheiser HD 560S (~$199) is a strong open-back entry point — accurate, neutral tuning with genuinely good imaging for the price.
 
 {{< ad id="in-article-hp2" >}}
 
@@ -49,7 +49,7 @@ Closed-back headphones are not merely a compromised version of open-back designs
 
 The quality closed-back headphones from Beyerdynamic, Sony, Audio-Technica, and AKG have closed the gap with open-back designs substantially. A good closed-back in its price range can be genuinely competitive with an open-back at the same price, though the two will sound different rather than one being strictly better.
 
-{{< amazon name="Beyerdynamic DT 770 Pro 80 Ohm" asin="B0016MNAAI" price="~$149" desc="A closed-back studio classic with extended bass, excellent isolation, and comfortable long-session wear. Requires a decent headphone amplifier." >}}
+The Beyerdynamic DT 770 Pro (80 ohm, ~$149) is a closed-back studio classic — extended bass, excellent isolation, and comfortable for long sessions, though it does benefit from a decent headphone amplifier.
 
 ## The Amplifier Question
 

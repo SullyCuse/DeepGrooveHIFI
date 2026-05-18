@@ -51,7 +51,7 @@ Before buying, map your actual signal chain.
 
 **Under $300:** This range has improved dramatically. DACs from SMSL, Topping, Cambridge Audio, and Schiit offer measurements that would have cost ten times as much a decade ago. At this level, prioritize connectivity (does it have the inputs you need?), the quality of the analog output stage, and build quality. Measurements-wise, most are genuinely excellent.
 
-{{< amazon name="Schiit Modi+ DAC" asin="B09G2BFHBC" price="~$149" desc="A clean, USB and optical-capable DAC with a discrete output stage. An honest starting point that punches above its price." >}}
+The Schiit Modi Plus (~$149) is a well-regarded entry point — clean USB and optical inputs, discrete output stage, and honest performance at the price.
 
 **$300–$1,000:** You gain better output stages, more inputs, true balanced outputs, and more attention to power supply quality. R2R options begin appearing at the upper end of this range. This is where differences between specific products begin to be audible on quality amplification and speakers.
 

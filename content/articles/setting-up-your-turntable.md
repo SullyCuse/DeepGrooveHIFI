@@ -31,7 +31,7 @@ Setting tracking force requires either a stylus balance (a digital scale designe
 
 Set tracking force to the cartridge manufacturer's recommended optimal value. If the specification is a range, start at the upper third. Audiophile cartridges often have tighter tolerances and repay the investment of measuring with a scale.
 
-{{< amazon name="Neoteck Stylus Force Scale" asin="B01N2ZXQJB" price="~$20" desc="A reliable digital stylus balance for accurately setting tracking force. An essential tool for any turntable owner." >}}
+A digital stylus balance (the Neoteck scale is a popular ~$20 option) gives you an actual measurement rather than relying on the counterweight dial alone.
 
 ## Cartridge Alignment: The Most Important Step You're Probably Skipping
 
