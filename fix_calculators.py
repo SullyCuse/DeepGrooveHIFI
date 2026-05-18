@@ -111,7 +111,7 @@ NEW_FOOTER_AND_END = """\
           <h4>Topics</h4>
           <ul>
             <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
-            <li><a href="https://deepgroovehifi.com/categories/reviews/">Reviews</a></li>
+            <li><a 
             <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
             <li><a href="https://deepgroovehifi.com/articles/">All Articles</a></li>
           </ul>
