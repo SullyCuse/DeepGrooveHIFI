@@ -563,13 +563,13 @@
 
       var color, compat, sub, vtext;
       if (spkOhm < ampMin) {
-        color = '#A0522D'; compat = 'Unsafe'; sub = 'below amp minimum';
+        color = '#A0522D'; compat = 'Unsafe'; sub = spkOhm + 'Ω < ' + ampMin + 'Ω minimum';
         vtext = '<strong>Incompatible.</strong> Your ' + spkOhm + 'Ω speakers fall below your amplifier\'s ' + ampMin + 'Ω minimum rating. Running this combination risks overheating, protection shutdowns, or permanent amplifier damage. Use speakers rated ' + ampMin + 'Ω or higher.';
       } else if (spkOhm === ampMin) {
-        color = '#9A7010'; compat = 'Marginal'; sub = 'at amp\'s limit';
+        color = '#9A7010'; compat = 'Marginal'; sub = 'at ' + ampMin + 'Ω amp limit';
         vtext = '<strong>At the limit.</strong> Your speakers exactly match your amplifier\'s minimum rating. This will work but leaves no headroom — the amp will run warmer than ideal and may exhibit higher distortion. Confirm your amp genuinely supports this impedance under sustained use.';
       } else {
-        color = '#6B8E23'; compat = 'Safe'; sub = 'fully compatible';
+        color = '#6B8E23'; compat = 'Safe'; sub = spkOhm + 'Ω ≥ ' + ampMin + 'Ω minimum';
         vtext = '<strong>Safe and compatible.</strong> ' + spkOhm + 'Ω speakers on a ' + ampMin + 'Ω-rated amplifier is a standard setup. Each of your ' + discChannels + ' channels sees an identical ' + spkOhm + 'Ω load — comfortably above your amplifier\'s minimum rating. No concerns.';
       }
 
