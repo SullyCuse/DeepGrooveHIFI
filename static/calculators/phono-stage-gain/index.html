@@ -448,6 +448,96 @@
       const open = links.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', open);
     });
+
+    const CART_RANGES = {
+      mm:   { min: 0.5,  max: 6.0,  step: 0.1,  def: 3.0,  dec: 1 },
+      homc: { min: 0.5,  max: 2.5,  step: 0.1,  def: 1.8,  dec: 1 },
+      lomc: { min: 0.05, max: 0.6,  step: 0.05, def: 0.3,  dec: 2 },
+    };
+
+    let cartType = 'homc';
+    let cartMv   = 1.8;
+    let targetMv = 200;
+
+    function setType(t) {
+      cartType = t;
+      ['mm','homc','lomc'].forEach(id => {
+        const b = document.getElementById('btn-' + id);
+        b.classList.toggle('active', id === t);
+        b.setAttribute('aria-pressed', id === t);
+      });
+      const r = CART_RANGES[t];
+      const slider = document.getElementById('cart');
+      slider.min   = r.min;
+      slider.max   = r.max;
+      slider.step  = r.step;
+      slider.value = r.def;
+      cartMv = r.def;
+      document.getElementById('cartVal').textContent  = r.def.toFixed(r.dec);
+      document.getElementById('rangeMin').textContent = r.min + ' mV';
+      document.getElementById('rangeMax').textContent = r.max + ' mV';
+      compute();
+    }
+
+    function compute() {
+      const gainDb = 20 * Math.log10(targetMv / cartMv);
+      const mult   = targetMv / cartMv;
+
+      document.getElementById('gainDb').textContent   = gainDb.toFixed(1);
+      document.getElementById('gainMult').textContent = Math.round(mult) + '×';
+
+      let stageText, stageNote, gainNote, verdictText;
+
+      if (gainDb <= 42) {
+        stageText   = 'MM Stage';
+        stageNote   = 'Standard MM gain — compatible with the vast majority of phono stages.';
+        gainNote    = gainDb < 36 ? 'Low for MM — output may be quiet on some amplifiers.' : 'Standard MM gain range.';
+        verdictText = '<strong>Standard MM gain.</strong> Any phono stage with an MM input will handle this comfortably. Look for a stage rated 36–42 dB.';
+      } else if (gainDb <= 55) {
+        stageText   = 'High-Output MC Stage';
+        stageNote   = 'Above typical MM range — a phono stage with switchable or dedicated MC gain is required.';
+        gainNote    = 'High-output MC range — you need a phono stage with dedicated MC support.';
+        verdictText = '<strong>High-output MC range.</strong> You need a phono stage with a dedicated MC input or switchable gain above 42 dB. Many integrated phono stages cover this range.';
+      } else if (gainDb <= 70) {
+        stageText   = 'Low-Output MC Stage';
+        stageNote   = 'High gain territory — a dedicated high-gain MC phono stage is required.';
+        gainNote    = 'Low-output MC range. Dedicated high-gain MC stage essential.';
+        verdictText = '<strong>Low-output MC range.</strong> A dedicated high-gain MC phono stage is required. A step-up transformer (SUT) is optional but often improves noise performance at this level.';
+      } else {
+        stageText   = 'SUT + MM Stage';
+        stageNote   = 'Extreme gain — a step-up transformer before a standard MM stage is the recommended approach.';
+        gainNote    = 'Extreme gain required. A SUT paired with a MM stage is typically the cleanest solution.';
+        verdictText = '<strong>Extreme gain required.</strong> A step-up transformer (SUT) paired with a standard MM phono stage is the preferred approach. Active MC stages at this gain level struggle to avoid noise.';
+      }
+
+      document.getElementById('stageType').textContent = stageText;
+      document.getElementById('stageNote').textContent = stageNote;
+      document.getElementById('gainNote').textContent  = gainNote;
+      document.getElementById('multNote').textContent  = 'The phono stage must amplify the cartridge signal ' + Math.round(mult) + '× to reach line level.';
+
+      // Meter: 30 dB = 0%, 75 dB = 100%
+      const meterPct = Math.min(100, Math.max(0, (gainDb - 30) / 45 * 100));
+      document.getElementById('gainMeter').style.width = meterPct + '%';
+
+      const meterFill = document.getElementById('gainMeter');
+      meterFill.style.background = gainDb <= 42 ? 'var(--gold)' : gainDb <= 55 ? '#9a6a00' : '#8b3a2a';
+
+      document.getElementById('verdict').innerHTML = verdictText;
+    }
+
+    document.getElementById('cart').addEventListener('input', function () {
+      cartMv = parseFloat(this.value);
+      document.getElementById('cartVal').textContent = cartMv.toFixed(CART_RANGES[cartType].dec);
+      compute();
+    });
+
+    document.getElementById('target').addEventListener('input', function () {
+      targetMv = parseInt(this.value, 10);
+      document.getElementById('targetVal').textContent = targetMv;
+      compute();
+    });
+
+    compute();
   </script>
 
 </body>

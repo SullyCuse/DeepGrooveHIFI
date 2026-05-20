@@ -431,6 +431,115 @@
       const open = links.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', open);
     });
+
+    const C = 343; // speed of sound m/s at 20°C
+    let unit = 'ft';
+
+    function setUnit(u) {
+      unit = u;
+      document.getElementById('btnFt').classList.toggle('active', u === 'ft');
+      document.getElementById('btnM').classList.toggle('active', u === 'm');
+      ['L','W','H'].forEach(id => document.getElementById('unit' + id).textContent = u);
+      compute();
+    }
+
+    function toM(v) { return unit === 'ft' ? v * 0.3048 : v; }
+
+    function compute() {
+      const Lraw = parseFloat(document.getElementById('inpL').value) || 14;
+      const Wraw = parseFloat(document.getElementById('inpW').value) || 11;
+      const Hraw = parseFloat(document.getElementById('inpH').value) || 8;
+
+      const Lm = toM(Lraw), Wm = toM(Wraw), Hm = toM(Hraw);
+
+      const dims = [
+        { name: 'Length', m: Lm, cls: 'length' },
+        { name: 'Width',  m: Wm, cls: 'width'  },
+        { name: 'Height', m: Hm, cls: 'height' },
+      ];
+
+      // Compute all axial modes (4 harmonics per dimension)
+      const allModes = [];
+      dims.forEach((d, di) => {
+        for (let n = 1; n <= 4; n++) {
+          allModes.push({ f: (n * C) / (2 * d.m), dim: di, n });
+        }
+      });
+
+      // Flag coincidences: modes from different dimensions within 10 Hz
+      const coincident = new Set();
+      for (let i = 0; i < allModes.length; i++) {
+        for (let j = i + 1; j < allModes.length; j++) {
+          if (allModes[i].dim !== allModes[j].dim && Math.abs(allModes[i].f - allModes[j].f) <= 10) {
+            coincident.add(i);
+            coincident.add(j);
+          }
+        }
+      }
+
+      // Build modes grid
+      let gridHtml = '';
+      dims.forEach((d, di) => {
+        gridHtml += `<div class="mode-col"><div class="mode-col-head ${d.cls}">${d.name}</div>`;
+        for (let n = 1; n <= 4; n++) {
+          const idx = di * 4 + (n - 1);
+          const f   = allModes[idx].f;
+          const hit = coincident.has(idx);
+          gridHtml += `<div class="mode-row">
+            <span class="mode-harmonic">${n}×</span>
+            <span class="mode-freq">${f.toFixed(1)}</span>
+            <span class="mode-hz">Hz</span>
+            <span class="mode-flag ${hit ? 'coincides' : 'empty'}" title="${hit ? 'Coincides with another mode' : ''}"></span>
+          </div>`;
+        }
+        gridHtml += '</div>';
+      });
+      document.getElementById('modesGrid').innerHTML = gridHtml;
+
+      // Schroeder frequency (assumes RT60 ≈ 0.32 s — typical treated room)
+      const Vm  = Lm * Wm * Hm;
+      const Fs  = Math.round(2000 * Math.sqrt(0.32 / Vm));
+      document.getElementById('schroederVal').textContent = Fs;
+
+      // Volume
+      const Vdisp = unit === 'ft' ? Math.round(Lraw * Wraw * Hraw) : Math.round(Vm);
+      document.getElementById('volumeVal').textContent  = Vdisp;
+      document.getElementById('volumeUnit').textContent = unit === 'ft' ? 'cubic feet' : 'cubic metres';
+
+      // Ratio note
+      const ratios = [Lm/Wm, Lm/Hm, Wm/Hm];
+      const hasProblematic = ratios.some(r => Math.abs(r - Math.round(r)) < 0.07 && Math.round(r) >= 1 && Math.round(r) <= 4);
+      document.getElementById('ratioNote').textContent = hasProblematic
+        ? 'One or more dimension ratios are close to a whole number — modes will share harmonics and stack more severely.'
+        : 'No whole-number dimension ratios detected — modes are reasonably well distributed.';
+
+      // Alerts
+      let alertsHtml = coincident.size > 0
+        ? `<div class="alert warn"><strong>${coincident.size / 2 > 1 ? 'Multiple mode coincidences' : 'Mode coincidence'} detected.</strong> Modes from different room dimensions fall within 10 Hz of each other, causing stacking bass peaks. Corner bass trapping is especially important at those frequencies.</div>`
+        : `<div class="alert good"><strong>No mode coincidences detected.</strong> Your room's axial modes are well spread. Bass treatment will still help, but you are not dealing with stacked peaks.</div>`;
+      document.getElementById('alertsZone').innerHTML = alertsHtml;
+
+      // Recommendations
+      const lowestF    = Math.min(...allModes.map(m => m.f));
+      const lowestDim  = ['length','width','height'][allModes.findIndex(m => m.f === lowestF)];
+      const recs = [
+        `Your lowest axial mode is <strong>${lowestF.toFixed(1)} Hz</strong> (${lowestDim} dimension). Bass treatment is most critical near this frequency — place floor-to-ceiling corner traps in all four vertical corners as a first step.`,
+        `The Schroeder frequency of <strong>${Fs} Hz</strong> marks where modal behaviour ends. Broadband absorption panels become effective above this point; below it, only thick corner traps or tuned resonators will address the modes.`,
+        coincident.size > 0
+          ? `<strong>Priority: corner bass trapping.</strong> The mode coincidences in this room will produce particularly strong, narrow-band bass peaks. Minimum 4-inch thick, floor-to-ceiling corner treatment is strongly recommended.`
+          : `Place broadband bass traps in all four vertical corners. Even without coincidences, corner loading addresses the axial modes most effectively.`,
+        `Avoid placing your listening position at exactly 50% of any room dimension — that puts you at the pressure null of every second harmonic. The 38% rule (see Listening Room Size Calculator) is a practical starting point.`,
+      ];
+      document.getElementById('recsZone').innerHTML = recs.map((r, i) =>
+        `<div class="rec-item"><span class="rec-num">${i + 1}</span><span>${r}</span></div>`
+      ).join('');
+    }
+
+    ['inpL','inpW','inpH'].forEach(id =>
+      document.getElementById(id).addEventListener('input', compute)
+    );
+
+    compute();
   </script>
 
 </body>

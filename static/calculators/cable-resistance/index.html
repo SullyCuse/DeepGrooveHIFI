@@ -216,11 +216,18 @@
       cursor: pointer;
     }
     .range-labels {
-      display: flex;
-      justify-content: space-between;
+      position: relative;
+      height: 16px;
       margin-top: 5px;
     }
-    .range-labels span { font-size: 10px; color: var(--text-dim); }
+    .range-labels span {
+      position: absolute;
+      font-size: 10px;
+      color: var(--text-dim);
+      transform: translateX(-50%);
+    }
+    .range-labels span:first-child { transform: translateX(0); }
+    .range-labels span:last-child  { transform: translateX(-100%); }
 
     /* ── BUTTON GROUP ── */
     .btn-group {
@@ -504,10 +511,10 @@
         </div>
         <input type="range" id="length" min="1" max="100" value="10" step="1" aria-label="Cable length in feet" />
         <div class="range-labels">
-          <span>1 ft</span>
-          <span>25 ft</span>
-          <span>50 ft</span>
-          <span>100 ft</span>
+          <span style="left:0%">1 ft</span>
+          <span style="left:24.2%">25 ft</span>
+          <span style="left:49.5%">50 ft</span>
+          <span style="left:100%">100 ft</span>
         </div>
       </div>
 
