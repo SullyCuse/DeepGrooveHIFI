@@ -1,5 +1,5 @@
 ---
-title: "Amplifier Classes: A, AB, and D Explained"
+title: "Amplifier Classes Explained: Class A, AB, and D"
 date: 2026-04-22
 description: "Class A runs hot and expensive. Class D runs cool and efficient. Class AB sits between. Here's what each means for sound quality and your electricity bill."
 categories: ["Guides"]
