@@ -1,5 +1,5 @@
 ---
-title: "What Is a DAC and Why Does It Matter?"
+title: "What Is a DAC? Understanding Digital-to-Analog Conversion"
 date: 2026-05-01
 description: "Every digital audio signal needs a DAC to become sound you can hear. Here's how the conversion works, why it matters, and what to look for when shopping."
 categories: ["Guides"]
