@@ -1,8 +1,5 @@
 {{ define "main" }}
 
-<!-- Ad slot: top of article page -->
-{{ partial "ad-slot.html" (dict "id" "top-article" "context" .) }}
-
 <div class="article-layout">
 
   <!-- ── Article main column ── -->
@@ -18,6 +15,8 @@
       <h1 class="article-header__title">{{ .Title }}</h1>
 
       <div class="article-header__meta">
+        <span class="article-header__byline">By Sully</span>
+        <span class="article-header__meta-dot">·</span>
         <time datetime="{{ .Date.Format "2006-01-02" }}">
           {{ .Date.Format "January 2, 2006" }}
         </time>
@@ -31,6 +30,9 @@
         {{ end }}
       </div>
     </header>
+
+    <!-- Ad slot: after article header, before body -->
+    {{ partial "ad-slot.html" (dict "id" "top-article" "context" .) }}
 
     <div class="article-body">
       {{ .Content }}
