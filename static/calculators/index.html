@@ -32,13 +32,6 @@
     a { color: var(--gold); text-decoration: none; }
     a:hover { color: var(--gold-hover); }
 
-    /* ── NETWORK BAR ── */
-    .network-bar { background: #0e0e0e; border-bottom: 1px solid #222; padding: .4rem 1.5rem; }
-    .network-bar__inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: .6rem; flex-wrap: wrap; }
-    .network-bar__label { font-size: 11px; color: #7A6A58; letter-spacing: .04em; }
-    .network-bar a { font-size: 11px; color: var(--gold); font-weight: 500; letter-spacing: .04em; }
-    .network-bar a:hover { color: var(--gold-hover); }
-    .network-bar__dot { color: #333; font-size: 11px; }
 
     /* ── NAV ── */
     .nav { position: sticky; top: 0; z-index: 100; background: var(--bg-nav); border-bottom: 1px solid var(--border); height: 68px; }
@@ -70,6 +63,12 @@
     .main { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
     .section-label { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1.25rem; padding-bottom: .75rem; border-bottom: 0.5px solid var(--border); }
 
+    /* ── INTRO COPY ── */
+    .calc-intro { max-width: 720px; margin-bottom: 2.75rem; }
+    .calc-intro p { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 1.1rem; }
+    .calc-intro p:last-child { margin-bottom: 0; }
+    .calc-intro strong { color: var(--text-head); font-weight: 600; }
+
     /* ── CALC CARDS ── */
     .calc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin-bottom: 2.5rem; }
     .calc-card { background: #fff; border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; text-decoration: none; transition: border-color .2s, box-shadow .2s; }
@@ -86,7 +85,7 @@
     /* ── FOOTER ── */
     .footer { background: var(--bg-nav); border-top: 1px solid var(--border); padding: 3rem 0 2rem; margin-top: 4rem; }
     .footer__inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
     @media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
     @media (max-width: 500px) { .footer__grid { grid-template-columns: 1fr; } }
     .footer__brand p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-top: .75rem; max-width: 300px; }
@@ -103,16 +102,6 @@
 </head>
 
 <body>
-
-  <!-- NETWORK BAR -->
-  <div class="network-bar">
-    <div class="network-bar__inner">
-      <span class="network-bar__label">Also from our network:</span>
-      <a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a>
-      <span class="network-bar__dot">·</span>
-      <a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a>
-    </div>
-  </div>
 
   <!-- NAV -->
   <header class="nav">
@@ -155,6 +144,13 @@
 
   <!-- MAIN -->
   <main class="main">
+
+    <div class="calc-intro">
+      <p>Most advice in this hobby is qualitative — "try it and trust your ears." That's true for things like cable voicing or amplifier character, but a surprising number of the questions that actually determine whether a system works at all come down to arithmetic. Will this amplifier push these speakers loud enough in this room? Does this cartridge's output match this phono stage's gain? Is that "bargain" speaker cable thin enough to matter at the length you need? These aren't matters of taste — they have correct answers, and getting them wrong is one of the most common ways people end up with a system that underperforms or, worse, gear that doesn't actually work together.</p>
+      <p>The calculators below exist to take the guesswork out of those decisions. Each one is built around the same handful of variables an experienced listener would ask about before recommending gear — speaker sensitivity and listening distance for amplifier power, cartridge output voltage and step-up ratios for phono gain, room dimensions for placement and acoustic treatment, wire gauge and run length for cable resistance. Enter your own numbers and you get a real answer specific to your setup, not a generic rule of thumb that may or may not apply to your room or your gear.</p>
+      <p>We'd suggest using these tools <strong>before</strong> you buy rather than after. It's far easier to choose an amplifier with adequate headroom from the start than to discover three months in that it's straining to fill your living room. Run your numbers, then read the companion guide linked from each calculator's results — that's where we walk through what the figures actually mean for how your system will sound, and what to do if the numbers come back telling you something needs to change.</p>
+      <p>Every calculator on this page is free, runs entirely in your browser, and stores nothing about you or your system. New tools are added as we identify the questions readers ask most often — if there's a calculation you wish existed, the <a href="https://deepgroovehifi.com/contact/">contact page</a> is the place to suggest it.</p>
+    </div>
 
     <div class="section-label">Available now</div>
     <div class="calc-grid">
@@ -242,14 +238,6 @@
             <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
             <li><a href="https://deepgroovehifi.com/privacy-policy/">Privacy Policy</a></li>
             <li><a href="https://deepgroovehifi.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__col">
-          <h4>Sister Sites</h4>
-          <ul>
-            <li><a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a></li>
-            <li><a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a></li>
           </ul>
         </div>
 
