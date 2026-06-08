@@ -49,15 +49,6 @@ Gear is a means to an end. The end is the music. We never lose sight of that.
 
 ---
 
-## Sister Sites
-
-Deep Groove HiFi is part of a small network of audio-focused publications:
-
-- [AudioChainHiFi.com](https://audiochainhifi.com) — focused on signal chain optimization and component matching
-- [AudioScopeHiFi.com](https://audioscopehifi.com) — measurement-forward audio coverage
-
----
-
 ## Get in Touch
 
 Questions, feedback, review requests, or just want to talk audio? Use our [contact page](/contact/) — we read every message.
