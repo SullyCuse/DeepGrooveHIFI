@@ -29,9 +29,6 @@ In accordance with the Federal Trade Commission's guidelines on endorsements and
 
 ## Affiliate Programs We Participate In
 
-**Amazon Associates**
-Deep Groove HiFi is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. Our Amazon Associate tag is `deepgroovehifi-20`.
-
 **Crutchfield**
 We participate in the Crutchfield affiliate program. Qualifying purchases made through Crutchfield links on this site may earn us a commission.
 
