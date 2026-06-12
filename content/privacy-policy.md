@@ -36,9 +36,6 @@ We use Google Analytics to understand how visitors use our site — which pages 
 ### Google AdSense
 We display advertisements served by Google AdSense. Google uses cookies to serve ads based on your prior visits to this site and other sites. You can opt out of personalized advertising at [Google's Ads Settings](https://www.google.com/settings/ads).
 
-### Amazon Associates
-We participate in the Amazon Services LLC Associates Program. When you click an Amazon link on this site, Amazon may place a cookie on your device to track referrals. Amazon's privacy policy applies to any data collected through those links.
-
 ### Affiliate Networks
 We work with affiliate networks including FlexOffers and direct merchant programs. These services may use cookies to track clicks and purchases originating from our site.
 

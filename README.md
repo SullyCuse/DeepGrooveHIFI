@@ -3,7 +3,6 @@
 ## Overview
 A Hugo static site pre-configured for:
 - Google AdSense monetization
-- Amazon Associates (tag: `audiochainhif-20`)
 - Netlify deployment from GitHub
 - 20 original audiophile articles at launch
 
@@ -81,8 +80,6 @@ Your article content here in Markdown...
 {{</* ad id="in-article-1" */>}}
 
 More content...
-
-{{</* amazon name="Product Name" asin="B0XXXXXXXX" price="~$299" desc="Product description." */>}}
 ```
 
 Then `git add . && git commit -m "Add article" && git push`.
@@ -121,23 +118,6 @@ To change fonts, swap the Google Fonts link in `baseof.html` and update:
 --font-head: 'Your Heading Font', serif;
 --font-body: 'Your Body Font', sans-serif;
 ```
-
----
-
-## Amazon Associates Links
-
-Use the `{{</* amazon */>}}` shortcode in any article:
-
-```markdown
-{{</* amazon
-    name="Product Name"
-    asin="B0XXXXXXXXX"
-    price="~$299"
-    desc="Short product description."
-*/>}}
-```
-
-Your affiliate tag (`audiochainhif-20`) is automatically appended to every link.
 
 ---
 
