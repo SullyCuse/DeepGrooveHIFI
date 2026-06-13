@@ -628,27 +628,40 @@ a:hover { color: var(--accent-hover); }
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: .25rem;
   padding: 2.5rem 0;
+  list-style: none;
+  margin: 0;
 }
 
+.pagination li { list-style: none; margin: 0; }
+
+.pagination .page-link,
 .pagination a,
 .pagination span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  min-width: 40px;
   height: 40px;
+  padding: 0 .35rem;
   border-radius: var(--radius);
   font-size: var(--size-sm);
   font-weight: 500;
-  border: 1px solid var(--border);
   color: var(--text-muted);
-  transition: all .2s;
+  transition: background .2s, color .2s;
 }
 
-.pagination a:hover { border-color: var(--accent); color: var(--accent); }
-.pagination .current { background: var(--accent); color: #0d0d0d; border-color: var(--accent); font-weight: 700; }
+/* the text span sits inside the <a>; don't double-box it */
+.pagination a span { min-width: 0; height: auto; padding: 0; }
+
+.pagination .page-link:hover,
+.pagination a:hover { background: var(--bg-card); color: var(--accent); }
+.pagination .disabled .page-link,
+.pagination .disabled a { opacity: .3; pointer-events: none; }
+.pagination .active .page-link,
+.pagination .active a,
+.pagination .current { background: var(--accent); color: #fff; font-weight: 700; }
 
 /* ============================================================
    STATIC PAGES (about, contact, privacy)
