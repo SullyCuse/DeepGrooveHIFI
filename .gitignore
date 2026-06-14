@@ -1,0 +1,24 @@
+# Hugo build output
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Secrets / environment
+.env
+.env.*
+!.env.example
+
+# Netlify
+.netlify/
+
+# Dependencies (if Node tooling is added)
+node_modules/
+
+# Logs
+*.log
+
+# Editor / OS junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
