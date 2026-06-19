@@ -25,6 +25,8 @@ I'm Kevin — Sully to my friends — based in Georgia, originally from the Adir
 
 We cover DACs, amplifiers, turntables, speakers, streamers, and the cables and accessories that connect them. Our focus is the sub-$5,000 space where the real value decisions get made — where a $400 amplifier can genuinely outperform one that costs four times as much if you know what to look for.
 
+**One important note:** I'm a passionate enthusiast, not a professional audio engineer. Everything here reflects my own hands-on experience, listening impressions, and research — not formal training or lab credentials. I aim to be accurate and honest, but treat this as one well-informed hobbyist's perspective, and always do your own research before making a purchase.
+
 ---
 
 ## What We Believe
