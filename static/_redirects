@@ -1,0 +1,66 @@
+# ═══════════════════════════════════════════════════════════════
+# Deep Groove HiFi → AudioChainHiFi — domain retirement 301s
+# Site consolidated into audiochainhifi.com (2026-07). Every old URL
+# 301s to its closest ACCC equivalent. Forced (!) so the retired local
+# files don't shadow the redirect. First match wins — keep /* last.
+# Hugo URLs carry a trailing slash; the /* catch-all covers any
+# non-slash stragglers.
+# ═══════════════════════════════════════════════════════════════
+
+# ── Calculators (migrated 1:1 into ACCC) ───────────────────────
+/calculators/                      https://audiochainhifi.com/calculators/                    301!
+/calculators/amplifier-power/      https://audiochainhifi.com/calculators/amplifier-power      301!
+/calculators/cable-resistance/     https://audiochainhifi.com/calculators/cable-resistance     301!
+/calculators/hifi-budget-builder/  https://audiochainhifi.com/calculators/hifi-budget-builder  301!
+/calculators/listening-room-size/  https://audiochainhifi.com/calculators/listening-room-size  301!
+/calculators/phono-stage-gain/     https://audiochainhifi.com/calculators/phono-stage-gain     301!
+/calculators/room-acoustics/       https://audiochainhifi.com/calculators/room-acoustics       301!
+/calculators/speaker-impedance/    https://audiochainhifi.com/calculators/speaker-impedance    301!
+
+# ── Main pages ─────────────────────────────────────────────────
+/about/                 https://audiochainhifi.com/about    301!
+/contact/               https://audiochainhifi.com/contact  301!
+/privacy-policy/        https://audiochainhifi.com/privacy   301!
+/affiliate-disclosure/  https://audiochainhifi.com/about    301!
+
+# ── Articles → closest ACCC guide ──────────────────────────────
+/articles/                                       https://audiochainhifi.com/guides/                            301!
+/articles/acoustic-treatment-on-a-budget/        https://audiochainhifi.com/guides/room-acoustics              301!
+/articles/amplifier-classes-explained/           https://audiochainhifi.com/guides/amplifiers                  301!
+/articles/balanced-vs-unbalanced/                https://audiochainhifi.com/guides/                            301!
+/articles/bi-wiring-and-bi-amping-explained/     https://audiochainhifi.com/guides/cables                      301!
+/articles/bookshelf-vs-floorstanding/            https://audiochainhifi.com/guides/speakers                    301!
+/articles/building-a-hifi-system-under-1000/     https://audiochainhifi.com/guides/first-hifi-system           301!
+/articles/cd-players-and-transports/             https://audiochainhifi.com/guides/cd-players                  301!
+/articles/cd-players-still-worth-it/             https://audiochainhifi.com/guides/cd-players                  301!
+/articles/desktop-hifi-near-field-system-guide/  https://audiochainhifi.com/guides/first-hifi-system           301!
+/articles/headphone-amplifiers-explained/        https://audiochainhifi.com/guides/headphones                  301!
+/articles/hi-res-streaming-services-compared/    https://audiochainhifi.com/guides/streamers                   301!
+/articles/high-resolution-audio-explained/       https://audiochainhifi.com/guides/digital-formats             301!
+/articles/how-much-amplifier-power-do-you-need/  https://audiochainhifi.com/guides/amplifier-speaker-matching  301!
+/articles/how-to-choose-a-dac/                   https://audiochainhifi.com/guides/dacs                        301!
+/articles/integrated-vs-separates/               https://audiochainhifi.com/guides/integrated-vs-separates     301!
+/articles/network-streamers-explained/           https://audiochainhifi.com/guides/streamers                   301!
+/articles/open-back-vs-closed-back-headphones/   https://audiochainhifi.com/guides/headphones                  301!
+/articles/phono-preamp-basics/                   https://audiochainhifi.com/guides/phono-stages                301!
+/articles/record-cleaning-and-vinyl-care/        https://audiochainhifi.com/guides/turntables                  301!
+/articles/room-acoustics-guide/                  https://audiochainhifi.com/guides/room-acoustics              301!
+/articles/setting-up-your-turntable/             https://audiochainhifi.com/guides/turntables                  301!
+/articles/speaker-cables-and-interconnects/      https://audiochainhifi.com/guides/cables                      301!
+/articles/speaker-impedance-matching/            https://audiochainhifi.com/guides/speaker-impedance           301!
+/articles/speaker-placement-guide/               https://audiochainhifi.com/guides/room-acoustics              301!
+/articles/streaming-vs-local-files/              https://audiochainhifi.com/guides/streamers                   301!
+/articles/subwoofers-in-hifi/                    https://audiochainhifi.com/guides/subwoofers                  301!
+/articles/the-preamplifier/                      https://audiochainhifi.com/guides/amplifiers                  301!
+/articles/tube-vs-solid-state-amplifiers/        https://audiochainhifi.com/guides/tubes                       301!
+/articles/turntable-cartridge-types/             https://audiochainhifi.com/guides/cartridges                  301!
+/articles/turntable-setup-guide/                 https://audiochainhifi.com/guides/turntables                  301!
+/articles/vinyl-revival/                         https://audiochainhifi.com/guides/turntables                  301!
+/articles/what-is-a-dac/                         https://audiochainhifi.com/guides/dacs                        301!
+
+# ── Taxonomy pages → guides hub ────────────────────────────────
+/categories/*  https://audiochainhifi.com/guides/  301!
+/tags/*        https://audiochainhifi.com/guides/  301!
+
+# ── Catch-all (homepage + anything unmapped) ───────────────────
+/*  https://audiochainhifi.com/  301!

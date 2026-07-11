@@ -5,28 +5,9 @@
 [build.environment]
   HUGO_VERSION = "0.128.0"
 
-# Redirect /articles to /articles/ (clean URLs)
-[[redirects]]
-  from = "/articles"
-  to   = "/articles/"
-  status = 301
-
-# Fix 404s flagged by Google Search Console
-[[redirects]]
-  from = "/articles/first-hifi-system-under-2000/"
-  to   = "/articles/"
-  status = 301
-
-[[redirects]]
-  from = "/tags/system/"
-  to   = "/tags/"
-  status = 301
-
-# 404 page
-[[redirects]]
-  from   = "/*"
-  to     = "/404.html"
-  status = 404
+# Domain retirement: all 301s to audiochainhifi.com live in static/_redirects
+# (copied to the site root at build). Kept in one file to avoid netlify.toml vs
+# _redirects processing-order ambiguity.
 
 [context.production.environment]
   HUGO_ENV = "production"
