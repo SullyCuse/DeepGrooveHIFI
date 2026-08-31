@@ -7,6 +7,13 @@
 # non-slash stragglers.
 # ═══════════════════════════════════════════════════════════════
 
+# ── Search Console verification (must NOT redirect) ────────────
+# The forced /* catch-all below would 301 this file, which breaks GSC
+# re-verification and blocks the Change of Address tool. A 200 rewrite to
+# itself, placed before the catch-all, serves the file instead (first match
+# wins). Keep this until the property is DNS-verified or fully retired.
+/ktd1f5d7qn24frjwn8hjegxkegg66kdq.txt  /ktd1f5d7qn24frjwn8hjegxkegg66kdq.txt  200
+
 # ── Calculators (migrated 1:1 into ACCC) ───────────────────────
 /calculators/                      https://audiochainhifi.com/calculators/                    301!
 /calculators/amplifier-power/      https://audiochainhifi.com/calculators/amplifier-power      301!
