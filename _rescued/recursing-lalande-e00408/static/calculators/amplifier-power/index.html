@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amplifier Power & Speaker SPL Calculator | Deep Groove HiFi</title>
+  <meta name="description" content="Find how many watts your speakers need — or what SPL your amplifier can deliver at your listening position. Free calculator from Deep Groove HiFi." />
+  <meta name="author" content="Deep Groove HiFi" />
+  <meta property="og:title" content="Amplifier Power & Speaker SPL Calculator | Deep Groove HiFi" />
+  <meta property="og:description" content="Find out exactly how many watts your speakers need — or what SPL your amplifier can deliver at your listening position." />
+  <meta property="og:type" content="website" />
+<meta property="og:image" content="https://deepgroovehifi.com/images/og-default.png" />
+  <meta property="og:url" content="https://deepgroovehifi.com/calculators/amplifier-power/" />
+  <meta property="og:site_name" content="Deep Groove HiFi" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Amplifier Power & Speaker SPL Calculator | Deep Groove HiFi" />
+  <meta name="twitter:description" content="Find out exactly how many watts your speakers need — or what SPL your amplifier can deliver at your listening position." />
+  <link rel="canonical" href="https://deepgroovehifi.com/calculators/amplifier-power/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-page:      #FAF7F2;
+      --bg-hero:      #EDE6DA;
+      --bg-card:      #EDE6DA;
+      --bg-input:     #E8DDD0;
+      --bg-nav:       #1C1C1C;
+      --gold:         #B8860B;
+      --gold-hover:   #9A6F09;
+      --gold-dim:     rgba(184,134,11,0.12);
+      --gold-border:  rgba(184,134,11,0.35);
+      --text-white:   #1A1208;
+      --text-body:    #2C2416;
+      --text-muted:   #7A6A58;
+      --text-dim:     #9A8A78;
+      --border:       #D8CFBF;
+      --border-light: #E0D5C5;
+      --serif:        'Playfair Display', Georgia, serif;
+      --sans:         'Inter', system-ui, -apple-system, sans-serif;
+      --radius:       5px;
+      --radius-lg:    10px;
+    }
+
+    html { font-size: 18px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-page);
+      color: var(--text-body);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--gold-hover); }
+
+    /* ── NETWORK BAR ── */
+    .network-bar {
+      background: #0e0e0e;
+      border-bottom: 1px solid #222;
+      padding: .4rem 1.5rem;
+    }
+    .network-bar__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      flex-wrap: wrap;
+    }
+    .network-bar__label { font-size: 11px; color: var(--text-muted); letter-spacing: .04em; }
+    .network-bar a { font-size: 11px; color: var(--gold); font-weight: 500; letter-spacing: .04em; }
+    .network-bar a:hover { color: var(--gold-hover); }
+    .network-bar__dot { color: #333; font-size: 11px; }
+
+        /* ── NAV ── */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--bg-nav); border-bottom: 1px solid var(--border); height: 68px; }
+    .nav__inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .nav__logo { display: flex; align-items: center; gap: .75rem; text-decoration: none; flex-shrink: 0; }
+    .nav__logo-text { font-family: var(--serif); font-size: 1.25rem; color: #ffffff; letter-spacing: .01em; white-space: nowrap; }
+    .nav__logo-text span { color: var(--gold); }
+    .nav__links { display: flex; align-items: center; gap: 1.75rem; list-style: none; }
+    .nav__links a { font-size: 15px; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; transition: color .15s; }
+    .nav__links a:hover { color: var(--gold); }
+    .nav__toggle { display: none; background: none; border: none; cursor: pointer; padding: .5rem; flex-direction: column; gap: 5px; }
+    .nav__toggle span { display: block; width: 24px; height: 2px; background: #ffffff; transition: all .3s; }
+    @media (max-width: 768px) {
+      .nav__toggle { display: flex; }
+      .nav__links { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--bg-nav); flex-direction: column; padding: 1.5rem; border-bottom: 1px solid var(--border); gap: 1.25rem; align-items: flex-start; }
+      .nav__links.is-open { display: flex; }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--bg-hero);
+      padding: 3.5rem 1.5rem 3rem;
+      border-bottom: 0.5px solid #2a2200;
+    }
+    .hero-inner { max-width: 700px; margin: 0 auto; }
+    .hero-breadcrumb {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .hero-breadcrumb a { color: var(--gold); }
+    .hero-breadcrumb span { color: var(--text-dim); margin: 0 6px; }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-white);
+      margin-bottom: 1rem;
+    }
+    .hero-sub {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 580px;
+      line-height: 1.7;
+    }
+
+    /* ── LAYOUT ── */
+    .main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    /* ── SECTION HEAD ── */
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    /* ── INPUTS GRID ── */
+    .inputs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 560px) { .inputs-grid { grid-template-columns: 1fr; } }
+
+    .input-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+    }
+    .input-card-label {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .slider-readout {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .slider-val {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--text-white);
+      line-height: 1;
+    }
+    .slider-unit {
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      outline: none;
+      cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--bg-page);
+      cursor: pointer;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--bg-page);
+      cursor: pointer;
+    }
+    .range-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+    }
+    .range-labels span { font-size: 10px; color: var(--text-dim); }
+
+    select {
+      width: 100%;
+      background: var(--bg-input);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-white);
+      font-family: var(--sans);
+      font-size: 15px;
+      padding: 10px 12px;
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 32px;
+    }
+    select:focus { border-color: var(--gold-border); }
+
+    .watt-input-wrap {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 0.5px solid var(--border-light);
+    }
+    .watt-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    input[type="number"] {
+      flex: 1;
+      background: var(--bg-input);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text-white);
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 600;
+      padding: 8px 12px;
+      outline: none;
+      width: 100%;
+    }
+    input[type="number"]:focus { border-color: var(--gold-border); }
+    input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+    /* ── RESULTS ── */
+    .results-card {
+      background: var(--bg-input);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 1.5rem;
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: 0;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 480px) {
+      .results-grid { grid-template-columns: 1fr; }
+      .results-divider { display: none; }
+    }
+    .results-divider { background: var(--border); }
+    .result-block { padding: 0 20px; }
+    .result-block:first-child { padding-left: 0; }
+    .result-block:last-child { padding-right: 0; }
+    .result-label {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 8px;
+    }
+    .result-value {
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .result-unit {
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-bottom: 10px;
+    }
+    .result-note {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ── HEADROOM METER ── */
+    .meter-section {
+      border-top: 0.5px solid var(--border);
+      padding-top: 20px;
+    }
+    .meter-label {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 10px;
+    }
+    .meter-track {
+      height: 6px;
+      background: var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+    .meter-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: var(--gold);
+      transition: width 0.35s ease, background 0.35s ease;
+    }
+    .meter-ticks {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .meter-ticks span { font-size: 10px; color: var(--text-dim); }
+    .verdict-box {
+      background: var(--bg-card);
+      border-left: 2px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      transition: border-color 0.35s ease;
+    }
+    .verdict-box strong { color: var(--text-white); font-weight: 500; }
+
+    /* ── AFFILIATE STRIP ── */
+    .aff-section { margin-bottom: 2.5rem; }
+    .aff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    .aff-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .aff-card:hover {
+      border-color: var(--gold-border);
+      background: #1d1d1d;
+    }
+    .aff-retailer {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .aff-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    .aff-arrow {
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-top: 4px;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { margin-bottom: 2.5rem; }
+    .faq-item {
+      border-top: 0.5px solid var(--border);
+      padding: 18px 0;
+    }
+    .faq-item:last-child { border-bottom: 0.5px solid var(--border); }
+    .faq-q {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text-white);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+    .faq-a {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── RELATED ── */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .related-card {
+      background: var(--bg-card);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.2s;
+    }
+    .related-card:hover { border-color: var(--gold-border); }
+    .related-tag {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .related-title {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-white);
+      line-height: 1.35;
+    }
+
+        /* ── FOOTER ── */
+    .footer { background: var(--bg-nav); border-top: 1px solid var(--border); padding: 3rem 0 2rem; margin-top: 4rem; }
+    .footer__inner { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    @media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+    @media (max-width: 500px) { .footer__grid { grid-template-columns: 1fr; } }
+    .footer__brand p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-top: .75rem; max-width: 300px; }
+    .footer__logo-text { font-family: var(--serif); font-size: 1.2rem; color: #ffffff; }
+    .footer__logo-text span { color: var(--gold); }
+    .footer__col h4 { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #ffffff; margin-bottom: 1rem; }
+    .footer__col ul { list-style: none; }
+    .footer__col li { margin-bottom: .6rem; }
+    .footer__col a { font-size: 15px; color: var(--text-muted); transition: color .2s; }
+    .footer__col a:hover { color: var(--gold); }
+    .footer__bottom { padding-top: 2rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer__copy { font-size: 13px; color: var(--text-muted); }
+  </style>
+
+</head>
+
+<body>
+
+  
+  <!-- NETWORK BAR -->
+  <div class="network-bar">
+    <div class="network-bar__inner">
+      <span class="network-bar__label">Also from our network:</span>
+      <a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a>
+      <span class="network-bar__dot">·</span>
+      <a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="https://deepgroovehifi.com/" class="nav__logo" aria-label="Deep Groove HiFi home">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="18" cy="18" r="17" stroke="#c9a84c" stroke-width="2"/>
+          <circle cx="18" cy="18" r="5" fill="#c9a84c"/>
+          <path d="M6 18 Q9 11 12 18 Q15 25 18 18 Q21 11 24 18 Q27 25 30 18" stroke="#c9a84c" stroke-width="1.75" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span class="nav__logo-text">Deep Groove <span>HiFi</span></span>
+      </a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
+        <li><a href="https://deepgroovehifi.com/calculators/" class="active">Calculators</a></li>
+        <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
+        <li><a href="https://deepgroovehifi.com/about/">About</a></li>
+        <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-breadcrumb">
+        <a href="https://deepgroovehifi.com/">Deep Groove HiFi</a>
+        <span>›</span>
+        <a href="https://deepgroovehifi.com/categories/guides/">Guides</a>
+        <span>›</span>
+        Calculators
+      </div>
+      <h1>Amplifier power &amp; speaker SPL calculator</h1>
+      <p class="hero-sub">Find out exactly how many watts your speakers need — or what SPL your current amplifier can deliver at your listening position.</p>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- INPUTS -->
+    <div class="section-label">Your system</div>
+    <div class="inputs-grid">
+
+      <div class="input-card">
+        <label class="input-card-label" for="sens">Speaker sensitivity</label>
+        <div class="slider-readout">
+          <span class="slider-val" id="sensVal">87</span>
+          <span class="slider-unit">dB @ 1W/1m</span>
+        </div>
+        <input type="range" id="sens" min="72" max="102" value="87" step="1" aria-label="Speaker sensitivity in dB" />
+        <div class="range-labels">
+          <span>72 dB — inefficient</span>
+          <span>102 dB — very efficient</span>
+        </div>
+      </div>
+
+      <div class="input-card">
+        <label class="input-card-label" for="dist">Listening distance</label>
+        <div class="slider-readout">
+          <span class="slider-val" id="distVal">10</span>
+          <span class="slider-unit">feet</span>
+        </div>
+        <input type="range" id="dist" min="3" max="30" value="10" step="1" aria-label="Listening distance in feet" />
+        <div class="range-labels">
+          <span>3 ft</span>
+          <span>30 ft</span>
+        </div>
+      </div>
+
+      <div class="input-card">
+        <label class="input-card-label" for="spl">Target listening level</label>
+        <div class="slider-readout">
+          <span class="slider-val" id="splVal">85</span>
+          <span class="slider-unit">dB SPL</span>
+        </div>
+        <input type="range" id="spl" min="65" max="105" value="85" step="1" aria-label="Target listening level in dB SPL" />
+        <div class="range-labels">
+          <span>65 dB — quiet</span>
+          <span>105 dB — concert level</span>
+        </div>
+      </div>
+
+      <div class="input-card">
+        <label class="input-card-label" for="room">Room size</label>
+        <select id="room" aria-label="Room size">
+          <option value="3">Small — under 150 sq ft</option>
+          <option value="0" selected>Medium — 150 to 300 sq ft</option>
+          <option value="-3">Large — over 300 sq ft</option>
+        </select>
+        <div class="watt-input-wrap">
+          <label class="input-card-label" for="ampW">Your amplifier's wattage (optional)</label>
+          <div class="watt-row">
+            <input type="number" id="ampW" value="50" min="1" max="5000" aria-label="Amplifier wattage" />
+            <span class="slider-unit">W / ch</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RESULTS -->
+    <div class="section-label">Results</div>
+    <div class="results-card" role="region" aria-label="Calculator results" aria-live="polite">
+      <div class="results-grid">
+        <div class="result-block">
+          <div class="result-label">Minimum watts needed</div>
+          <div class="result-value" id="reqWatts">—</div>
+          <div class="result-unit">watts per channel</div>
+          <div class="result-note" id="reqNote"></div>
+        </div>
+        <div class="results-divider" aria-hidden="true"></div>
+        <div class="result-block">
+          <div class="result-label">Max SPL from your amp</div>
+          <div class="result-value" id="maxSpl">—</div>
+          <div class="result-unit">dB at listening position</div>
+          <div class="result-note" id="splNote"></div>
+        </div>
+      </div>
+      <div class="meter-section">
+        <div class="meter-label">Headroom above target</div>
+        <div class="meter-track"><div class="meter-fill" id="meterFill" style="width:0%"></div></div>
+        <div class="meter-ticks">
+          <span>0 dB</span>
+          <span>+6 dB</span>
+          <span>+12 dB</span>
+          <span>+18 dB</span>
+          <span>+24 dB</span>
+        </div>
+        <div class="verdict-box" id="verdict">Enter your amplifier's wattage above to see a full system assessment.</div>
+      </div>
+    </div>
+
+    <!-- AFFILIATE -->
+    <div class="aff-section">
+      <div class="section-label">Shop amplifiers for your setup</div>
+      <div class="aff-grid">
+        <a href="https://www.awin1.com/cread.php?awinmid=119395&awinaffid=2894963&clickref=DeepGrooveHifi+Amplifiers&ued=https%3A%2F%2Ffosiaudio.com%2Fcollections%2Famplifier" class="aff-card" target="_blank" rel="noopener sponsored">
+          <div class="aff-retailer">Fosi Audio</div>
+          <div class="aff-desc">Compact, high-value amplifiers — a favourite in the budget audiophile space</div>
+          <div class="aff-arrow">Browse amps →</div>
+        </a>
+        <a href="https://www.amazon.com/s?k=integrated+amplifier+stereo&tag=audiochainhif-20" class="aff-card" target="_blank" rel="noopener sponsored">
+          <div class="aff-retailer">Amazon</div>
+          <div class="aff-desc">Integrated and stereo amplifiers from leading audiophile brands with fast shipping and easy returns</div>
+          <div class="aff-arrow">Browse amps →</div>
+        </a>
+        <a href="https://www.amazon.com/s?k=stereo+amplifiers&tag=audiochainhif-20" class="aff-card" target="_blank" rel="noopener sponsored">
+          <div class="aff-retailer">Amazon</div>
+          <div class="aff-desc">Stereo and integrated amplifiers from leading audiophile brands with fast shipping</div>
+          <div class="aff-arrow">Browse amps →</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <div class="section-label">Understanding the numbers</div>
+      <div class="faq-item">
+        <div class="faq-q">What does speaker sensitivity actually mean?</div>
+        <div class="faq-a">Speaker sensitivity is the sound pressure level (SPL) a speaker produces at one meter distance when driven with exactly one watt of power. A speaker rated at 90 dB sensitivity is twice as loud as an 87 dB speaker given the same input power — because every 3 dB represents a doubling of perceived loudness. This single spec determines more about how much amplifier you need than almost any other number.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why do I need headroom above my target listening level?</div>
+        <div class="faq-a">Music is not a steady tone. Orchestral peaks, drum transients, and dynamic passages can exceed the average listening level by 10 to 20 dB. Without sufficient headroom, your amplifier reaches its maximum output during those peaks and clips — producing harsh distortion that stresses both your ears and your drivers. At least 10 dB of headroom above your typical listening level is advisable for dynamic music genres.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does more wattage always mean better sound?</div>
+        <div class="faq-a">No. Wattage determines headroom and maximum volume, but it says nothing about the quality of the amplification. A well-designed 20-watt amplifier driving efficient 92 dB speakers can sound significantly better than a mediocre 200-watt design — the circuit topology, power supply quality, and output stage character matter at least as much as the rated power figure. Choose the wattage your setup genuinely needs, then prioritize amplifier quality within that range.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How does room size affect the calculation?</div>
+        <div class="faq-a">Smaller rooms reinforce bass frequencies and tend to build up SPL more readily than large, open spaces. A large room with high ceilings and absorptive materials can demand significantly more amplifier power to reach the same listening level as a small, lively room. The room gain adjustments in this calculator are approximations — your specific room's acoustic treatment, furnishings, and geometry will all influence the actual result.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is the minimum wattage figure the right amp size to buy?</div>
+        <div class="faq-a">Treat the minimum as a floor, not a target. Amplifiers generally sound better when they are not being pushed close to their limits. If the calculator shows you need 20 watts minimum, a 50-watt amplifier will run more relaxed and typically offer better dynamics and lower distortion at your listening level. The sweet spot for most setups is 2 to 4 times the calculated minimum.</div>
+      </div>
+    </div>
+
+    <!-- RELATED -->
+    <div class="section-label">Related guides</div>
+    <div class="related-grid">
+      <a href="https://deepgroovehifi.com/articles/amplifier-classes-explained/" class="related-card">
+        <div class="related-tag">Guide</div>
+        <div class="related-title">Amplifier classes explained: Class A, AB, and D</div>
+      </a>
+      <a href="https://deepgroovehifi.com/articles/integrated-vs-separates/" class="related-card">
+        <div class="related-tag">Guide</div>
+        <div class="related-title">Integrated amps vs. separates: which setup is right for you?</div>
+      </a>
+      <a href="https://deepgroovehifi.com/articles/what-is-a-dac/" class="related-card">
+        <div class="related-tag">Guide</div>
+        <div class="related-title">What is a DAC? Understanding digital-to-analog conversion</div>
+      </a>
+    </div>
+
+  </main>
+
+  
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <div class="footer__logo-text">Deep Groove <span>HiFi</span></div>
+          <p>Expert audiophile coverage for enthusiasts who care about the signal chain — from source to speaker.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Topics</h4>
+          <ul>
+            <li><a href="https://deepgroovehifi.com/categories/guides/">Guides</a></li>
+            <li><a href="https://deepgroovehifi.com/categories/features/">Features</a></li>
+            <li><a href="https://deepgroovehifi.com/articles/">All Articles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Gear Types</h4>
+          <ul>
+            <li><a href="https://deepgroovehifi.com/tags/dac/">DACs</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/amplifiers/">Amplifiers</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/turntables/">Turntables</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/speakers/">Speakers</a></li>
+            <li><a href="https://deepgroovehifi.com/tags/streamers/">Streamers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Site</h4>
+          <ul>
+            <li><a href="https://deepgroovehifi.com/about/">About</a></li>
+            <li><a href="https://deepgroovehifi.com/contact/">Contact</a></li>
+            <li><a href="https://deepgroovehifi.com/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="https://deepgroovehifi.com/affiliate-disclosure/">Affiliate Disclosure</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Sister Sites</h4>
+          <ul>
+            <li><a href="https://audiochainhifi.com" target="_blank" rel="noopener">AudioChainHiFi.com</a></li>
+            <li><a href="https://audioscopehifi.com" target="_blank" rel="noopener">AudioScopeHiFi.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Deep Groove HiFi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links  = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    function compute() {
+      const sens = parseInt(document.getElementById('sens').value, 10);
+      const dist = parseInt(document.getElementById('dist').value, 10);
+      const spl  = parseInt(document.getElementById('spl').value, 10);
+      const room = parseInt(document.getElementById('room').value, 10);
+      const ampW = parseFloat(document.getElementById('ampW').value) || 0;
+
+      document.getElementById('sensVal').textContent = sens;
+      document.getElementById('distVal').textContent = dist;
+      document.getElementById('splVal').textContent  = spl;
+
+      const distM    = dist * 0.3048;
+      const distLoss = 20 * Math.log10(distM);
+
+      // Required watts: SPL = sens + 10*log10(W) - distLoss + room  →  solve for W
+      const reqWatts = Math.pow(10, (spl - sens + distLoss - room) / 10);
+      document.getElementById('reqWatts').textContent = reqWatts < 1 ? '< 1' : Math.ceil(reqWatts).toString();
+
+      let reqNote;
+      if      (reqWatts < 5)   reqNote = 'Even a low-powered integrated or Class D mini-amp will handle this comfortably.';
+      else if (reqWatts < 20)  reqNote = 'A modest integrated amplifier will handle this with headroom to spare.';
+      else if (reqWatts < 60)  reqNote = 'A typical 40–80 W integrated amplifier is well suited to this setup.';
+      else if (reqWatts < 150) reqNote = 'You will want a higher-powered integrated or a separate power amplifier.';
+      else                     reqNote = 'Consider high-powered separates — a pre/power combination — for this demanding setup.';
+      document.getElementById('reqNote').textContent = reqNote;
+
+      if (ampW > 0) {
+        const maxSpl  = sens + 10 * Math.log10(ampW) - distLoss + room;
+        const headroom = maxSpl - spl;
+
+        document.getElementById('maxSpl').textContent  = maxSpl.toFixed(1);
+        document.getElementById('splNote').textContent = headroom >= 0
+          ? headroom.toFixed(1) + ' dB above your ' + spl + ' dB target.'
+          : Math.abs(headroom).toFixed(1) + ' dB short of your ' + spl + ' dB target.';
+
+        const headPct = Math.min(100, Math.max(0, (headroom / 24) * 100));
+        const fill = document.getElementById('meterFill');
+        fill.style.width = headPct + '%';
+        fill.style.background = headroom < 3 ? '#c0392b' : headroom < 6 ? '#e67e22' : 'var(--gold)';
+
+        let verdict;
+        if      (headroom < 0)  verdict = '<strong>Underpowered</strong> — your amplifier cannot reach your target listening level. Consider more efficient speakers, a shorter listening distance, or a more powerful amplifier.';
+        else if (headroom < 3)  verdict = '<strong>Marginal headroom</strong> — your amplifier can just reach the target, but dynamic peaks will push it to clipping and cause distortion on loud passages.';
+        else if (headroom < 6)  verdict = '<strong>Adequate but tight</strong> — enough for moderate listening, but dynamic music will stress the amp. More headroom is advisable for wide-dynamic-range genres.';
+        else if (headroom < 12) verdict = '<strong>Good headroom</strong> — comfortable reserve above your target level. Dynamic peaks will be handled cleanly.';
+        else                    verdict = '<strong>Excellent headroom</strong> — well-matched system with substantial reserve above your target level, ensuring clean reproduction of even the most dynamic recordings.';
+        document.getElementById('verdict').innerHTML = verdict;
+      } else {
+        document.getElementById('maxSpl').textContent  = '—';
+        document.getElementById('splNote').textContent = '';
+        document.getElementById('meterFill').style.width = '0%';
+        document.getElementById('verdict').textContent = 'Enter your amplifier\'s wattage above to see a full system assessment.';
+      }
+    }
+
+    ['sens', 'dist', 'spl'].forEach(id => document.getElementById(id).addEventListener('input', compute));
+    document.getElementById('room').addEventListener('change', compute);
+    document.getElementById('ampW').addEventListener('input', compute);
+    compute();
+  </script>
+
+</body>
+</html>
